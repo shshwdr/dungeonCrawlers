@@ -1,0 +1,26 @@
+{
+    "buff":
+    [
+      {
+        "effectId": "increaseChanceToFail",
+        "effectDesc":"next move has {0}% chance to fail.",
+        "doEffectDesc":"{0} failed the move."
+      },{
+        "effectId": "removeMDef",
+        "effectDesc":"Magic DEF get recuded {0}% for {1} round",
+        "doEffectDesc":""
+      },{
+        "effectId": "increaseBDef",
+        "effectDesc":"Increase Magic DEF and DEF by {0} for {1} round",
+        "doEffectDesc":""
+      },{
+        "effectId": "restoreHPGradually",
+        "effectDesc":"Restore {0} HP every turn for the {1} turns.",
+        "doEffectDesc":"{0} restored {1} hp."
+      },{
+        "effectId": "failAndReflectHalf",
+        "effectDesc":"The next enemy's move has {0}% Chance to fail, if it does: deal himself half damage of the move.",
+        "doEffectDesc":"{0} failed the move and get {1} damage himself."
+      }
+    ]
+  }

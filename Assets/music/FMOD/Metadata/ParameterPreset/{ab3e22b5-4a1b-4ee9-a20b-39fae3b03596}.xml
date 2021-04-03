@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="ParameterPreset" id="{ab3e22b5-4a1b-4ee9-a20b-39fae3b03596}">
+		<property name="name">
+			<value>To Danger Zone</value>
+		</property>
+		<relationship name="folder">
+			<destination>{0646594b-b70c-4d4d-9991-8753a1ec6c9b}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{9323bbba-c2ff-4358-b995-5c25c81acae4}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{9323bbba-c2ff-4358-b995-5c25c81acae4}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

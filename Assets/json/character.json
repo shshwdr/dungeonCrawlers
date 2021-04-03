@@ -1,0 +1,287 @@
+{
+    "PlayerStatus":
+    [
+      {
+        "playerName": "Flav",
+        "hp":100,
+        "atk":0,
+        "def":0,
+        "mag":0,
+        "magdef":0,
+        "mana":15
+      }
+    ],
+    "MonsterStatus":
+    [
+      {
+        "playerName": "Bat",
+        "level":1,
+        "hp":20,
+        "atk":0,
+        "def":0,
+        "mag":0,
+        "magdef":0,
+        "absorbCost":6,
+        "absorbRate":0.7,
+        "absorbExp":15,
+        "runRate":0.8,
+        "ability":[{"abilityName":"Bite","freq":95},{"abilityName":"Last Recover","freq":5}],
+        "reward":{"itemName":"hpPotion","itemRate":0.1,"currencyMin":1,"currencyMax":3}
+      },
+
+      
+      {
+        "playerName": "Bat",
+        "level":2,
+        "hp":25,
+        "atk":20,
+        "def":5,
+        "mag":0,
+        "magdef":0,
+        "absorbCost":7,
+        "absorbRate":0.65,
+        "absorbExp":25,
+        "runRate":0.75,
+        "ability":[{"abilityName":"Bite","freq":75},{"abilityName":"Wing Attack","freq":20},{"abilityName":"Last Recover","freq":5}],
+        "reward":{"itemName":"hpPotion","itemRate":0.08,"currencyMin":2,"currencyMax":4}
+      },{
+        "playerName": "Bat",
+        "level":3,
+        "hp":40,
+        "atk":50,
+        "def":15,
+        "mag":0,
+        "magdef":0,
+        "absorbCost":8,
+        "absorbRate":0.6,
+        "absorbExp":40,
+        "runRate":0.7,
+        "ability":[{"abilityName":"Bite","freq":65},{"abilityName":"Wing Attack","freq":30},{"abilityName":"Last Recover","freq":5}],
+        "reward":{"itemName":"hpPotion","itemRate":0.1,"currencyMin":3,"currencyMax":5}
+      },
+
+      {
+        "playerName": "Bee",
+        "level":1,
+        "hp":20,
+        "atk":20,
+        "def":0,
+        "mag":0,
+        "magdef":0,
+        "absorbCost":7,
+        "absorbRate":0.65,
+        "absorbExp":20,
+        "runRate":0.65,
+        "ability":[{"abilityName":"Sting","freq":95},{"abilityName":"Last Recover","freq":5}],
+        "reward":{"itemName":"spPotion","itemRate":0.1,"currencyMin":4,"currencyMax":5}
+      },
+
+      {
+        "playerName": "Bee",
+        "level":2,
+        "hp":25,
+        "atk":50,
+        "def":0,
+        "mag":0,
+        "magdef":10,
+        "absorbCost":8,
+        "absorbRate":0.6,
+        "absorbExp":30,
+        "runRate":0.6,
+        "ability":[{"abilityName":"Sting","freq":70},{"abilityName":"Drill Dart","freq":25},{"abilityName":"Last Recover","freq":5}],
+        "reward":{"itemName":"spPotion","itemRate":0.15,"currencyMin":5,"currencyMax":6}
+      },
+      {
+        "playerName": "Bee",
+        "level":3,
+        "hp":35,
+        "atk":70,
+        "def":30,
+        "mag":0,
+        "magdef":25,
+        "absorbCost":9,
+        "absorbRate":0.55,
+        "absorbExp":35,
+        "runRate":0.55,
+        "ability":[{"abilityName":"Sting","freq":60},{"abilityName":"Drill Dart","freq":35},{"abilityName":"Last Recover","freq":5}],
+        "reward":{"itemName":"spPotion","itemRate":0.2,"currencyMin":5,"currencyMax":8}
+      },
+
+
+
+      {
+        "playerName": "Golem",
+        "level":1,
+        "hp":30,
+        "atk":0,
+        "def":15,
+        "mag":0,
+        "magdef":0,
+        "absorbCost":7,
+        "absorbRate":0.6,
+        "absorbExp":20,
+        "runRate":0.6,
+        "ability":[{"abilityName":"Smash Attack","freq":85},{"abilityName":"Strong Skin","freq":10},{"abilityName":"Last Recover","freq":5}],
+        "reward":{"itemName":"hpPotion2","itemRate":0.1,"currencyMin":5,"currencyMax":10}
+      },
+      {
+        "playerName": "Golem",
+        "level":2,
+        "hp":40,
+        "atk":20,
+        "def":25,
+        "mag":0,
+        "magdef":10,
+        "absorbCost":8,
+        "absorbRate":0.55,
+        "absorbExp":25,
+        "runRate":0.55,
+        "ability":[{"abilityName":"Smash Attack","freq":75},{"abilityName":"Strong Skin","freq":20},{"abilityName":"Last Recover","freq":5}],
+        "reward":{"itemName":"hpPotion2","itemRate":0.15,"currencyMin":8,"currencyMax":15}
+      },
+      {
+        "playerName": "Golem",
+        "level":3,
+        "hp":50,
+        "atk":30,
+        "def":35,
+        "mag":0,
+        "magdef":15,
+        "absorbCost":9,
+        "absorbRate":0.5,
+        "absorbExp":30,
+        "runRate":0.5,
+        "ability":[{"abilityName":"Smash Attack","freq":70},{"abilityName":"Strong Skin","freq":20},{"abilityName":"Last Recover","freq":10}],
+        "reward":{"itemName":"hpPotion2","itemRate":0.2,"currencyMin":15,"currencyMax":20}
+      },
+
+
+      
+      {
+        "playerName": "Magic Slime",
+        "level":1,
+        "hp":20,
+        "atk":0,
+        "def":0,
+        "mag":20,
+        "magdef":10,
+        "absorbCost":8,
+        "absorbRate":0.55,
+        "absorbExp":20,
+        "runRate":0.65,
+        "ability":[{"abilityName":"Slurp","freq":85},{"abilityName":"Slime Surface","freq":10},{"abilityName":"Last Recover","freq":5}],
+        "reward":{"itemName":"spPotion2","itemRate":0.1,"currencyMin":4,"currencyMax":6}
+      },
+      
+      {
+        "playerName": "Magic Slime",
+        "level":2,
+        "hp":25,
+        "atk":0,
+        "def":0,
+        "mag":40,
+        "magdef":25,
+        "absorbCost":9,
+        "absorbRate":0.5,
+        "absorbExp":30,
+        "runRate":0.6,
+        "ability":[{"abilityName":"Slurp","freq":75},{"abilityName":"Slime Surface","freq":20},{"abilityName":"Last Recover","freq":5}],
+        "reward":{"itemName":"spPotion2","itemRate":0.15,"currencyMin":5,"currencyMax":8}
+      },
+      
+      {
+        "playerName": "Magic Slime",
+        "level":3,
+        "hp":35,
+        "atk":0,
+        "def":0,
+        "mag":60,
+        "magdef":35,
+        "absorbCost":9,
+        "absorbRate":0.45,
+        "absorbExp":35,
+        "runRate":0.55,
+        "ability":[{"abilityName":"Slurp","freq":70},{"abilityName":"Slime Surface","freq":20},{"abilityName":"Last Recover","freq":10}],
+        "reward":{"itemName":"spPotion2","itemRate":0.2,"currencyMin":6,"currencyMax":9}
+      },
+      
+      {
+        "playerName": "Magic Lizard",
+        "level":1,
+        "hp":75,
+        "atk":20,
+        "def":50,
+        "mag":40,
+        "magdef":25,
+        "absorbCost":9,
+        "absorbRate":0.45,
+        "absorbExp":35,
+        "runRate":0.0,
+        "ability":[{"abilityName":"Slurp","freq":70},{"abilityName":"Slime Surface","freq":20},{"abilityName":"Last Recover","freq":10}],
+        "reward":{"itemName":"spPotion2","itemRate":0.2,"currencyMin":6,"currencyMax":9}
+      }
+      
+    ],
+    "MonsterAbsorb":
+    [
+      {
+        "playerName": "Bat",
+        "color":0,
+        "absorbAbility":"Focus"
+      },{
+        "playerName": "Bat",
+        "color":1,
+        "absorbAbility":"Tiny Tornado"
+      },{
+        "playerName": "Bat",
+        "color":2,
+        "absorbAbility":"Heat Breath"
+      },
+      {
+        "playerName": "Bee",
+        "color":0,
+        "absorbAbility":"Confusing Strike"
+      },
+      {
+        "playerName": "Bee",
+        "color":1,
+        "absorbAbility":"Driller"
+      },
+      {
+        "playerName": "Bee",
+        "color":2,
+        "absorbAbility":"Eye Contact"
+      },
+      {
+        "playerName": "Golem",
+        "color":0,
+        "absorbAbility":"Spells Drain"
+      },
+      {
+        "playerName": "Golem",
+        "color":1,
+        "absorbAbility":"Lava Rock "
+      },
+      {
+        "playerName": "Golem",
+        "color":2,
+        "absorbAbility":"Static Soul"
+      },
+      {
+        "playerName": "Magic Slime",
+        "color":0,
+        "absorbAbility":"Fertilizer"
+      },
+      {
+        "playerName": "Magic Slime",
+        "color":1,
+        "absorbAbility":"Sticky Jelly"
+      },
+      {
+        "playerName": "Magic Slime",
+        "color":2,
+        "absorbAbility":"Slippery Shield"
+      }
+
+    ]
+  }

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="AudioFile" id="{7831d155-5b8c-46a5-8d57-a8612b774405}">
+		<property name="assetPath">
+			<value>Exploration - Melody.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>25.945941043083899</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{3a7acac0-2463-46ca-b6f6-c2f5669bb4d4}</destination>
+		</relationship>
+	</object>
+</objects>
