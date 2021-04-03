@@ -27,6 +27,30 @@ public class BattlePlayer : HPObject
         
     }
 
+    public override int getMaxHp()
+    {
+        return Inventory.Instance.playerStatus["hp"].getLevelValue;
+    }
+
+    public override int getAttack()
+    {
+        return Inventory.Instance.playerStatus["atk"].getLevelValue;
+    }
+
+
+    public override int getDef()
+    {
+        return Inventory.Instance.playerStatus["def"].getLevelValue;
+    }
+
+    public override int getMagic()
+    {
+        return Inventory.Instance.playerStatus["mag"].getLevelValue;
+    }
+    public override int getMagDef()
+    {
+        return Inventory.Instance.playerStatus["magDef"].getLevelValue;
+    }
 
     public void getIntoBattle()
     {
@@ -71,14 +95,20 @@ public class BattlePlayer : HPObject
     public void restoreMana(int sp)
     {
         currentSP += sp;
-        currentSP = Mathf.Clamp(currentSP, 0, playerStatus.mana);
+        currentSP = Mathf.Clamp(currentSP, 0, getMana());
 
         updateStatusUI();
     }
 
+    public int getMana()
+    {
+
+        return Inventory.Instance.playerStatus["mana"].getLevelValue;
+    }
+
     protected override void initStatusUI()
     {
-        stateUI.updateMaxSP(playerStatus.mana);
+        stateUI.updateMaxSP(getMana());
         updateBuffUI();
         base.initStatusUI();
     }

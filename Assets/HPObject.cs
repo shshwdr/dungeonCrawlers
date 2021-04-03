@@ -32,8 +32,13 @@ public class HPObject : MonoBehaviour
     protected virtual void initStatusUI()
     {
         stateUI.updateHPObject(this);
-        stateUI.updateName(status.playerName).updateMaxHP(status.hp);
+        stateUI.updateName(status.playerName).updateMaxHP(getMaxHp());
         updateStatusUI();
+    }
+
+    public virtual int getMaxHp()
+    {
+        return status.hp;
     }
 
     public virtual void updateStatusUI()
@@ -66,37 +71,36 @@ public class HPObject : MonoBehaviour
         isDead = true;
     }
 
-    public int getAttack()
+
+    public virtual int getAttack()
     {
         return status.atk;
     }
 
-    public int getBattleAttack()
-    {
-        return status.atk;
-    }
 
-    public int getDef()
+    public virtual  int getDef()
     {
         return status.def;
     }
 
     public int getBattleDef()
     {
-        return Mathf.Clamp( status.def + BattleSystem.Instance.getBuffValue(this, "increaseBDef"),0,50);
+        return Mathf.Clamp(getDef() + BattleSystem.Instance.getBuffValue(this, "increaseBDef"),0,50);
     }
-    public int getMagic()
+    public virtual int getMagic()
     {
         return status.mag;
     }
-    public int getMagDef()
+    public virtual int getMagDef()
     {
         return status.magdef;
     }
     public int getBattleMagDef()
     {
-        return Mathf.Clamp(status.magdef + BattleSystem.Instance.getBuffValue(this, "increaseBDef") - BattleSystem.Instance.getBuffValue(this, "removeMDef"), 0, 50);
+        return Mathf.Clamp(getMagDef() + BattleSystem.Instance.getBuffValue(this, "increaseBDef") - BattleSystem.Instance.getBuffValue(this, "removeMDef"), 0, 50);
     }
+
+
 
     public virtual void attack(HPObject attakee, int damage)
     {

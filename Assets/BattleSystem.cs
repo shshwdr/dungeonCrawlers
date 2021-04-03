@@ -226,13 +226,7 @@ public class BattleSystem : Singleton<BattleSystem>
         showParticleEffect(info.actionId);
 
         yield return new WaitForSeconds(attackTime);
-        //check if enemy is dead
-        if (monster.isDead)
-        {
-            //end battle
-            state = BattleState.Won;
-            EndBattle();
-        }
+        if (checkDeath()) { }
         else
         {
             //state = BattleState.EnemyTurn;
@@ -241,6 +235,23 @@ public class BattleSystem : Singleton<BattleSystem>
             //StartCoroutine(EnemyTurn());
         }
         //change state to enemy
+    }
+
+    public bool checkDeath()
+    {
+
+        //check if enemy is dead
+        if (monster.isDead)
+        {
+            //end battle
+            state = BattleState.Won;
+            EndBattle();
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 
     public void removeBuff(HPObject checkObject, string buffId)
@@ -416,7 +427,7 @@ public class BattleSystem : Singleton<BattleSystem>
             //end game
             state = BattleState.Absorb;
             //
-            monster.gameObject.SetActive(false);
+            //monster.gameObject.SetActive(false);
             EndBattle();
         }
         else

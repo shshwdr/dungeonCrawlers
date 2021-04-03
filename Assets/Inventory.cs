@@ -19,6 +19,9 @@ public class Inventory : Singleton<Inventory>
     Dictionary<string, int> currentItemDict = new Dictionary<string, int>();
     Dictionary<string, ActionButton> itemButtonDict = new Dictionary<string, ActionButton>();
     Dictionary<string, ItemInfo> itemInfoDict;
+    public Dictionary<string, int> statusLevel = new Dictionary<string, int>();
+    public Dictionary<string, PlayerPurchaseStatus> playerStatus = new Dictionary<string, PlayerPurchaseStatus>();
+
     [SerializeField]
     TextAsset jsonFile;
 
@@ -28,7 +31,7 @@ public class Inventory : Singleton<Inventory>
     [SerializeField]
     Transform buttonsParent;
 
-    int currentCurrency = 0;
+    public int currentCurrency = 0;
     // Start is called before the first frame update
     void Awake()
     {
@@ -85,7 +88,48 @@ public class Inventory : Singleton<Inventory>
     public void addCurrency(int value)
     {
         currentCurrency += value;
+        ShopMenu.Instance. updateCoin();
     }
+    public bool canPurchase(PurchaseItem item)
+    {
+
+        var cost = item.getCost;
+        return currentCurrency >= cost;
+    }
+    public void purchase(PurchaseItem item)
+    {
+        var cost = item.getCost;
+
+        currentCurrency -= cost;
+        if(item is PlayerPurchaseStatus)
+        {
+            updateStatusLevel((PlayerPurchaseStatus)item);
+        }
+        ShopMenu.Instance.updateCoin();
+    }
+    public bool isStatusAtMaxLevel(PlayerPurchaseStatus status)
+    {
+        return statusLevel[status.itemId] == status.cost.Length-1;
+    }
+
+    public void updateStatusLevel(PlayerPurchaseStatus status)
+    {
+        if (BattleSystem.Instance.player)
+        {
+            if (status.itemId == "hp")
+        {
+
+                //hacky
+                BattleSystem.Instance.player.heal(10);
+            }else if(status.itemId == "mana")
+            {
+                BattleSystem.Instance.player.restoreMana(5);
+            }
+        }
+        statusLevel[status.itemId]++;
+    }
+
+    
 
     // Update is called once per frame
     void Update()

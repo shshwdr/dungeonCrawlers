@@ -3,7 +3,7 @@
     [
       {
         "playerName": "Flav",
-        "hp":100,
+        "hp":25,
         "atk":0,
         "def":0,
         "mag":0,
