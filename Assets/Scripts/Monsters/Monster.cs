@@ -41,7 +41,7 @@ public class Monster : HPObject
 
     protected override void Init(BattleCharacterStatus s)
     {
-        animator = GetComponent<Animator>();
+        animator = GetComponentInChildren<Animator>();
         stateUI = HUD.Instance.enemyUI;
         monsterStatus = (MonsterStatus)s;
         base.Init(s);
