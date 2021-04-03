@@ -133,7 +133,7 @@ public class BattleSystem : Singleton<BattleSystem>
         //update UI
     }
 
-    IEnumerator yieldAndShowText(string t, float delayTime = 1)
+    IEnumerator yieldAndShowText(string t, float delayTime = 2)
     {
 
         HUD.Instance.battleDialogUI.text = t;
@@ -391,9 +391,14 @@ public class BattleSystem : Singleton<BattleSystem>
         StartCoroutine(EnemyTurn());
     }
 
+    public void OnAbsorbButton()
+    {
+        StartCoroutine(OnAbsorb());
+    }
+
     public IEnumerator OnAbsorb()
     {
-        GameEventMessage.SendEvent("StopAction");
+       // GameEventMessage.SendEvent("StopAction");
 
         //show particle effect
         //check possibility
@@ -403,7 +408,7 @@ public class BattleSystem : Singleton<BattleSystem>
         {
 
             yield return StartCoroutine( yieldAndShowText(string.Format(Dialogs.absorbSuccess, monster.monsterStatus.playerName)));
-
+           // yield return StartCoroutine(yieldAndShowText(string.Format(selectedAbilityInfo.description, monster.monsterStatus.playerName, selectedAbilityInfo.getDamage)));
 
 
             string abosrbText = AbilityManager.Instance.addExp(monster.getAbsorbId(), monster.monsterStatus.absorbExp);

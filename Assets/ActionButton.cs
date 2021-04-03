@@ -78,7 +78,8 @@ public class ActionButton : MonoBehaviour
                 switch (info.actionId)
                 {
                     case "absorb":
-                        StartCoroutine( BattleSystem.Instance.OnAbsorb());
+                        BattleSystem.Instance.OnAbsorbButton();
+                        //StartCoroutine( BattleSystem.Instance.OnAbsorb());
                         //BattleSystem.Instance.OnAttackButton();
                         break;
                     case "run":

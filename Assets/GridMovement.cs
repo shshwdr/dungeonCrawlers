@@ -52,7 +52,7 @@ public class GridMovement : MonoBehaviour
                     Vector3 playerPosition = playerTransform.position;
                     Vector3 playerForward = playerTransform.forward * moveStep;
                     Quaternion monsterRotation = Quaternion.LookRotation(-playerForward);
-                    Vector3 monsterPosition = playerPosition;// + playerForward;
+                    Vector3 monsterPosition = playerPosition + playerForward;
                     bool canTriggerBattle = ValidSpawn(playerPosition, playerForward);
                     if (ZoneManager.Instance.moveInDangerZone(canTriggerBattle))
                     {
