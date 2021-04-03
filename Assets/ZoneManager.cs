@@ -9,7 +9,7 @@ public class ZoneMonsterInfo
     public string monsterId;
     public int rate;
     public int level;
-    public string color;
+    public int color;
 }
     [Serializable]
 public class ZoneInfo

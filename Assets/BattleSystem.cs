@@ -51,8 +51,8 @@ public class BattleSystem : Singleton<BattleSystem>
     public void StartBattle(ZoneMonsterInfo zoneMonsterInfo, BattlePlayer p, Vector3 monsterPosition, Quaternion monsterRotation)
     {
         string monsterName = zoneMonsterInfo.monsterId;
-        string monsterColor = zoneMonsterInfo.color;
-        GameObject monster = Instantiate(Resources.Load<GameObject>("monsters/"+ monsterName+"_"+ monsterColor), monsterPosition, monsterRotation);
+        int monsterColor = zoneMonsterInfo.color;
+        GameObject monster = Instantiate(Resources.Load<GameObject>("monsters/"+ monsterName+ monsterColor), monsterPosition, monsterRotation);
         isPopup = true;
         Monster mo = monster.GetComponent<Monster>();
         mo.level = zoneMonsterInfo.level;
@@ -85,7 +85,7 @@ public class BattleSystem : Singleton<BattleSystem>
         monster.updateStatusUI();
         player.updateStatusUI();
         //setup enemy hp?
-        HUD.Instance.battleDialogUI.text = string.Format(Dialogs.enemyShowsUp,monster.monsterStatus.playerName);
+        HUD.Instance.battleDialogUI.text = string.Format(Dialogs.enemyShowsUp,monster.getName());
         yield return new WaitForSeconds(startBattleTime);
         state = BattleState.PlayerTurn;
 
@@ -289,7 +289,7 @@ public class BattleSystem : Singleton<BattleSystem>
 
     IEnumerator EnemyTurn()
     {
-        HUD.Instance.battleDialogUI.text = string.Format(Dialogs.enemyAttack, monster.monsterStatus.playerName);
+        HUD.Instance.battleDialogUI.text = string.Format(Dialogs.enemyAttack, monster.getName());
         yield return new WaitForSeconds(1f);
         bool attackSucceed = true;
         bool missReflect = false;
@@ -345,7 +345,7 @@ public class BattleSystem : Singleton<BattleSystem>
             //        player.restoreMana(info.getEffectValue);
             //        break;
             //}
-            yield return StartCoroutine(yieldAndShowText(string.Format(selectedAbilityInfo.description, monster.monsterStatus.playerName, selectedAbilityInfo.getDamage)));
+            yield return StartCoroutine(yieldAndShowText(string.Format(selectedAbilityInfo.description, monster.getName(), selectedAbilityInfo.getDamage)));
         }
         else
         {
@@ -407,12 +407,12 @@ public class BattleSystem : Singleton<BattleSystem>
         if (value < monster.monsterStatus.absorbRate)
         {
 
-            yield return StartCoroutine( yieldAndShowText(string.Format(Dialogs.absorbSuccess, monster.monsterStatus.playerName)));
+            yield return StartCoroutine( yieldAndShowText(string.Format(Dialogs.absorbSuccess, monster.getName())));
            // yield return StartCoroutine(yieldAndShowText(string.Format(selectedAbilityInfo.description, monster.monsterStatus.playerName, selectedAbilityInfo.getDamage)));
 
 
             string abosrbText = AbilityManager.Instance.addExp(monster.getAbsorbId(), monster.monsterStatus.absorbExp);
-            yield return StartCoroutine(yieldAndShowText(abosrbText));
+            yield return StartCoroutine(yieldAndShowText(abosrbText, 4));
             //end game
             state = BattleState.Absorb;
             //
@@ -421,7 +421,7 @@ public class BattleSystem : Singleton<BattleSystem>
         }
         else
         {
-            yield return StartCoroutine(yieldAndShowText(string.Format( Dialogs.absorbFailed,monster.monsterStatus.playerName)));
+            yield return StartCoroutine(yieldAndShowText(string.Format( Dialogs.absorbFailed,monster.getName())));
         }
 
         GameEventMessage.SendEvent("Action");

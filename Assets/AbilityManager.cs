@@ -80,7 +80,7 @@ public class AbilityManager : Singleton<AbilityManager>
         else
         {
             abilityExp[abilityId] += exp;
-            string res = string.Format(Dialogs.abilityExpAdd, info.actionName, exp);
+            string res = string.Format(Dialogs.abilityExpAdd, exp, info.actionName);
             if (upgradeExp[abilityLevel[abilityId]] <= abilityExp[abilityId])
             {
                 abilityExp[abilityId] -= upgradeExp[abilityLevel[abilityId]];

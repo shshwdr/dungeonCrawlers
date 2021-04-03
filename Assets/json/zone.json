@@ -5,7 +5,9 @@
         "zoneId": "tutorial",
         "zoneName": "grassland",
         "zoneMonsters":[
-          {"monsterId":"Bat", "level":1,"color":"white","rate":1}
+          {"monsterId":"Bat", "level":1,"color":0,"rate":1},
+          {"monsterId":"Bat", "level":1,"color":1,"rate":1},
+          {"monsterId":"Bat", "level":1,"color":2,"rate":1}
         ]
       }
     ]

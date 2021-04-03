@@ -226,15 +226,15 @@
     [
       {
         "playerName": "Bat",
-        "color":0,
+        "color":1,
         "absorbAbility":"Focus"
       },{
         "playerName": "Bat",
-        "color":1,
+        "color":2,
         "absorbAbility":"Tiny Tornado"
       },{
         "playerName": "Bat",
-        "color":2,
+        "color":0,
         "absorbAbility":"Heat Breath"
       },
       {

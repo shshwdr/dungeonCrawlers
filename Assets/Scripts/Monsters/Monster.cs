@@ -10,6 +10,7 @@ public class Monster : HPObject
     float awakeRange;
     public int level = 1;
     public int color = 0;
+    public string displayName;
     Animator animator;
     public GameObject battleCamera;
     public GameObject attackCamera;
@@ -28,7 +29,7 @@ public class Monster : HPObject
 
     public string getName()
     {
-        return status.playerName;
+        return displayName;
     }
     public string getAbsorbId()
     {
@@ -153,6 +154,7 @@ public class Monster : HPObject
         stateUI.updateLevel("Level: "+level);
         updateBuffUI();
         base.initStatusUI();
+        stateUI.updateName(getName());
     }
 
 
