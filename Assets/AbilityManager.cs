@@ -17,7 +17,57 @@ public class AbilityInfo : ActionInfo
     public bool applyOnSelf;
     public int getMana { get { return mana[level]; } }
     public int getDamage { get { return damage[level]; } }
+    public int getNextDamage { get { return damage[level+1]; } }
     public int getEffectValue { get { return effectValue[level]; } }
+    public int getNextEffectValue { get { return effectValue[level+1]; } }
+    public bool isUnlocked { get { return AbilityManager.Instance.isAbilityUnlocked(actionId); } }
+    public string getAbilityDetails
+    {
+        get
+        {
+            string text = "";
+            if (descriptionType == "attack")
+            {
+
+                text = string.Format(description, BattleSystem.Instance.getPlayerDamage(this));
+            }
+            else if (descriptionType == "attackEffect")
+            {
+
+                text = string.Format(description, BattleSystem.Instance.getPlayerDamage(this), getEffectValue);
+            }
+            else if (descriptionType == "effect")
+            {
+
+                text = string.Format(description, getEffectValue);
+            }
+            return text;
+        }
+    }
+
+    public string getNextLevelAbilityDetails
+    {
+        get
+        {
+            string text = "";
+            if (descriptionType == "attack")
+            {
+
+                text = string.Format(description, BattleSystem.Instance.getPlayerDamage(this,true));
+            }
+            else if (descriptionType == "attackEffect")
+            {
+
+                text = string.Format(description, BattleSystem.Instance.getPlayerDamage(this, true), getNextEffectValue);
+            }
+            else if (descriptionType == "effect")
+            {
+
+                text = string.Format(description, getNextEffectValue);
+            }
+            return text;
+        }
+    }
 
 }
 public class AbilityManager : Singleton<AbilityManager>
@@ -28,19 +78,19 @@ public class AbilityManager : Singleton<AbilityManager>
     GameObject buttonPrefab;
     [SerializeField]
     Transform buttonsParent;
-    Dictionary<string, AbilityInfo> actionDictionary = new Dictionary<string, AbilityInfo>();
+    public Dictionary<string, AbilityInfo> abilityDict = new Dictionary<string, AbilityInfo>();
 
-    int[] upgradeExp = new int[] { 0,100, 150 };
+    public int[] upgradeExp = new int[] { 100, 150 };
 
-    Dictionary<string, int> abilityLevel = new Dictionary<string, int>();
-    Dictionary<string, int> abilityExp = new Dictionary<string, int>();
+    public Dictionary<string, int> abilityLevel = new Dictionary<string, int>();
+    public Dictionary<string, int> abilityExp = new Dictionary<string, int>();
     Dictionary<string, ActionButton> abilityButtons = new Dictionary<string, ActionButton>();
 
     // Start is called before the first frame update
     void Start()
     {
         AllActionInfo allActionInfoList = JsonUtility.FromJson<AllActionInfo>(jsonFile.text);
-        actionDictionary = allActionInfoList.abilityInfos.ToDictionary(x => x.actionId, x => x);
+        abilityDict = allActionInfoList.abilityInfos.ToDictionary(x => x.actionId, x => x);
         //this might change for each battle
         foreach (var actionInfo in allActionInfoList.abilityInfos)
         {
@@ -53,26 +103,37 @@ public class AbilityManager : Singleton<AbilityManager>
             actionButton.Init(actionInfo);
             abilityButtons[actionInfo.actionId] = actionButton;
             button.SetActive(false);
-            abilityLevel[actionInfo.actionId] = 0;
+            abilityLevel[actionInfo.actionId] = -1;
+
+            //test
+            //if(actionInfo.actionId == "Focus" || actionInfo.actionId == "Tiny Tornado" || actionInfo.actionId == "Heat Breath")
+            //{
+
+            //    abilityLevel[actionInfo.actionId] = 0;
+            //}
+
             abilityExp[actionInfo.actionId] = 0;
         }
     }
 
     public bool isAbilityUnlocked(string abilityId)
     {
-        return abilityLevel[abilityId] > 0;
+        return abilityLevel[abilityId] >= 0;
     }
-
+    public bool isAbilityAtMaxLevel(string abilityId)
+    {
+        return abilityLevel[abilityId] == upgradeExp.Length;
+    }
     public string addExp(string abilityId, int exp)
     {
-        var info = actionDictionary[abilityId];
-        if (abilityLevel[abilityId] == 0)
+        var info = abilityDict[abilityId];
+        if (!isAbilityUnlocked(abilityId))
         {
             abilityLevel[abilityId] = 1;
             abilityButtons[abilityId].gameObject.SetActive(true);
             return string.Format(Dialogs.unlockAbility, info.actionName);
         }
-        else if(abilityLevel[abilityId] == upgradeExp.Length)
+        else if(isAbilityAtMaxLevel(abilityId))
         {
 
             return string.Format(Dialogs.abilityMax, info.actionName);

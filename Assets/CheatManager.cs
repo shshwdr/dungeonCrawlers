@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CheatManager : MonoBehaviour
+public class CheatManager : Singleton<CheatManager>
 {
+    public bool defeiniteAbsorb;
     // Start is called before the first frame update
     void Start()
     {

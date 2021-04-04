@@ -67,7 +67,6 @@ public class BattleSystem : Singleton<BattleSystem>
             FModSoundManager.Instance.GetIntoBattle();
 
             monster = m;
-            player = p;
             state = BattleState.Start;
             StartCoroutine( SetupBattle());
 
@@ -94,9 +93,9 @@ public class BattleSystem : Singleton<BattleSystem>
         StartCoroutine( PlayerTurn());
     }
 
-    public int getPlayerDamage(AbilityInfo info)
+    public int getPlayerDamage(AbilityInfo info, bool isNextLevel = false)
     {
-        return player.getDamageValue(info, player, monster);
+        return player.getDamageValue(info, player, monster,isNextLevel);
     }
 
     void addEffect(Dictionary<string, BuffInfo> buffDict, AbilityInfo info)
@@ -409,13 +408,13 @@ public class BattleSystem : Singleton<BattleSystem>
 
     public IEnumerator OnAbsorb()
     {
-       // GameEventMessage.SendEvent("StopAction");
+        GameEventMessage.SendEvent("StopAction");
 
         //show particle effect
         //check possibility
         var value = Random.value;
         showParticleEffect("Absorb");
-        if (value < monster.monsterStatus.absorbRate)
+        if (value < monster.monsterStatus.absorbRate || CheatManager.Instance.defeiniteAbsorb)
         {
 
             yield return StartCoroutine( yieldAndShowText(string.Format(Dialogs.absorbSuccess, monster.getName())));
@@ -433,10 +432,9 @@ public class BattleSystem : Singleton<BattleSystem>
         else
         {
             yield return StartCoroutine(yieldAndShowText(string.Format( Dialogs.absorbFailed,monster.getName())));
+            GameEventMessage.SendEvent("Action");
         }
 
-        GameEventMessage.SendEvent("Action");
-        yield return new WaitForSeconds(0.1f);
     }
 
     void EndBattle()

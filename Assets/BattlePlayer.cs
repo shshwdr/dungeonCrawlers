@@ -18,6 +18,7 @@ public class BattlePlayer : HPObject
         base.Start();
         Init(BattleCharacters.Instance.playerStatus);
         currentSP = playerStatus.mana;
+        BattleSystem.Instance.player = this;
 
     }
     protected override void Init(BattleCharacterStatus s)

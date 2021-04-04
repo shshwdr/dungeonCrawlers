@@ -22,7 +22,7 @@ public class Dialogs : MonoBehaviour
     //ability
     public static string unlockAbility = "You unlocked ability 	<color=red>{0}</color>.";
     public static string abilityMax = "Your ability <color=red>{0}</color> is at max level.";
-    public static string abilityExpAdd = "You earned <color=red>{0}</color> for ability <color=red>{0}</color>.";
+    public static string abilityExpAdd = "You earned <color=red>{0}</color> for ability <color=red>{1}</color>.";
     public static string abilityLevelUp = " Your ability <color=red>{0}</color> level up!";
 
     //absorb

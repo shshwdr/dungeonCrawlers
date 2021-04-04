@@ -108,27 +108,36 @@ public class HPObject : MonoBehaviour
     }
     // Update is called once per frame
 
-    public int getDamageValue(AbilityInfo info, HPObject attacker, HPObject attackee)
+    public int getDamageValue(AbilityInfo info, HPObject attacker, HPObject attackee, bool isNextLevel = false)
     {
         //get info attack
         float abilityAttack = info.getDamage;
+        if (isNextLevel)
+        {
+            abilityAttack = info.getNextDamage;
+        }
 
         if (info.abilityType == "physical")
         {
             //apply attacker atk
             abilityAttack = (1 + attacker.getAttack() * 0.01f) * abilityAttack;
             //apply attackee def
-            var attackeeDef = attackee.getDef();
-
-            // check if player has increaseBDef buff on it
-            attackeeDef += BattleSystem.Instance.getBuffValue(attackee, "increaseBDef");
-
-            //if attack ignore def
-            if (info.effectType == "ignoreDef")
+            var attackeeDef = 0;
+            if (attackee)
             {
-                attackeeDef -= info.getEffectValue;
+
+                attackee.getDef();
+
+                // check if player has increaseBDef buff on it
+                attackeeDef += BattleSystem.Instance.getBuffValue(attackee, "increaseBDef");
+
+                //if attack ignore def
+                if (info.effectType == "ignoreDef")
+                {
+                    attackeeDef -= info.getEffectValue;
+                }
+                attackeeDef = Mathf.Clamp(attackeeDef, 0, 50);
             }
-            attackeeDef = Mathf.Clamp(attackeeDef, 0, 50);
             abilityAttack = (1 - attackeeDef * 0.01f) * abilityAttack;
         }
         else if (info.abilityType == "magical")
@@ -136,19 +145,24 @@ public class HPObject : MonoBehaviour
             //apply attacker atk
             abilityAttack = (1 + attacker.getMagic() * 0.01f) * abilityAttack;
             //apply attackee def
-            var attackeeDef = attackee.getMagDef();
-
-            attackeeDef -= BattleSystem.Instance.getBuffValue(attackee, "removeMDef");
-
-            // check if player has increaseBDef buff on it
-            attackeeDef += BattleSystem.Instance.getBuffValue(attackee, "increaseBDef");
-            
-            //if attack ignore def
-            if (info.effectType == "ignoreDef")
+            var attackeeDef = 0;
+            if (attackee)
             {
-                attackeeDef -= info.getEffectValue;
+                attackee.getMagDef();
+
+                attackeeDef -= BattleSystem.Instance.getBuffValue(attackee, "removeMDef");
+
+                // check if player has increaseBDef buff on it
+                attackeeDef += BattleSystem.Instance.getBuffValue(attackee, "increaseBDef");
+
+                //if attack ignore def
+                if (info.effectType == "ignoreDef")
+                {
+                    attackeeDef -= info.getEffectValue;
+                }
+                attackeeDef = Mathf.Clamp(attackeeDef, 0, 50);
             }
-            attackeeDef = Mathf.Clamp(attackeeDef, 0, 50); 
+            
             abilityAttack = (1 - attackeeDef * 0.01f) * abilityAttack;
         }
 

@@ -12,8 +12,23 @@ public class ActionInfo
     public string doActionDesc;
     public string descriptionType;
     public int[] cost;
-    public int level;
-    public int getCost { get { return cost[level]; } }
+    public int level
+    {
+        get
+        {
+            var lev = 0;
+            if (this is AbilityInfo)
+            {
+                if(actionId == "Attack")
+                {
+                    return 0;
+                }
+                return AbilityManager.Instance.abilityLevel[actionId];
+            }
+            return lev;
+        }
+    }
+    public int getCost { get {return cost[level]; } }
 }
 
 [Serializable]
