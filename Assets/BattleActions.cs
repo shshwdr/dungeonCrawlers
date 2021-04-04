@@ -19,11 +19,11 @@ public class ActionInfo
             var lev = 0;
             if (this is AbilityInfo)
             {
-                if(actionId == "Attack")
+                if(AbilityManager.Instance.abilityLevel.ContainsKey(actionId))
                 {
-                    return 0;
+
+                    return AbilityManager.Instance.abilityLevel[actionId];
                 }
-                return AbilityManager.Instance.abilityLevel[actionId];
             }
             return lev;
         }

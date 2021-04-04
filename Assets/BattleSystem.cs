@@ -149,17 +149,14 @@ public class BattleSystem : Singleton<BattleSystem>
             GameObject effect = Instantiate(effectPrefab, monster.transform.position + effectPrefab.transform.position, effectPrefab.transform.rotation);
         }
     }
-
-    IEnumerator PlayerUseAbility(AbilityInfo info)
+    void applyEffect(AbilityInfo info, HPObject attacker)
     {
-        //damage
-        HUD.Instance.battleDialogUI.text = Dialogs.playerBasicAttack;
 
-
+        bool isPlayer = attacker is BattlePlayer;
         //add effect
         if (info.effectRound >= 0)
         {
-            if (info.applyOnSelf)
+            if (info.applyOnSelf== isPlayer)
             {
                 addEffect(playerBuffDict, info);
             }
@@ -174,12 +171,23 @@ public class BattleSystem : Singleton<BattleSystem>
             switch (info.effectType)
             {
                 case "restoreMana":
-                    player.restoreMana(info.getEffectValue);
+
+                    ((BattlePlayer)attacker).restoreMana(info.getEffectValue);
+                    break;
+                case "healPercent":
+                    attacker.heal(info.getEffectValue * attacker.getMaxHp()/100);
                     break;
             }
         }
+    }
+    IEnumerator PlayerUseAbility(AbilityInfo info)
+    {
+        //damage
+        HUD.Instance.battleDialogUI.text = Dialogs.playerBasicAttack;
 
-        if(info.descriptionType == "effect")
+        applyEffect(info, player);
+
+        if (info.descriptionType == "effect")
         {
             //this spell only has effect
         }
@@ -301,77 +309,89 @@ public class BattleSystem : Singleton<BattleSystem>
     {
         HUD.Instance.battleDialogUI.text = string.Format(Dialogs.enemyAttack, monster.getName());
         yield return new WaitForSeconds(1f);
-        bool attackSucceed = true;
-        bool missReflect = false;
-        //check if failAndReflectHalf valid
-        int missReflectChance = getBuffValue(monster, "failAndReflectHalf");
-        if (missReflectChance > 0)
+
+
+        var abilities = monster.monsterStatus.ability;
+
+        List<int> monsterRates = new List<int>();
+        foreach (var zoneMonsterInfo in abilities)
         {
-            removeBuff(monster, "failAndReflectHalf");
-            var rand = Random.Range(0, 100);
-            if (rand < missReflectChance)
-            {
-                //failed
-                attackSucceed = false;
-                missReflect = true;
-            }
+            monsterRates.Add(zoneMonsterInfo.freq);
+            //var monsterInfo = BattleCharacters.Instance.monsterStatusDict[monsterId];
+            //Debug.Log("battle monster " + monsterId);
+            //BattleSystem.Instance.StartBattle(monsterId, player, monsterPosition, monsterRotation);
         }
-        //check if increaseChanceToFail valid
-        int failedChance = getBuffValue(monster, "increaseChanceToFail");
-        if (failedChance > 0)
+        var randomId = Utils.getRandomIdInDistribution(monsterRates);
+        var selectedAbility = abilities[randomId];
+        var selectedAbilityInfo = MonsterAbilityManager.Instance.abilityDictionary[selectedAbility.abilityName];
+
+        if (selectedAbilityInfo.descriptionType == "attack")
         {
-            removeBuff(monster, "increaseChanceToFail");
-            var rand = Random.Range(0, 100);
-            if (rand < failedChance)
+            bool attackSucceed = true;
+            bool missReflect = false;
+            //check if failAndReflectHalf valid
+            int missReflectChance = getBuffValue(monster, "failAndReflectHalf");
+            if (missReflectChance > 0)
             {
-                //failed
-                attackSucceed = false;
+                removeBuff(monster, "failAndReflectHalf");
+                var rand = Random.Range(0, 100);
+                if (rand < missReflectChance)
+                {
+                    //failed
+                    attackSucceed = false;
+                    missReflect = true;
+                }
             }
-        }
-        if (attackSucceed)
-        {
-
-            //randomly pick one skill
-            var abilities = monster.monsterStatus.ability;
-
-            List<int> monsterRates = new List<int>();
-            foreach (var zoneMonsterInfo in abilities)
+            //check if increaseChanceToFail valid
+            int failedChance = getBuffValue(monster, "increaseChanceToFail");
+            if (failedChance > 0)
             {
-                monsterRates.Add(zoneMonsterInfo.freq);
-                //var monsterInfo = BattleCharacters.Instance.monsterStatusDict[monsterId];
-                //Debug.Log("battle monster " + monsterId);
-                //BattleSystem.Instance.StartBattle(monsterId, player, monsterPosition, monsterRotation);
+                removeBuff(monster, "increaseChanceToFail");
+                var rand = Random.Range(0, 100);
+                if (rand < failedChance)
+                {
+                    //failed
+                    attackSucceed = false;
+                }
             }
-            var randomId = Utils.getRandomIdInDistribution(monsterRates);
-            var selectedAbility = abilities[randomId];
-            var selectedAbilityInfo = MonsterAbilityManager.Instance.abilityDictionary[selectedAbility.abilityName];
-
-            int damageValue = monster.getDamageValue(selectedAbilityInfo, monster, player);
-            monster.attack(player, damageValue);
-            ////instant effect
-            //switch (info.effectType)
-            //{
-            //    case "restoreMana":
-            //        player.restoreMana(info.getEffectValue);
-            //        break;
-            //}
-            yield return StartCoroutine(yieldAndShowText(string.Format(selectedAbilityInfo.description, monster.getName(), selectedAbilityInfo.getDamage)));
-        }
-        else
-        {
-            if (missReflect)
+            if (attackSucceed)
             {
 
-                //missed and reflect
-                yield return StartCoroutine(yieldAndShowText(string.Format(Dialogs.attackFailedAndReflect, player.playerStatus.playerName)));
+                int damageValue = monster.getDamageValue(selectedAbilityInfo, monster, player);
+                monster.attack(player, damageValue);
+                ////instant effect
+                //switch (info.effectType)
+                //{
+                //    case "restoreMana":
+                //        player.restoreMana(info.getEffectValue);
+                //        break;
+                //}
+                yield return StartCoroutine(yieldAndShowText(string.Format(selectedAbilityInfo.description, monster.getName(), selectedAbilityInfo.getDamage)));
             }
             else
             {
+                if (missReflect)
+                {
 
-                //missed
-                yield return StartCoroutine(yieldAndShowText(string.Format(Dialogs.attackFailed, player.playerStatus.playerName)));
+                    //missed and reflect
+                    yield return StartCoroutine(yieldAndShowText(string.Format(Dialogs.attackFailedAndReflect, player.playerStatus.playerName)));
+                }
+                else
+                {
+
+                    //missed
+                    yield return StartCoroutine(yieldAndShowText(string.Format(Dialogs.attackFailed, player.playerStatus.playerName)));
+                }
             }
         }
+        else
+        {
+            applyEffect(selectedAbilityInfo, monster);
+            yield return StartCoroutine(yieldAndShowText(string.Format(selectedAbilityInfo.description, monster.getName())));
+        }
+
+
+        
 
 
         yield return new WaitForSeconds(1f);
