@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class BattlePlayer : HPObject
 {
+    public Vector3 originPosition;
     public BattlePlayerStatus playerStatus;
 
 
@@ -13,7 +14,7 @@ public class BattlePlayer : HPObject
     protected override void Start()
     {
 
-
+        originPosition = transform.position;
         stateUI = HUD.Instance.playerUI;
         base.Start();
         Init(BattleCharacters.Instance.playerStatus);
@@ -112,6 +113,16 @@ public class BattlePlayer : HPObject
         stateUI.updateMaxSP(getMana());
         updateBuffUI();
         base.initStatusUI();
+    }
+
+    public void Reset()
+    {
+        transform.position = originPosition;
+        GetComponent<GridMovement>().Reset();
+    }
+    public void revive()
+    {
+        isDead = false;
     }
 
 }

@@ -26,4 +26,9 @@ public class Door : Interactable
         isInteracting = true;
         DialogueManager.ShowAlert("Kill Guardian to pass", showTime);
     }
+
+    public void OpenDoor()
+    {
+        Destroy(gameObject);
+    }
 }

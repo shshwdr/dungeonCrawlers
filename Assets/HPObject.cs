@@ -49,15 +49,16 @@ public class HPObject : MonoBehaviour
     public virtual void heal(int value)
     {
         currentHP += value;
-        currentHP = Mathf.Clamp(currentHP, 0, status.hp);
+        currentHP = Mathf.Clamp(currentHP, 0, getMaxHp());
 
         updateStatusUI();
     }
 
     public virtual void healPercent(int value)
     {
+
         currentHP += value*getMaxHp()/100;
-        currentHP = Mathf.Clamp(currentHP, 0, status.hp);
+        currentHP = Mathf.Clamp(currentHP, 0, getMaxHp());
 
         updateStatusUI();
     }
@@ -66,6 +67,7 @@ public class HPObject : MonoBehaviour
     public virtual void takeDamage(int damage )
     {
         currentHP -= damage;
+        currentHP = Mathf.Clamp(currentHP, 0, getMaxHp());
         updateStatusUI();
 
         if (currentHP <= 0)

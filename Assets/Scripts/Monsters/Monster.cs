@@ -91,7 +91,7 @@ public class Monster : HPObject
 
     public  override void takeDamage(int damage)
     {
-        attackCamera.SetActive(true);
+        //attackCamera.SetActive(true);
         if (!GameManager.Instance.enemyImmortal)
         {
             base.takeDamage(damage);
@@ -102,7 +102,7 @@ public class Monster : HPObject
     public void finishDamage()
     {
 
-        attackCamera.SetActive(false);
+        //attackCamera.SetActive(false);
     }
 
     protected override void die()
@@ -112,6 +112,20 @@ public class Monster : HPObject
         animator.SetTrigger("die");
     }
 
+    public void fullyDie()
+    {
+        animator.SetTrigger("fullyDie");
+    }
+
+    public void startAttackCamera()
+    {
+        attackCamera.gameObject.SetActive(true);
+    }
+    public void finishAttackCamera()
+    {
+        attackCamera.gameObject.SetActive(false);
+    }
+
     public override void attack(HPObject attakee, int damage)
     {
         //base.attack(attakee);
@@ -119,7 +133,7 @@ public class Monster : HPObject
 
 
         attakee.takeDamage(damage);
-        battleCamera.SetActive(true);
+        //battleCamera.SetActive(true);
         var rand = Random.Range(0, 2);
         if(rand == 0)
         {

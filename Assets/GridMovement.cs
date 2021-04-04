@@ -22,16 +22,22 @@ public class GridMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        player = GetComponent<BattlePlayer>();
+        Reset();
+    }
+
+    public void Reset()
+    {
+
         currentDirection = up;
         nextPos = Vector3.forward;
         destination = transform.position;
-        player = GetComponent<BattlePlayer>();
     }
-   
+
     // Update is called once per frame
     void Update()
     {
-        if (BattleSystem.Instance.isInBattle || ShopManager.Instance.isInShop)
+        if (BattleSystem.Instance.isInBattle || ShopManager.Instance.isInShop || player.isDead)
         {
             return;
         }

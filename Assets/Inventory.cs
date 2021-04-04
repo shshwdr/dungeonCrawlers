@@ -90,6 +90,12 @@ public class Inventory : Singleton<Inventory>
         currentCurrency += value;
         ShopMenu.Instance. updateCoin();
     }
+
+    public void lossCurrency(float value)
+    {
+        currentCurrency =( int)(currentCurrency*(1-value));
+        ShopMenu.Instance.updateCoin();
+    }
     public bool canPurchase(PurchaseItem item)
     {
 

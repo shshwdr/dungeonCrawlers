@@ -1,5 +1,79 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8844098991273866752
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea08aeacce5dcd746b2f00e10a995b72, type: 3}
+  m_Name: PortalNode
+  m_EditorClassIdentifier: 
+  ErrorNodeNameIsEmpty: 0
+  ErrorDuplicateNameFoundInGraph: 0
+  m_inputSockets: []
+  m_outputSockets:
+  - m_connectionMode: 0
+    m_connections:
+    - m_inputConnectionPoint: {x: 202, y: 4}
+      m_outputConnectionPoint: {x: -2, y: 4}
+      m_id: 509de859-ccbe-462d-b8ec-22eccbc72c22
+      m_inputNodeId: 4f01632d-308f-4a07-bf45-31c28329cddb
+      m_inputSocketId: 9c67065d-3d3d-4789-870e-ac9e6a5ef90f
+      m_outputNodeId: ed771ab4-98f1-4fec-abde-431446eb75d2
+      m_outputSocketId: 36ffe095-92c4-4c2b-b665-8b84a21c5259
+    m_connectionPoints:
+    - {x: -2, y: 4}
+    - {x: 202, y: 4}
+    m_direction: 1
+    m_canBeDeleted: 0
+    m_canBeReordered: 0
+    m_curveModifier: 0
+    m_height: 24
+    m_width: 216
+    m_x: 0
+    m_y: 38
+    m_id: 36ffe095-92c4-4c2b-b665-8b84a21c5259
+    m_nodeId: ed771ab4-98f1-4fec-abde-431446eb75d2
+    m_socketName: OutputSocket_0
+    m_value: '{}'
+    m_valueTypeQualifiedName: Doozy.Engine.Nody.Connections.PassthroughConnection,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_nodeType: 5
+  m_allowDuplicateNodeName: 0
+  m_allowEmptyNodeName: 0
+  m_canBeDeleted: 1
+  m_debugMode: 0
+  m_useFixedUpdate: 0
+  m_useLateUpdate: 0
+  m_useUpdate: 0
+  m_height: 132
+  m_width: 216
+  m_x: 624
+  m_y: 12
+  m_minimumInputSocketsCount: 1
+  m_minimumOutputSocketsCount: 1
+  m_graphId: 215106a5-2532-4d6f-8131-8724e49513e4
+  m_id: ed771ab4-98f1-4fec-abde-431446eb75d2
+  m_name: ExitGameOver GameEvent
+  m_notes: 
+  ErrorNotListeningForAnyGameEvent: 0
+  m_gameEvent: ExitGameOver
+  ListenFor: 0
+  AnyValue: 0
+  UIViewTriggerAction: 1
+  ViewCategory: General
+  ViewName: Unnamed
+  UIButtonTriggerAction: 0
+  ButtonCategory: General
+  ButtonName: Unnamed
+  UIDrawerTriggerAction: 0
+  DrawerName: Unnamed
+  CustomDrawerName: 0
+  SwitchBackMode: 0
 --- !u!114 &-5982738871536725143
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -99,6 +173,80 @@ MonoBehaviour:
   m_onEnterHideViews: []
   m_onExitShowViews: []
   m_onExitHideViews: []
+--- !u!114 &-5424593469818468391
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea08aeacce5dcd746b2f00e10a995b72, type: 3}
+  m_Name: PortalNode
+  m_EditorClassIdentifier: 
+  ErrorNodeNameIsEmpty: 0
+  ErrorDuplicateNameFoundInGraph: 0
+  m_inputSockets: []
+  m_outputSockets:
+  - m_connectionMode: 0
+    m_connections:
+    - m_inputConnectionPoint: {x: -2, y: 4}
+      m_outputConnectionPoint: {x: 202, y: 4}
+      m_id: 287a6744-a303-4ebb-b3fa-5450273feb23
+      m_inputNodeId: 2de65816-b1e2-4c9f-941b-f01575933ed4
+      m_inputSocketId: 5a765235-ffe8-4f38-bebe-014508ca563d
+      m_outputNodeId: 7ed4bec6-96c5-4d2c-b150-1076e7da2c0f
+      m_outputSocketId: e893fac4-8eb0-41e4-a52c-82d9f7f6ee85
+    m_connectionPoints:
+    - {x: -2, y: 4}
+    - {x: 202, y: 4}
+    m_direction: 1
+    m_canBeDeleted: 0
+    m_canBeReordered: 0
+    m_curveModifier: 0
+    m_height: 24
+    m_width: 216
+    m_x: 0
+    m_y: 38
+    m_id: e893fac4-8eb0-41e4-a52c-82d9f7f6ee85
+    m_nodeId: 7ed4bec6-96c5-4d2c-b150-1076e7da2c0f
+    m_socketName: OutputSocket_0
+    m_value: '{}'
+    m_valueTypeQualifiedName: Doozy.Engine.Nody.Connections.PassthroughConnection,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_nodeType: 5
+  m_allowDuplicateNodeName: 0
+  m_allowEmptyNodeName: 0
+  m_canBeDeleted: 1
+  m_debugMode: 0
+  m_useFixedUpdate: 0
+  m_useLateUpdate: 0
+  m_useUpdate: 0
+  m_height: 132
+  m_width: 216
+  m_x: 628.593
+  m_y: 131.34932
+  m_minimumInputSocketsCount: 1
+  m_minimumOutputSocketsCount: 1
+  m_graphId: 215106a5-2532-4d6f-8131-8724e49513e4
+  m_id: 7ed4bec6-96c5-4d2c-b150-1076e7da2c0f
+  m_name: GameOver GameEvent
+  m_notes: 
+  ErrorNotListeningForAnyGameEvent: 0
+  m_gameEvent: GameOver
+  ListenFor: 0
+  AnyValue: 0
+  UIViewTriggerAction: 1
+  ViewCategory: General
+  ViewName: Unnamed
+  UIButtonTriggerAction: 0
+  ButtonCategory: General
+  ButtonName: Unnamed
+  UIDrawerTriggerAction: 0
+  DrawerName: Unnamed
+  CustomDrawerName: 0
+  SwitchBackMode: 0
 --- !u!114 &-4284860492579882997
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -739,11 +887,14 @@ MonoBehaviour:
   - {fileID: -887767096655542493}
   - {fileID: 6484802347737809307}
   - {fileID: 6892975655844858296}
+  - {fileID: 1798532655233800434}
+  - {fileID: -5424593469818468391}
+  - {fileID: -8844098991273866752}
   m_isSubGraph: 0
   m_version: 1
   m_description: 
   m_id: 215106a5-2532-4d6f-8131-8724e49513e4
-  m_lastModified: 132619498370516780
+  m_lastModified: 132620432139812665
 --- !u!114 &418232747159559008
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -894,6 +1045,95 @@ MonoBehaviour:
   DrawerName: Unnamed
   CustomDrawerName: 0
   SwitchBackMode: 0
+--- !u!114 &1798532655233800434
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 840a439e06374673a9115ed02deb5a54, type: 3}
+  m_Name: UINode
+  m_EditorClassIdentifier: 
+  ErrorNodeNameIsEmpty: 0
+  ErrorDuplicateNameFoundInGraph: 0
+  m_inputSockets:
+  - m_connectionMode: 1
+    m_connections:
+    - m_inputConnectionPoint: {x: -2, y: 4}
+      m_outputConnectionPoint: {x: 202, y: 4}
+      m_id: 287a6744-a303-4ebb-b3fa-5450273feb23
+      m_inputNodeId: 2de65816-b1e2-4c9f-941b-f01575933ed4
+      m_inputSocketId: 5a765235-ffe8-4f38-bebe-014508ca563d
+      m_outputNodeId: 7ed4bec6-96c5-4d2c-b150-1076e7da2c0f
+      m_outputSocketId: e893fac4-8eb0-41e4-a52c-82d9f7f6ee85
+    m_connectionPoints:
+    - {x: -2, y: 4}
+    - {x: 202, y: 4}
+    m_direction: 0
+    m_canBeDeleted: 0
+    m_canBeReordered: 0
+    m_curveModifier: 0
+    m_height: 24
+    m_width: 216
+    m_x: 0
+    m_y: 38
+    m_id: 5a765235-ffe8-4f38-bebe-014508ca563d
+    m_nodeId: 2de65816-b1e2-4c9f-941b-f01575933ed4
+    m_socketName: InputSocket_0
+    m_value: '{"ButtonCategory":"General","ButtonName":"Unnamed","GameEvent":"","TimeDelay":3.0,"Trigger":0}'
+    m_valueTypeQualifiedName: Doozy.Engine.UI.Connections.UIConnection, Assembly-CSharp,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_outputSockets:
+  - m_connectionMode: 0
+    m_connections: []
+    m_connectionPoints:
+    - {x: -2, y: 4}
+    - {x: 202, y: 4}
+    m_direction: 1
+    m_canBeDeleted: 1
+    m_canBeReordered: 1
+    m_curveModifier: 0
+    m_height: 24
+    m_width: 216
+    m_x: 0
+    m_y: 62
+    m_id: 7a0f234c-7de6-43b0-942d-5ad6a9beac0a
+    m_nodeId: 2de65816-b1e2-4c9f-941b-f01575933ed4
+    m_socketName: OutputSocket_0
+    m_value: '{"ButtonCategory":"General","ButtonName":"Back","GameEvent":"","TimeDelay":3.0,"Trigger":0}'
+    m_valueTypeQualifiedName: Doozy.Engine.UI.Connections.UIConnection, Assembly-CSharp,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_nodeType: 4
+  m_allowDuplicateNodeName: 0
+  m_allowEmptyNodeName: 0
+  m_canBeDeleted: 1
+  m_debugMode: 0
+  m_useFixedUpdate: 0
+  m_useLateUpdate: 0
+  m_useUpdate: 0
+  m_height: 128
+  m_width: 216
+  m_x: 876
+  m_y: 144
+  m_minimumInputSocketsCount: 1
+  m_minimumOutputSocketsCount: 1
+  m_graphId: 215106a5-2532-4d6f-8131-8724e49513e4
+  m_id: 2de65816-b1e2-4c9f-941b-f01575933ed4
+  m_name: gameover
+  m_notes: 
+  m_onEnterShowViews:
+  - Category: Normal
+    InstantAction: 0
+    Name: GameOver
+  m_onEnterHideViews: []
+  m_onExitShowViews: []
+  m_onExitHideViews:
+  - Category: Normal
+    InstantAction: 0
+    Name: GameOver
 --- !u!114 &5222943276292031513
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1000,6 +1240,13 @@ MonoBehaviour:
       m_inputSocketId: 9c67065d-3d3d-4789-870e-ac9e6a5ef90f
       m_outputNodeId: 0b1bf534-1b1b-46c3-8259-f631d4ca5286
       m_outputSocketId: de32e154-81e2-4e19-83d8-7ed21bd2d255
+    - m_inputConnectionPoint: {x: 202, y: 4}
+      m_outputConnectionPoint: {x: -2, y: 4}
+      m_id: 509de859-ccbe-462d-b8ec-22eccbc72c22
+      m_inputNodeId: 4f01632d-308f-4a07-bf45-31c28329cddb
+      m_inputSocketId: 9c67065d-3d3d-4789-870e-ac9e6a5ef90f
+      m_outputNodeId: ed771ab4-98f1-4fec-abde-431446eb75d2
+      m_outputSocketId: 36ffe095-92c4-4c2b-b665-8b84a21c5259
     m_connectionPoints:
     - {x: -2, y: 4}
     - {x: 202, y: 4}

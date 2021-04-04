@@ -37,8 +37,8 @@
       {
         "actionId": "continue",
         "actionName": "Continue",
-        "description":"Finish your turn",
-        "doActionDesc":"You decided to move on.",
+        "description":"Finish your turn. Remaining action point will be kept(max 5)",
+        "doActionDesc":"You decided to move on. ",
         "descriptionType":"normal",
         "cost":[0]
       }

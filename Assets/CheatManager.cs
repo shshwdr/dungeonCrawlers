@@ -51,4 +51,13 @@ public class CheatManager : Singleton<CheatManager>
             BattleSystem.Instance. checkDeath();
         }
     }
+
+    public void suicide()
+    {
+        if (BattleSystem.Instance.player)
+        {
+            BattleSystem.Instance.player.takeDamage(1000);
+            BattleSystem.Instance.playerDead();
+        }
+    }
 }

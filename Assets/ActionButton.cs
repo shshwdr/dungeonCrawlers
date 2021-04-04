@@ -140,10 +140,16 @@ public class ActionButton : MonoBehaviour
         else
         {
             text = info.description;
+
         }
         if (info.getCost > 0)
         {
-            text += string.Format(Dialogs.actionCost, info.getCost);
+            var cost = info.getCost;
+            if(info.descriptionType == "absorb")
+            {
+                cost = BattleSystem.Instance.monster.monsterStatus.absorbCost;
+            }
+            text += string.Format(Dialogs.actionCost, cost);
         }
         if((info is AbilityInfo) && ((AbilityInfo)info).getMana > 0)
         {

@@ -17,3 +17,5 @@ MonoBehaviour:
   Names:
   - Shop
   - Ability
+  - GameOver
+  - Item

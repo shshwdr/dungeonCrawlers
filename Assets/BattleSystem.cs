@@ -1,4 +1,5 @@
 using Doozy.Engine;
+using PixelCrushers.DialogueSystem;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -35,6 +36,7 @@ public class BattleSystem : Singleton<BattleSystem>
     public bool isPopup;
 
     public int skillPoint;
+    public int keepSkillPoint = 5;
 
     public bool isInBattle { get { return state != BattleState.None; } }
 
@@ -318,6 +320,7 @@ public class BattleSystem : Singleton<BattleSystem>
 
     IEnumerator EnemyTurn()
     {
+        monster.startAttackCamera();
         HUD.Instance.battleDialogUI.text = string.Format(Dialogs.enemyAttack, monster.getName());
         yield return new WaitForSeconds(1f);
 
@@ -409,8 +412,7 @@ public class BattleSystem : Singleton<BattleSystem>
         if (player.isDead)
 
         {
-            state = BattleState.Lost;
-            EndBattle();
+            playerDead();
         }
         else
         {
@@ -420,15 +422,23 @@ public class BattleSystem : Singleton<BattleSystem>
             state = BattleState.PlayerTurn;
 
             monster.finishDamage();
+            monster.finishAttackCamera();
             StartCoroutine(PlayerTurn());
         }
 
     }
 
+    public void playerDead()
+    {
+        state = BattleState.Lost;
+        EndBattle();
+    }
+
     public void OnContinue()
     {
         GameEventMessage.SendEvent("StopAction");
-        setSkillPoint(0);
+        var leftPoint = Mathf.Min(skillPoint, keepSkillPoint);
+        setSkillPoint(leftPoint);
         StartCoroutine(EnemyTurn());
     }
 
@@ -453,6 +463,8 @@ public class BattleSystem : Singleton<BattleSystem>
 
 
             string abosrbText = AbilityManager.Instance.addExp(monster.getAbsorbId(), monster.monsterStatus.absorbExp);
+
+            DialogueManager.ShowAlert(abosrbText);
             yield return StartCoroutine(yieldAndShowText(abosrbText, 4));
             //end game
             state = BattleState.Absorb;
@@ -482,8 +494,6 @@ public class BattleSystem : Singleton<BattleSystem>
 
             HUD.Instance.battleDialogUI.text = Dialogs.lossBattle;
 
-            GameEventMessage.SendEvent("GameOver");
-            Revive20Health();
             StartCoroutine(cleanBattle());
         }
         else if(state == BattleState.Absorb)
@@ -495,10 +505,6 @@ public class BattleSystem : Singleton<BattleSystem>
 
     }
 
-    public void Revive20Health()
-    {
-        player.healPercent(20);
-    }
 
     struct GotReward
     {
@@ -540,6 +546,8 @@ public class BattleSystem : Singleton<BattleSystem>
         var reward = giveReward();
         var text = rewardText(reward);
         HUD.Instance.battleDialogUI.text = text;
+
+        DialogueManager.ShowAlert(text);
         yield return new WaitForSeconds(3f);
         StartCoroutine(cleanBattle());
     }
@@ -547,15 +555,8 @@ public class BattleSystem : Singleton<BattleSystem>
     IEnumerator cleanBattle()
     {
         monster.clearCamera();
-        yield return new WaitForSeconds(1f);
+        //yield return new WaitForSeconds(1f);
         GameEventMessage.SendEvent("StopBattle");
-        if (state == BattleState.Won || state == BattleState.Absorb || isPopup)
-        {
-
-            Destroy(monster.gameObject);//better way to die?
-        }
-        isPopup = false;
-        state = BattleState.None;
 
         monsterBuffDict.Clear();
         playerBuffDict.Clear();
@@ -573,6 +574,19 @@ public class BattleSystem : Singleton<BattleSystem>
         {
             FModSoundManager.Instance.GetIntoSafeZone();
         }
+        if (state == BattleState.Won || state == BattleState.Absorb || isPopup)
+        {
+            monster.fullyDie();
+            yield return new WaitForSeconds(0.5f);
+            Destroy(monster.gameObject);//better way to die?
+        }
+        if (state == BattleState.Lost)
+        {
+
+            GameEventMessage.SendEvent("GameOver");
+        }
+        state = BattleState.None;
+        isPopup = false;
     }
     void UpdateOneTypeBuff(Dictionary<string,BuffInfo> buffDict)
     {
@@ -639,8 +653,8 @@ public class BattleSystem : Singleton<BattleSystem>
 
         GameEventMessage.SendEvent("Action");
 
-        setSkillPoint(value);
-        HUD.Instance.battleDialogUI.text = string.Format(Dialogs.afterThrowDice, skillPoint);
+        updateSkillPoint(-value);
+        HUD.Instance.battleDialogUI.text = string.Format(Dialogs.afterThrowDice, value);
     }
     public void OnHeal(int value)
     {
