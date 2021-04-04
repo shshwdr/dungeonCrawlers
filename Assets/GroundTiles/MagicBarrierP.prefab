@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8277268851068137923}
   - component: {fileID: 5503956416695369699}
   - component: {fileID: 6476368503970823991}
-  m_Layer: 11
+  m_Layer: 12
   m_Name: MagicBarrier
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -127,7 +127,8 @@ GameObject:
   - component: {fileID: 4290764616868131991}
   - component: {fileID: 8629354180707375493}
   - component: {fileID: 7523807735227658652}
-  m_Layer: 11
+  - component: {fileID: 4778349672679455227}
+  m_Layer: 12
   m_Name: MagicBarrierP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -159,7 +160,7 @@ Animator:
   m_GameObject: {fileID: 4290764616868131990}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b425e5762d2587648ae9e14eadbf08ca, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -181,3 +182,15 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.5, y: 2.5, z: 2.5}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &4778349672679455227
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4290764616868131990}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8f1027458078d149951d158323be209, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -144,10 +144,22 @@ public class GridMovement : MonoBehaviour
         LayerMask wallMask = LayerMask.GetMask("Wall");
 
         LayerMask monsterMask = LayerMask.GetMask("Monster");
+        LayerMask shopMask = LayerMask.GetMask("Shop");
         LayerMask interactableMask = LayerMask.GetMask("Interactable");
-        LayerMask layerMask = wallMask | monsterMask| interactableMask;
         Debug.DrawRay(myRay.origin, myRay.direction, Color.red);
-        if (Physics.Raycast(myRay, moveStep, layerMask))
+        if (Physics.Raycast(myRay, moveStep, shopMask))
+        {
+            return false;
+        }
+        if (Physics.Raycast(myRay, moveStep, monsterMask))
+        {
+            return false;
+        }
+        if (Physics.Raycast(myRay, moveStep, interactableMask))
+        {
+            return false;
+        }
+        if (Physics.Raycast(myRay, moveStep, wallMask))
         {
             return false;
         }

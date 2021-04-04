@@ -5,9 +5,20 @@ using UnityEngine;
 
 public class Interactable:MonoBehaviour
 {
+    protected int showTime = 5;
+    protected bool isInteracting = false;
+    protected float countDown = 1;
     public virtual void Interact()
     {
 
+    }
+    void Update()
+    {
+        countDown -= Time.deltaTime;
+        if (countDown <= 0)
+        {
+            isInteracting = false;
+        }
     }
 }
 
@@ -23,9 +34,6 @@ public class Chest : Interactable
     [SerializeField]
     bool hasCollected = false;
 
-    int showTime = 5;
-    bool isInteracting = false;
-    float countDown = 1;
 
     string[] itemList = new string[]{
         "hpPotion1","hpPotion","spPotion","spPotion1"
@@ -77,11 +85,5 @@ public class Chest : Interactable
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        countDown -= Time.deltaTime;
-        if(countDown <= 0) {
-            isInteracting = false;
-        }
-    }
+    
 }

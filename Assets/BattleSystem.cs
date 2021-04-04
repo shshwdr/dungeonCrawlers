@@ -481,14 +481,23 @@ public class BattleSystem : Singleton<BattleSystem>
         {
 
             HUD.Instance.battleDialogUI.text = Dialogs.lossBattle;
-            //load game
-        }else if(state == BattleState.Absorb)
+
+            GameEventMessage.SendEvent("GameOver");
+            Revive20Health();
+            StartCoroutine(cleanBattle());
+        }
+        else if(state == BattleState.Absorb)
         {
 
             HUD.Instance.battleDialogUI.text = Dialogs.winBattle;
             StartCoroutine(cleanBattle());
         }
 
+    }
+
+    public void Revive20Health()
+    {
+        player.healPercent(20);
     }
 
     struct GotReward

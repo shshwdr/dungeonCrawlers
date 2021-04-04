@@ -54,6 +54,14 @@ public class HPObject : MonoBehaviour
         updateStatusUI();
     }
 
+    public virtual void healPercent(int value)
+    {
+        currentHP += value*getMaxHp()/100;
+        currentHP = Mathf.Clamp(currentHP, 0, status.hp);
+
+        updateStatusUI();
+    }
+
 
     public virtual void takeDamage(int damage )
     {
