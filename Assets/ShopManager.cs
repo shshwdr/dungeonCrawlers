@@ -15,7 +15,7 @@ public class PlayerPurchaseStatus : PurchaseItem
     public int[] levelValue;
     public int[] cost;
 
-    public override int getCost { get { return cost[Inventory.Instance.statusLevel[itemId] + 1]; } }
+    public override int getCost { get { return cost[Inventory.Instance.statusLevel[itemId] + 1] *Utils.currencyScale; } }
     public int getLevelValue { get { return levelValue[Inventory.Instance.statusLevel[itemId]]; } }
     public int getNextLevelValue { get { return levelValue[Inventory.Instance.statusLevel[itemId] + 1]; } }
 }

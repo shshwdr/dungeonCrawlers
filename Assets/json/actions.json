@@ -54,7 +54,7 @@
         "param":10,
         "cost":[3]
       },{
-        "actionId": "hpPotion2",
+        "actionId": "hpPotion1",
         "actionName": "HP Potion",
         "description":"Heal {0} HP",
         "doActionDesc":"You drank the healing potion.",
@@ -66,16 +66,16 @@
         "actionId": "spPotion",
         "actionName": "SP Potion",
         "description":"Restore {0} Mana",
-        "doActionDesc":"You drank the healing potion.",
+        "doActionDesc":"You drank the mana potion.",
         "descriptionType":"item",
         "param":8,
         "cost":[3]
       },
       {
-        "actionId": "spPotion2",
+        "actionId": "spPotion1",
         "actionName": "SP Potion",
         "description":"Restore {0} Mana",
-        "doActionDesc":"You drank the healing potion.",
+        "doActionDesc":"You drank the mana potion.",
         "descriptionType":"item",
         "param":15,
         "cost":[5]

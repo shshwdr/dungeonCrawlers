@@ -83,12 +83,18 @@ public class GridMovement : MonoBehaviour
             {
                 return;
             }
+            if (GetIntoInteractable(transform.forward * moveStep))
+            {
+                return;
+            }
+            
             if (ValidMove(transform.forward * moveStep))
             {
                 nextPos = transform.forward * moveStep;
                 isMoving = true;
                 destination = transform.position + nextPos;
             }
+
         }
         else if (Input.GetKeyDown(KeyCode.S))
         {
@@ -137,7 +143,8 @@ public class GridMovement : MonoBehaviour
         LayerMask wallMask = LayerMask.GetMask("Wall");
 
         LayerMask monsterMask = LayerMask.GetMask("Monster");
-        LayerMask layerMask = wallMask | monsterMask;
+        LayerMask interactableMask = LayerMask.GetMask("Interactable");
+        LayerMask layerMask = wallMask | monsterMask| interactableMask;
         Debug.DrawRay(myRay.origin, myRay.direction, Color.red);
         if (Physics.Raycast(myRay, moveStep, layerMask))
         {
@@ -161,10 +168,9 @@ public class GridMovement : MonoBehaviour
         return false;
     }
 
-    bool GetIntoLayer(Vector3 direction, string layerName)
+    bool GetIntoLayer(Vector3 direction, string layerName, out RaycastHit hit)
     {
         Ray myRay = new Ray(foot.position, direction * moveStep);
-        RaycastHit hit;
         LayerMask layerMask = LayerMask.GetMask(layerName);
         Debug.DrawRay(myRay.origin, myRay.direction, Color.red);
         if (Physics.Raycast(myRay, out hit, moveStep, layerMask))
@@ -176,10 +182,23 @@ public class GridMovement : MonoBehaviour
 
     bool GetIntoShop(Vector3 direction)
     {
-        var res = GetIntoLayer(direction, "Shop");
+        RaycastHit hit;
+        var res = GetIntoLayer(direction, "Shop",out hit);
         if (res)
         {
             ShopManager.Instance.showShopMenu();
+        }
+        return res;
+    }
+
+    bool GetIntoInteractable(Vector3 direction)
+    {
+        RaycastHit hit;
+        var res = GetIntoLayer(direction, "Interactable",out hit);
+        if (res)
+        {
+            var interactable = hit.collider.GetComponent<Interactable>();
+            interactable.Interact();
         }
         return res;
     }

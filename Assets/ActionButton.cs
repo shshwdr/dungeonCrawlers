@@ -61,6 +61,11 @@ public class ActionButton : MonoBehaviour
                     switch (itemInfo.actionId)
                     {
                         case "hpPotion":
+                        case "hpPotion1":
+                            BattleSystem.Instance.OnHeal(itemInfo.param);
+                            break;
+                        case "spPotion":
+                        case "spPotion1":
                             BattleSystem.Instance.OnHeal(itemInfo.param);
                             break;
                     }

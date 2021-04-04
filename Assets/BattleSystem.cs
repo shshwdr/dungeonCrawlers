@@ -637,6 +637,10 @@ public class BattleSystem : Singleton<BattleSystem>
     {
         player.heal(value);
     }
+    public void OnRestoreSP(int value)
+    {
+        player.restoreMana(value);
+    }
 
     public void OnAbilityButton(AbilityInfo info)
     {
