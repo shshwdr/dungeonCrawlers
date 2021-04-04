@@ -10,7 +10,7 @@ PrefabInstance:
     - target: {fileID: 1282134455992696983, guid: e8603f88925412e419c3f09bd31d5d36, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 4e01afa2a8b13134581eb487c510a76f, type: 2}
+      objectReference: {fileID: 2100000, guid: 3ff4e9345eab3504eae3be2ef1d82580, type: 2}
     - target: {fileID: 2186320428904699013, guid: e8603f88925412e419c3f09bd31d5d36, type: 3}
       propertyPath: m_Name
       value: Bat2

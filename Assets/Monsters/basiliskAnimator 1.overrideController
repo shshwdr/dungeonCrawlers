@@ -6,7 +6,7 @@ AnimatorOverrideController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: basiliskAnimator
+  m_Name: basiliskAnimator 1
   m_Controller: {fileID: 9100000, guid: ad18e1e3bc906104699c48eb7dfd95dc, type: 2}
   m_Clips:
   - m_OriginalClip: {fileID: 7400000, guid: 30808428c4200c44ca7416b9ecece63b, type: 3}
@@ -20,4 +20,6 @@ AnimatorOverrideController:
   - m_OriginalClip: {fileID: 7400000, guid: ef2ca70faa4d0dd4295aafc44ae3b860, type: 3}
     m_OverrideClip: {fileID: 4781951162920444690, guid: 8bf4b7a1098ea0b499b705b3d01ba68d, type: 3}
   - m_OriginalClip: {fileID: 7400000, guid: 7487d12a2915b2845b105fb2737e6829, type: 3}
+    m_OverrideClip: {fileID: 4781951162920444690, guid: 8bf4b7a1098ea0b499b705b3d01ba68d, type: 3}
+  - m_OriginalClip: {fileID: 7400000, guid: 812e90e54eb5aa3478f08ffbe7718e9f, type: 3}
     m_OverrideClip: {fileID: 4781951162920444690, guid: 8bf4b7a1098ea0b499b705b3d01ba68d, type: 3}

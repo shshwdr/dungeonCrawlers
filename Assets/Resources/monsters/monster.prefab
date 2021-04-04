@@ -224,7 +224,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 995486114731825333}
-  - component: {fileID: 995486114731825332}
   - component: {fileID: 995486114731825335}
   - component: {fileID: 995486114731825334}
   m_Layer: 8
@@ -252,25 +251,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
---- !u!95 &995486114731825332
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 995486114731825321}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: ca0980e90982fe6468542f951647d58c, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 1
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!65 &995486114731825335
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -301,6 +281,7 @@ MonoBehaviour:
   awakeRange: 3
   level: 1
   color: 0
+  displayName: 
   battleCamera: {fileID: 995486114989844330}
   attackCamera: {fileID: 995486114519374702}
   monsterStatus:

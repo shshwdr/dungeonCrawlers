@@ -7,7 +7,11 @@
         "zoneMonsters":[
           {"monsterId":"Bat", "level":1,"color":0,"rate":1},
           {"monsterId":"Bat", "level":1,"color":1,"rate":1},
-          {"monsterId":"Bat", "level":1,"color":2,"rate":1}
+          {"monsterId":"Bat", "level":1,"color":2,"rate":1},
+
+          {"monsterId":"Magic Slime", "level":1,"color":0,"rate":1},
+          {"monsterId":"Magic Slime", "level":1,"color":1,"rate":1},
+          {"monsterId":"Magic Slime", "level":1,"color":2,"rate":1}
         ]
       },
       {
