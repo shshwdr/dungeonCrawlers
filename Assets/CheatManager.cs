@@ -5,6 +5,17 @@ using UnityEngine;
 public class CheatManager : Singleton<CheatManager>
 {
     public bool defeiniteAbsorb;
+    public bool dontEncounter;
+
+    public void toggleDefiniteAbsorb(bool isOn)
+    {
+        defeiniteAbsorb = isOn;
+    }
+    public void toggleDontEncounter(bool isOn)
+    {
+        dontEncounter = isOn;
+    }
+
     // Start is called before the first frame update
     void Start()
     {

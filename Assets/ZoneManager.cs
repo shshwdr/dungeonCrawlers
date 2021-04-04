@@ -52,7 +52,7 @@ public class ZoneManager : Singleton<ZoneManager>
         currentStepCounter++;
         if (currentStepCounter >= meetMonterCounter)
         {
-            if (canTriggerBattle)
+            if (canTriggerBattle && !CheatManager.Instance.dontEncounter)
             {
 
                 //start popup battle

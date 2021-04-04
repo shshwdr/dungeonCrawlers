@@ -83,6 +83,17 @@ public class BattleSystem : Singleton<BattleSystem>
 
         monster.updateStatusUI();
         player.updateStatusUI();
+
+        //set up action buttons
+        if(monster.getAbsorbId() == "")
+        {
+            BattleActions.Instance.actionButtonDictionary["absorb"].gameObject.SetActive(false);
+        }
+        else
+        {
+            BattleActions.Instance.actionButtonDictionary["absorb"].gameObject.SetActive(true);
+        }
+
         //setup enemy hp?
         HUD.Instance.battleDialogUI.text = string.Format(Dialogs.enemyShowsUp,monster.getName());
         yield return new WaitForSeconds(startBattleTime);

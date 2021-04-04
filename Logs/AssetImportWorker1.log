@@ -978,3 +978,1275 @@ System memory in use after: 130.7 MB.
 Unloading 166 unused Assets to reduce memory usage. Loaded Objects now: 3498.
 Total: 4.247700 ms (FindLiveObjects: 0.348900 ms CreateObjectMapping: 0.217000 ms MarkObjects: 3.379100 ms  DeleteObjects: 0.300400 ms)
 
+========================================================================
+Received Import Request.
+  Time since last request: 16397.828970 seconds.
+  path: ProjectSettings/TagManager.asset
+  artifactKey: Guid(00000000000000003000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing ProjectSettings/TagManager.asset using Guid(00000000000000003000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5e610fdfd85d2bf40aa741ac044f44e4') in 0.035983 seconds
+  Import took 0.048991 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000812 seconds.
+  path: ProjectSettings/TagManager.asset
+  artifactKey: Guid(00000000000000003000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing ProjectSettings/TagManager.asset using Guid(00000000000000003000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5e610fdfd85d2bf40aa741ac044f44e4') in 0.005419 seconds
+  Import took 0.012404 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005067 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.63 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+System.TypeInitializationException: The type initializer for 'Doozy.Engine.Utils.DoozyPath' threw an exception. ---> System.ArgumentException: The specified path is not of a legal form (empty).
+  at System.IO.Path.InsecureGetFullPath (System.String path) [0x00025] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.IO.Path.GetFullPathInternal (System.String path) [0x00000] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.IO.FileInfo.Init (System.String fileName, System.Boolean checkHost) [0x00007] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.IO.FileInfo..ctor (System.String fileName) [0x00014] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.FileInfo..ctor(string)
+  at Doozy.Engine.Utils.DoozyPath.get_BasePath () [0x0003b] in C:\Users\csviv\Desktop\unity\test export\Assets\Doozy\Engine\Utils\DoozyPath.cs:158 
+  at Doozy.Engine.Utils.DoozyPath..cctor () [0x00000] in C:\Users\csviv\Desktop\unity\test export\Assets\Doozy\Engine\Utils\DoozyPath.cs:62 
+   --- End of inner exception stack trace ---
+  at Doozy.Editor.Internal.ProcessorsSettings.get_Instance () [0x00018] in C:\Users\csviv\Desktop\unity\test export\Assets\Doozy\Editor\Internal\ProcessorsSettings.cs:23 
+  at Doozy.Editor.Internal.DoozyAssetsProcessor.ExecuteProcessor () [0x0003f] in C:\Users\csviv\Desktop\unity\test export\Assets\Doozy\Editor\Internal\DoozyAssetsProcessor.cs:44 
+  at Doozy.Editor.Internal.DoozyAssetsProcessor..cctor () [0x00001] in C:\Users\csviv\Desktop\unity\test export\Assets\Doozy\Editor\Internal\DoozyAssetsProcessor.cs:25 
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+System.TypeInitializationException: The type initializer for 'Doozy.Engine.Utils.DoozyPath' threw an exception. ---> System.ArgumentException: The specified path is not of a legal form (empty).
+  at System.IO.Path.InsecureGetFullPath (System.String path) [0x00025] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.IO.Path.GetFullPathInternal (System.String path) [0x00000] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.IO.FileInfo.Init (System.String fileName, System.Boolean checkHost) [0x00007] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.IO.FileInfo..ctor (System.String fileName) [0x00014] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.FileInfo..ctor(string)
+  at Doozy.Engine.Utils.DoozyPath.get_BasePath () [0x0003b] in C:\Users\csviv\Desktop\unity\test export\Assets\Doozy\Engine\Utils\DoozyPath.cs:158 
+  at Doozy.Engine.Utils.DoozyPath..cctor () [0x00000] in C:\Users\csviv\Desktop\unity\test export\Assets\Doozy\Engine\Utils\DoozyPath.cs:62 
+   --- End of inner exception stack trace ---
+  at Doozy.Editor.Internal.ProcessorsSettings.get_Instance () [0x00018] in C:\Users\csviv\Desktop\unity\test export\Assets\Doozy\Editor\Internal\ProcessorsSettings.cs:23 
+  at Doozy.Editor.Internal.FoldersProcessor.ExecuteProcessor () [0x0000c] in C:\Users\csviv\Desktop\unity\test export\Assets\Doozy\Editor\Internal\FoldersProcessor.cs:20 
+  at Doozy.Editor.Internal.FoldersProcessor..cctor () [0x00001] in C:\Users\csviv\Desktop\unity\test export\Assets\Doozy\Editor\Internal\FoldersProcessor.cs:15 
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+ArgumentException: The specified path is not of a legal form (empty).
+  at System.IO.Path.InsecureGetFullPath (System.String path) [0x00025] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.IO.Path.GetFullPathInternal (System.String path) [0x00000] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.IO.FileInfo.Init (System.String fileName, System.Boolean checkHost) [0x00007] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.IO.FileInfo..ctor (System.String fileName) [0x00014] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.FileInfo..ctor(string)
+  at Doozy.Engine.Utils.DoozyPath.get_BasePath () [0x0003b] in C:\Users\csviv\Desktop\unity\test export\Assets\Doozy\Engine\Utils\DoozyPath.cs:158 
+  at Doozy.Engine.Utils.DoozyPath..cctor () [0x00000] in C:\Users\csviv\Desktop\unity\test export\Assets\Doozy\Engine\Utils\DoozyPath.cs:62 
+Rethrow as TypeInitializationException: The type initializer for 'Doozy.Engine.Utils.DoozyPath' threw an exception.
+  at Doozy.Editor.Utils.DefineSymbolsUtils+SymbolsCleaner.OnWillDeleteAsset (System.String assetPath, UnityEditor.RemoveAssetOptions options) [0x00001] in C:\Users\csviv\Desktop\unity\test export\Assets\Doozy\Editor\Utils\DefineSymbolsUtils.cs:103 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod.InternalInvoke(System.Reflection.MonoMethod,object,object[],System.Exception&)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00032] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+Rethrow as TargetInvocationException: Exception has been thrown by the target of an invocation.
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00048] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.Reflection.MethodBase.Invoke (System.Object obj, System.Object[] parameters) [0x00000] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at UnityEditor.AssetModificationProcessorInternal.OnWillDeleteAssets (System.String[] assetPaths, UnityEditor.AssetDeleteResult[] outPathDeletionResults, UnityEditor.RemoveAssetOptions options) [0x00098] in <50f55621a2ca4f31a35283e2979a8bf5>:0 
+UnityEditor.AssetDatabase:DeleteAsset(String)
+FMODUnity.Settings:CleanTemporaryFiles() (at Assets\Plugins\FMOD\src\Runtime\Settings.cs:1137)
+
+RefreshInfo: StopAssetImportingV2(NoUpdateAssetOptions) scanfilter: 
+RefreshProfiler: Total: 0.000ms
+Mono: successfully reloaded assembly
+- Completed reload, in  1.076 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.45 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1672 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 130.5 MB.
+System memory in use after: 130.7 MB.
+
+Unloading 168 unused Assets to reduce memory usage. Loaded Objects now: 3501.
+Total: 3.576100 ms (FindLiveObjects: 0.351500 ms CreateObjectMapping: 0.185700 ms MarkObjects: 2.804100 ms  DeleteObjects: 0.232900 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 149.619125 seconds.
+  path: Assets/Scenes/scene4.3.prefab
+  artifactKey: Guid(4a1359d1baf788e4ba2d32967fb2afac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/scene4.3.prefab using Guid(4a1359d1baf788e4ba2d32967fb2afac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '089df44d16de7528537edfe67f66ca74') in 0.306972 seconds
+  Import took 0.326920 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 21.290253 seconds.
+  path: Assets/Monsters/basiliskAnimator 1.overrideController
+  artifactKey: Guid(e5e86fb754986de44b8ccc207b3037da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Monsters/basiliskAnimator 1.overrideController using Guid(e5e86fb754986de44b8ccc207b3037da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '719f86b9a25aff63ea0e0e5fdc07bdbf') in 0.203586 seconds
+  Import took 0.211570 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.616325 seconds.
+  path: Assets/Monsters/ShoggothAnimator.overrideController
+  artifactKey: Guid(b30cde8d70dc36e46b71710a1e85ae12) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Monsters/ShoggothAnimator.overrideController using Guid(b30cde8d70dc36e46b71710a1e85ae12) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0a20ca6a703495e94c0d13cdad237760') in 0.025180 seconds
+  Import took 0.032650 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 22.844137 seconds.
+  path: Assets/Monsters/basiliskAnimator 1.overrideController
+  artifactKey: Guid(e5e86fb754986de44b8ccc207b3037da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Monsters/basiliskAnimator 1.overrideController using Guid(e5e86fb754986de44b8ccc207b3037da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2094109531bccb85778f84145c126c6d') in 0.017952 seconds
+  Import took 0.025597 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000375 seconds.
+  path: Assets/Monsters/ShoggothAnimator.overrideController
+  artifactKey: Guid(b30cde8d70dc36e46b71710a1e85ae12) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Monsters/ShoggothAnimator.overrideController using Guid(b30cde8d70dc36e46b71710a1e85ae12) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a99ed9402b5903a36f4c3538abec5c1b') in 0.020977 seconds
+  Import took 0.029862 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.428566 seconds.
+  path: Assets/Monsters/basiliskAnimator 1.overrideController
+  artifactKey: Guid(e5e86fb754986de44b8ccc207b3037da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Monsters/basiliskAnimator 1.overrideController using Guid(e5e86fb754986de44b8ccc207b3037da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3e719ea98c419fdd4b64fabeb644fe44') in 0.020715 seconds
+  Import took 0.028891 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 47.287670 seconds.
+  path: Assets/Resources/monsters/Shoggoth0.prefab
+  artifactKey: Guid(52b8ab8d8bcb7d64ba69b0ec269b3479) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/monsters/Shoggoth0.prefab using Guid(52b8ab8d8bcb7d64ba69b0ec269b3479) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '772228ae3ebbdc2cbcb595af180d7efd') in 0.022565 seconds
+  Import took 0.029113 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001551 seconds.
+  path: Assets/Resources/monsters/Shoggoth0.prefab
+  artifactKey: Guid(52b8ab8d8bcb7d64ba69b0ec269b3479) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/monsters/Shoggoth0.prefab using Guid(52b8ab8d8bcb7d64ba69b0ec269b3479) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '772228ae3ebbdc2cbcb595af180d7efd') in 0.006814 seconds
+  Import took 0.013226 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 70.490493 seconds.
+  path: Assets/Resources/ability/Absorb.prefab
+  artifactKey: Guid(50e34c6e8c17f4843b0532d7082b0da9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/ability/Absorb.prefab using Guid(50e34c6e8c17f4843b0532d7082b0da9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5beb094dd81d9966676cee921bd8bc84') in 0.021167 seconds
+  Import took 0.031183 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000396 seconds.
+  path: Assets/Resources/ability/CFX2_BrokenHeart.prefab
+  artifactKey: Guid(5d69f96acb8c06841ad1c2df99381c87) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/ability/CFX2_BrokenHeart.prefab using Guid(5d69f96acb8c06841ad1c2df99381c87) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '03717ee1709fbaaee3c8c5557301873c') in 0.012223 seconds
+  Import took 0.018053 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000421 seconds.
+  path: Assets/Resources/ability/CFX3 Electricity.prefab
+  artifactKey: Guid(1f1cfafbd5455c448a6cf73679689df2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/ability/CFX3 Electricity.prefab using Guid(1f1cfafbd5455c448a6cf73679689df2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5962d5b3fed4d109a6eb6ab03fb0d4f7') in 0.010729 seconds
+  Import took 0.017561 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000552 seconds.
+  path: Assets/Resources/ability/CFX3_Fire_Explosion.prefab
+  artifactKey: Guid(846472e467134504895ff4198a426ecf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/ability/CFX3_Fire_Explosion.prefab using Guid(846472e467134504895ff4198a426ecf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'df836da7ad4e3116442fe770356fedfd') in 0.011540 seconds
+  Import took 0.018686 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000540 seconds.
+  path: Assets/Resources/ability/CFX4 Sparks Explosion B.prefab
+  artifactKey: Guid(3d93c9a2db4e8ee47b164cb0f7e8e589) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/ability/CFX4 Sparks Explosion B.prefab using Guid(3d93c9a2db4e8ee47b164cb0f7e8e589) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '88eba6a82099f4b7e68d02027cddd0d7') in 0.018390 seconds
+  Import took 0.026042 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000368 seconds.
+  path: Assets/Resources/ability/CFX_Virus.prefab
+  artifactKey: Guid(8d0e045100289674a948158868d136e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/ability/CFX_Virus.prefab using Guid(8d0e045100289674a948158868d136e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00be90bd20d383647c9fe31c72e1bd16') in 0.015092 seconds
+  Import took 0.021537 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000560 seconds.
+  path: Assets/Resources/ability/Driller.prefab
+  artifactKey: Guid(291001b7a2aab0e43b7ff0cb14fce64f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/ability/Driller.prefab using Guid(291001b7a2aab0e43b7ff0cb14fce64f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '02d9af268af0b89159522b06a7eb26a5') in 0.013831 seconds
+  Import took 0.020574 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000749 seconds.
+  path: Assets/Resources/ability/Confusing Strike.prefab
+  artifactKey: Guid(3087732a95472a74690bf46211236ced) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/ability/Confusing Strike.prefab using Guid(3087732a95472a74690bf46211236ced) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '78fcadcb2740fb0956aa09dc9fb8ca9d') in 0.012474 seconds
+  Import took 0.021362 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000356 seconds.
+  path: Assets/Resources/ability/Focus.prefab
+  artifactKey: Guid(ef6d0de06ad1d0d4da0e48ce7fff9e1e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/ability/Focus.prefab using Guid(ef6d0de06ad1d0d4da0e48ce7fff9e1e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6d17b1d2a891054d8ab5e8c7786bad0e') in 0.018149 seconds
+  Import took 0.026076 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000318 seconds.
+  path: Assets/Resources/ability/Attack.prefab
+  artifactKey: Guid(29ce0e1222fe6ab4e82b9c450e40aa60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/ability/Attack.prefab using Guid(29ce0e1222fe6ab4e82b9c450e40aa60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '05f858accd6a89f0c4d72411a691d98f') in 0.010791 seconds
+  Import took 0.016216 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000507 seconds.
+  path: Assets/Resources/ability/fertilizer_.prefab
+  artifactKey: Guid(6de051598b028044faf5458a59d7591e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/ability/fertilizer_.prefab using Guid(6de051598b028044faf5458a59d7591e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a801498b0290e2f02a76f784685e8a99') in 0.011494 seconds
+  Import took 0.018843 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000487 seconds.
+  path: Assets/Resources/ability/CFX3_Hit_SmokePuff.prefab
+  artifactKey: Guid(2c44914470a70d54c890f1764851e3eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/ability/CFX3_Hit_SmokePuff.prefab using Guid(2c44914470a70d54c890f1764851e3eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7a81cd96295c32d09891beaa1b22687e') in 0.010834 seconds
+  Import took 0.016834 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000590 seconds.
+  path: Assets/Resources/ability/CFX2_Big_Splash (No Collision).prefab
+  artifactKey: Guid(11397053248083a48aef800bb2b72bb9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/ability/CFX2_Big_Splash (No Collision).prefab using Guid(11397053248083a48aef800bb2b72bb9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '28e4562427c7497c4b58d34c6e519844') in 0.011675 seconds
+  Import took 0.018264 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000422 seconds.
+  path: Assets/Resources/ability/Sticky Jelly.prefab
+  artifactKey: Guid(a100e91635dbdf8498dfb4f4fa81c427) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/ability/Sticky Jelly.prefab using Guid(a100e91635dbdf8498dfb4f4fa81c427) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6a134e6b8255d035a3fc3e620292b0b8') in 0.015131 seconds
+  Import took 0.021993 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000297 seconds.
+  path: Assets/Resources/ability/Tiny Tornado.prefab
+  artifactKey: Guid(6f30c74406a5c524ebdcb4dcc3b965f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/ability/Tiny Tornado.prefab using Guid(6f30c74406a5c524ebdcb4dcc3b965f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ef110fbef819e475b1d7b520142b263e') in 0.011052 seconds
+  Import took 0.017870 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000499 seconds.
+  path: Assets/Resources/ability/Heat Breath.prefab
+  artifactKey: Guid(e8172a315ee110346a1090bca463c6d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/ability/Heat Breath.prefab using Guid(e8172a315ee110346a1090bca463c6d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd5b92485aad4a33470e4b7a28ca60c1f') in 0.012011 seconds
+  Import took 0.018640 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000408 seconds.
+  path: Assets/Resources/ability/Spells Drain.prefab
+  artifactKey: Guid(c880deb88bd7a6c40889fc7e2cfd1ff4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/ability/Spells Drain.prefab using Guid(c880deb88bd7a6c40889fc7e2cfd1ff4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2de795adbc00631b3ee132902f6bfbfb') in 0.012162 seconds
+  Import took 0.018974 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000445 seconds.
+  path: Assets/Resources/ability/CFX2_PickupHeart.prefab
+  artifactKey: Guid(e916a516ac65b4341912fb4cc3fef5c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/ability/CFX2_PickupHeart.prefab using Guid(e916a516ac65b4341912fb4cc3fef5c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f86708be844754d2c3a5ce0e9179b229') in 0.012211 seconds
+  Import took 0.018333 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000493 seconds.
+  path: Assets/Resources/ability/Static Soul.prefab
+  artifactKey: Guid(efe815ffcbc1bc44ea78f9de7a44acc1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/ability/Static Soul.prefab using Guid(efe815ffcbc1bc44ea78f9de7a44acc1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8ca92bf04ba121c37a1e0bd8e4a0d99c') in 0.012983 seconds
+  Import took 0.019491 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000383 seconds.
+  path: Assets/Resources/ability/Lava Rock.prefab
+  artifactKey: Guid(748ab124c86fba64d97811c2f345a6c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/ability/Lava Rock.prefab using Guid(748ab124c86fba64d97811c2f345a6c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '02f2b4ef4265accc3c024558a7622f31') in 0.012667 seconds
+  Import took 0.019840 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000335 seconds.
+  path: Assets/Resources/ability/CFX4 Drill Air Hit (NO COLLISION).prefab
+  artifactKey: Guid(8dc9dda5dd525bf4896f48fba499ecfa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/ability/CFX4 Drill Air Hit (NO COLLISION).prefab using Guid(8dc9dda5dd525bf4896f48fba499ecfa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9f05691b1ea3ea8f5f3a52ca1bad8cf8') in 0.012265 seconds
+  Import took 0.018885 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000411 seconds.
+  path: Assets/Resources/ability/Slippery Shield.prefab
+  artifactKey: Guid(19076088f7a95ab40a86cc9d7aebfad5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/ability/Slippery Shield.prefab using Guid(19076088f7a95ab40a86cc9d7aebfad5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '09b54b3975baf51a76a533e28caccdb4') in 0.014132 seconds
+  Import took 0.020953 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000356 seconds.
+  path: Assets/Resources/ability/CFX_ElectricityBall.prefab
+  artifactKey: Guid(53f5e7bb1ffe83148ad6802a09283dab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/ability/CFX_ElectricityBall.prefab using Guid(53f5e7bb1ffe83148ad6802a09283dab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '06e75a04114efa33b5f52ab374820056') in 0.011676 seconds
+  Import took 0.017657 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000335 seconds.
+  path: Assets/Resources/ability/Spells Drain_.prefab
+  artifactKey: Guid(95ad57adcd2aeaa40aed0cadace14842) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/ability/Spells Drain_.prefab using Guid(95ad57adcd2aeaa40aed0cadace14842) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'afce8529078ad64086e7ad003d99ef39') in 0.011586 seconds
+  Import took 0.017178 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000330 seconds.
+  path: Assets/Resources/ability/Eye Contact.prefab
+  artifactKey: Guid(642455234e5f95d4d9869cf89dda3595) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/ability/Eye Contact.prefab using Guid(642455234e5f95d4d9869cf89dda3595) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '18e0b21a0c55eb96410a86f61c1837c5') in 0.011039 seconds
+  Import took 0.017667 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000377 seconds.
+  path: Assets/Resources/ability/Fertilizer.prefab
+  artifactKey: Guid(878afdea9011c8d43a761d3e555fa41c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/ability/Fertilizer.prefab using Guid(878afdea9011c8d43a761d3e555fa41c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '846ecbb4e997e7eb49cee679db9c51c1') in 0.012039 seconds
+  Import took 0.018353 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.781859 seconds.
+  path: Assets/Resources/monsters/Shoggoth0.prefab
+  artifactKey: Guid(52b8ab8d8bcb7d64ba69b0ec269b3479) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/monsters/Shoggoth0.prefab using Guid(52b8ab8d8bcb7d64ba69b0ec269b3479) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a2714a901e3278db390e697da7ae5982') in 0.035913 seconds
+  Import took 0.043918 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.319516 seconds.
+  path: Assets/Resources/monsters/Bat0.prefab
+  artifactKey: Guid(db0b0ffb515e67b4fa8dde4f799c6d34) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/monsters/Bat0.prefab using Guid(db0b0ffb515e67b4fa8dde4f799c6d34) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3581e2ecc45a54750afe80a02fa0965e') in 0.056281 seconds
+  Import took 0.063593 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.142848 seconds.
+  path: Assets/Resources/monsters/Bat0.prefab
+  artifactKey: Guid(db0b0ffb515e67b4fa8dde4f799c6d34) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/monsters/Bat0.prefab using Guid(db0b0ffb515e67b4fa8dde4f799c6d34) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '08b494e3b8bde08752c4f17ff7b61ba5') in 0.043542 seconds
+  Import took 0.052797 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.450538 seconds.
+  path: Assets/Resources/monsters/Bat0.prefab
+  artifactKey: Guid(db0b0ffb515e67b4fa8dde4f799c6d34) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/monsters/Bat0.prefab using Guid(db0b0ffb515e67b4fa8dde4f799c6d34) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '954ec49d9fb851ba7fcb6301d2a9fa4d') in 0.042480 seconds
+  Import took 0.050771 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.691189 seconds.
+  path: Assets/Resources/monsters/Shoggoth0.prefab
+  artifactKey: Guid(52b8ab8d8bcb7d64ba69b0ec269b3479) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/monsters/Shoggoth0.prefab using Guid(52b8ab8d8bcb7d64ba69b0ec269b3479) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '06cc495e279850e44aed3e41215cfd49') in 0.029362 seconds
+  Import took 0.037243 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.609293 seconds.
+  path: Assets/Resources/monsters/Shoggoth0.prefab
+  artifactKey: Guid(52b8ab8d8bcb7d64ba69b0ec269b3479) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/monsters/Shoggoth0.prefab using Guid(52b8ab8d8bcb7d64ba69b0ec269b3479) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'de4a4a7de1af2e573bb69c0d33cabc7f') in 0.028667 seconds
+  Import took 0.035707 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.011776 seconds.
+  path: Assets/Resources/monsters/Shoggoth0.prefab
+  artifactKey: Guid(52b8ab8d8bcb7d64ba69b0ec269b3479) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/monsters/Shoggoth0.prefab using Guid(52b8ab8d8bcb7d64ba69b0ec269b3479) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e5069e90b7cc0bd94751e22e52a2f66f') in 0.028484 seconds
+  Import took 0.037152 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 43.090406 seconds.
+  path: Assets/Resources/monsters/Shoggoth0.prefab
+  artifactKey: Guid(52b8ab8d8bcb7d64ba69b0ec269b3479) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/monsters/Shoggoth0.prefab using Guid(52b8ab8d8bcb7d64ba69b0ec269b3479) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e88a6a171097bd7c2da9dbe332badd6e') in 0.030213 seconds
+  Import took 0.037726 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.644841 seconds.
+  path: Assets/Resources/monsters/Shoggoth0.prefab
+  artifactKey: Guid(52b8ab8d8bcb7d64ba69b0ec269b3479) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/monsters/Shoggoth0.prefab using Guid(52b8ab8d8bcb7d64ba69b0ec269b3479) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6584aec49a1509fed8fb29075d8d91c7') in 0.022957 seconds
+  Import took 0.031621 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 15.638430 seconds.
+  path: Assets/Resources/monsters/Shoggoth0.prefab
+  artifactKey: Guid(52b8ab8d8bcb7d64ba69b0ec269b3479) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/monsters/Shoggoth0.prefab using Guid(52b8ab8d8bcb7d64ba69b0ec269b3479) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c1b2d3e55e3d59889fd55c4357eca1e0') in 0.024881 seconds
+  Import took 0.032924 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 104.087808 seconds.
+  path: Assets/Resources/monsters/Shoggoth0.prefab
+  artifactKey: Guid(52b8ab8d8bcb7d64ba69b0ec269b3479) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/monsters/Shoggoth0.prefab using Guid(52b8ab8d8bcb7d64ba69b0ec269b3479) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '91791637a148b41018ae1af298bfb54e') in 0.025250 seconds
+  Import took 0.031923 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.087553 seconds.
+  path: Assets/Resources/monsters/Shoggoth0.prefab
+  artifactKey: Guid(52b8ab8d8bcb7d64ba69b0ec269b3479) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/monsters/Shoggoth0.prefab using Guid(52b8ab8d8bcb7d64ba69b0ec269b3479) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '91791637a148b41018ae1af298bfb54e') in 0.027578 seconds
+  Import took 0.037696 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.091854 seconds.
+  path: Assets/Resources/monsters/Bat0.prefab
+  artifactKey: Guid(db0b0ffb515e67b4fa8dde4f799c6d34) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/monsters/Bat0.prefab using Guid(db0b0ffb515e67b4fa8dde4f799c6d34) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eee1ebccc12e9181e9b04a1cda2b4f1f') in 0.041525 seconds
+  Import took 0.050661 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000525 seconds.
+  path: Assets/Resources/monsters/Shoggoth0.prefab
+  artifactKey: Guid(52b8ab8d8bcb7d64ba69b0ec269b3479) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/monsters/Shoggoth0.prefab using Guid(52b8ab8d8bcb7d64ba69b0ec269b3479) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'de54f38035d12df1a1aa00e443b8e5ee') in 0.021482 seconds
+  Import took 0.028250 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000396 seconds.
+  path: Assets/Resources/monsters/Bat1.prefab
+  artifactKey: Guid(e8603f88925412e419c3f09bd31d5d36) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/monsters/Bat1.prefab using Guid(e8603f88925412e419c3f09bd31d5d36) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0a82de7201af7e123aa6ace206f7ac03') in 0.043470 seconds
+  Import took 0.050746 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000436 seconds.
+  path: Assets/Resources/monsters/monster.prefab
+  artifactKey: Guid(e325bbb2dcb898342976c0f3e5d56970) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/monsters/monster.prefab using Guid(e325bbb2dcb898342976c0f3e5d56970) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5a15bd29f4e3e912c134fd19771e92f8') in 0.017180 seconds
+  Import took 0.023077 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000411 seconds.
+  path: Assets/Resources/monsters/Bat2.prefab
+  artifactKey: Guid(a7363ed4c5aad254d8d358a9d8847a23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/monsters/Bat2.prefab using Guid(a7363ed4c5aad254d8d358a9d8847a23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a4c9b1c915b4dfa5aae946592beea92a') in 0.041889 seconds
+  Import took 0.051860 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 36.142527 seconds.
+  path: Assets/Resources/monsters/Bat2.prefab
+  artifactKey: Guid(a7363ed4c5aad254d8d358a9d8847a23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/monsters/Bat2.prefab using Guid(a7363ed4c5aad254d8d358a9d8847a23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '74a00d064f67f0622530325f5fed6b05') in 0.045257 seconds
+  Import took 0.055398 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 19.787920 seconds.
+  path: Assets/Resources/monsters/Shoggoth0.prefab
+  artifactKey: Guid(52b8ab8d8bcb7d64ba69b0ec269b3479) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/monsters/Shoggoth0.prefab using Guid(52b8ab8d8bcb7d64ba69b0ec269b3479) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '41dc7552a68bb7a4ff1d30942ed36e29') in 0.024609 seconds
+  Import took 0.033258 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.178242 seconds.
+  path: Assets/Resources/monsters/Shoggoth0.prefab
+  artifactKey: Guid(52b8ab8d8bcb7d64ba69b0ec269b3479) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/monsters/Shoggoth0.prefab using Guid(52b8ab8d8bcb7d64ba69b0ec269b3479) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ba8905c152e70aedac7bb069fe9f2738') in 0.039097 seconds
+  Import took 0.047476 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 10.276188 seconds.
+  path: Assets/Resources/monsters/Shoggoth0.prefab
+  artifactKey: Guid(52b8ab8d8bcb7d64ba69b0ec269b3479) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/monsters/Shoggoth0.prefab using Guid(52b8ab8d8bcb7d64ba69b0ec269b3479) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bd5fa94d51131f0251daf9fb899be068') in 0.036685 seconds
+  Import took 0.045357 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.653441 seconds.
+  path: Assets/Resources/monsters/Shoggoth0.prefab
+  artifactKey: Guid(52b8ab8d8bcb7d64ba69b0ec269b3479) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/monsters/Shoggoth0.prefab using Guid(52b8ab8d8bcb7d64ba69b0ec269b3479) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0843304248bfa4122ed2d0028b874170') in 0.035129 seconds
+  Import took 0.042975 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 10.618285 seconds.
+  path: Assets/Resources/monsters/Shoggoth0 Variant.prefab
+  artifactKey: Guid(81efac0fac6d6f043bd7953cb90c2859) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/monsters/Shoggoth0 Variant.prefab using Guid(81efac0fac6d6f043bd7953cb90c2859) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3047c2874864fffbfb58922d8f16aa26') in 0.054291 seconds
+  Import took 0.064801 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000902 seconds.
+  path: Assets/Resources/monsters/Shoggoth0 Variant.prefab
+  artifactKey: Guid(81efac0fac6d6f043bd7953cb90c2859) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/monsters/Shoggoth0 Variant.prefab using Guid(81efac0fac6d6f043bd7953cb90c2859) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3047c2874864fffbfb58922d8f16aa26') in 0.037891 seconds
+  Import took 0.045489 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.317631 seconds.
+  path: Assets/Resources/monsters/Shoggoth0 Variant 1.prefab
+  artifactKey: Guid(e571ad625f7a66c4ba09f2404281190a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/monsters/Shoggoth0 Variant 1.prefab using Guid(e571ad625f7a66c4ba09f2404281190a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'de3f5604558cf5865a4c748810615cd3') in 0.052018 seconds
+  Import took 0.060142 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001855 seconds.
+  path: Assets/Resources/monsters/Shoggoth0 Variant 1.prefab
+  artifactKey: Guid(e571ad625f7a66c4ba09f2404281190a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/monsters/Shoggoth0 Variant 1.prefab using Guid(e571ad625f7a66c4ba09f2404281190a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'de3f5604558cf5865a4c748810615cd3') in 0.034802 seconds
+  Import took 0.043108 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 126.120468 seconds.
+  path: Assets/Resources/monsters/Shoggoth0 Variant 1.prefab
+  artifactKey: Guid(e571ad625f7a66c4ba09f2404281190a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/monsters/Shoggoth0 Variant 1.prefab using Guid(e571ad625f7a66c4ba09f2404281190a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8fe0e3c6a2ef356e1bd49eb752300d6b') in 0.037775 seconds
+  Import took 0.047249 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000337 seconds.
+  path: Assets/Resources/monsters/Shoggoth0 Variant.prefab
+  artifactKey: Guid(81efac0fac6d6f043bd7953cb90c2859) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/monsters/Shoggoth0 Variant.prefab using Guid(81efac0fac6d6f043bd7953cb90c2859) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b5061ac12b56689d69fb169fd97e8179') in 0.048318 seconds
+  Import took 0.056584 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000309 seconds.
+  path: Assets/Resources/monsters/Shoggoth0.prefab
+  artifactKey: Guid(52b8ab8d8bcb7d64ba69b0ec269b3479) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/monsters/Shoggoth0.prefab using Guid(52b8ab8d8bcb7d64ba69b0ec269b3479) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '88e9f36a299b08e7f1018ec136d3c1bc') in 0.039865 seconds
+  Import took 0.049453 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.147549 seconds.
+  path: Assets/Resources/monsters/Shoggoth1.prefab
+  artifactKey: Guid(81efac0fac6d6f043bd7953cb90c2859) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/monsters/Shoggoth1.prefab using Guid(81efac0fac6d6f043bd7953cb90c2859) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b574650dabba8dbff1aa86749d293422') in 0.043569 seconds
+  Import took 0.050549 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 30.154898 seconds.
+  path: Assets/Resources/monsters/Shoggoth0 Variant 1.prefab
+  artifactKey: Guid(e571ad625f7a66c4ba09f2404281190a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/monsters/Shoggoth0 Variant 1.prefab using Guid(e571ad625f7a66c4ba09f2404281190a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '347c2db95845adb2fa91f1d721ba61eb') in 0.052158 seconds
+  Import took 0.068664 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000456 seconds.
+  path: Assets/Resources/monsters/Shoggoth1.prefab
+  artifactKey: Guid(81efac0fac6d6f043bd7953cb90c2859) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/monsters/Shoggoth1.prefab using Guid(81efac0fac6d6f043bd7953cb90c2859) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4874d3039af974d96814036a50648a12') in 0.046270 seconds
+  Import took 0.054542 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000272 seconds.
+  path: Assets/Resources/monsters/Shoggoth0.prefab
+  artifactKey: Guid(52b8ab8d8bcb7d64ba69b0ec269b3479) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/monsters/Shoggoth0.prefab using Guid(52b8ab8d8bcb7d64ba69b0ec269b3479) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ab164ba6765d6d50c6bd322fff2745b3') in 0.042156 seconds
+  Import took 0.050456 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.004083 seconds.
+  path: Assets/Resources/monsters/Shoggoth0.prefab
+  artifactKey: Guid(52b8ab8d8bcb7d64ba69b0ec269b3479) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/monsters/Shoggoth0.prefab using Guid(52b8ab8d8bcb7d64ba69b0ec269b3479) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ab164ba6765d6d50c6bd322fff2745b3') in 0.032918 seconds
+  Import took 0.041307 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 28.679684 seconds.
+  path: Assets/Resources/monsters/Shoggoth0 Variant 1.prefab
+  artifactKey: Guid(e571ad625f7a66c4ba09f2404281190a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/monsters/Shoggoth0 Variant 1.prefab using Guid(e571ad625f7a66c4ba09f2404281190a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8d58467b088642ea199ff3ba34d01563') in 0.040338 seconds
+  Import took 0.048544 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000374 seconds.
+  path: Assets/Resources/monsters/Shoggoth1.prefab
+  artifactKey: Guid(81efac0fac6d6f043bd7953cb90c2859) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/monsters/Shoggoth1.prefab using Guid(81efac0fac6d6f043bd7953cb90c2859) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9b27770e89257e2e1f6883bb4fd28538') in 0.032708 seconds
+  Import took 0.041526 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000329 seconds.
+  path: Assets/Resources/monsters/Shoggoth0.prefab
+  artifactKey: Guid(52b8ab8d8bcb7d64ba69b0ec269b3479) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/monsters/Shoggoth0.prefab using Guid(52b8ab8d8bcb7d64ba69b0ec269b3479) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8f44bdf4373dbae7771e46baa0bac61c') in 0.033155 seconds
+  Import took 0.040416 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.006911 seconds.
+  path: Assets/Resources/monsters/Shoggoth0.prefab
+  artifactKey: Guid(52b8ab8d8bcb7d64ba69b0ec269b3479) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/monsters/Shoggoth0.prefab using Guid(52b8ab8d8bcb7d64ba69b0ec269b3479) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8f44bdf4373dbae7771e46baa0bac61c') in 0.030471 seconds
+  Import took 0.038128 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 31.758187 seconds.
+  path: Assets/Resources/monsters/Shoggoth0 Variant 1.prefab
+  artifactKey: Guid(e571ad625f7a66c4ba09f2404281190a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/monsters/Shoggoth0 Variant 1.prefab using Guid(e571ad625f7a66c4ba09f2404281190a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'caba4c03cf4ba97042631717983d3ed1') in 0.043019 seconds
+  Import took 0.052364 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000444 seconds.
+  path: Assets/Resources/monsters/Shoggoth1.prefab
+  artifactKey: Guid(81efac0fac6d6f043bd7953cb90c2859) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/monsters/Shoggoth1.prefab using Guid(81efac0fac6d6f043bd7953cb90c2859) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eab38c7fa1fd25e6e437ac247958d149') in 0.038194 seconds
+  Import took 0.052865 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000443 seconds.
+  path: Assets/Resources/monsters/Shoggoth0.prefab
+  artifactKey: Guid(52b8ab8d8bcb7d64ba69b0ec269b3479) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/monsters/Shoggoth0.prefab using Guid(52b8ab8d8bcb7d64ba69b0ec269b3479) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1b4285ce25dd3d0579c3abf0aeb6c96e') in 0.035108 seconds
+  Import took 0.044263 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 25.375744 seconds.
+  path: Assets/Resources/monsters/Shoggoth1.prefab
+  artifactKey: Guid(81efac0fac6d6f043bd7953cb90c2859) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/monsters/Shoggoth1.prefab using Guid(81efac0fac6d6f043bd7953cb90c2859) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b76ac264d16ac2ca857f7d34a81ff808') in 0.053597 seconds
+  Import took 0.064709 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 13.961353 seconds.
+  path: Assets/Resources/monsters/Shoggoth2.prefab
+  artifactKey: Guid(e571ad625f7a66c4ba09f2404281190a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/monsters/Shoggoth2.prefab using Guid(e571ad625f7a66c4ba09f2404281190a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ececdeb125f0f7bbfb56464d2c403ff2') in 0.042608 seconds
+  Import took 0.052423 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 12.779998 seconds.
+  path: Assets/Resources/monsters/Shoggoth2.prefab
+  artifactKey: Guid(e571ad625f7a66c4ba09f2404281190a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/monsters/Shoggoth2.prefab using Guid(e571ad625f7a66c4ba09f2404281190a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ce6cfb6b5284ff678a02d9e49c3df849') in 0.054838 seconds
+  Import took 0.066275 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 10.627402 seconds.
+  path: Assets/Resources/monsters/Shoggoth1.prefab
+  artifactKey: Guid(81efac0fac6d6f043bd7953cb90c2859) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/monsters/Shoggoth1.prefab using Guid(81efac0fac6d6f043bd7953cb90c2859) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '20eddff98b3a1e67a217bedb8f88c32a') in 0.042606 seconds
+  Import took 0.052008 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.220553 seconds.
+  path: Assets/Resources/monsters/Shoggoth2.prefab
+  artifactKey: Guid(e571ad625f7a66c4ba09f2404281190a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/monsters/Shoggoth2.prefab using Guid(e571ad625f7a66c4ba09f2404281190a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c72d1c740d0999b42e61d53f747f1705') in 0.035195 seconds
+  Import took 0.042834 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.436544 seconds.
+  path: Assets/Resources/monsters/Shoggoth2.prefab
+  artifactKey: Guid(e571ad625f7a66c4ba09f2404281190a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/monsters/Shoggoth2.prefab using Guid(e571ad625f7a66c4ba09f2404281190a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '740b42424e6dbc873a205e437e343116') in 0.037049 seconds
+  Import took 0.045367 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.014260 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.84 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+System.TypeInitializationException: The type initializer for 'Doozy.Engine.Utils.DoozyPath' threw an exception. ---> System.ArgumentException: The specified path is not of a legal form (empty).
+  at System.IO.Path.InsecureGetFullPath (System.String path) [0x00025] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.IO.Path.GetFullPathInternal (System.String path) [0x00000] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.IO.FileInfo.Init (System.String fileName, System.Boolean checkHost) [0x00007] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.IO.FileInfo..ctor (System.String fileName) [0x00014] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.FileInfo..ctor(string)
+  at Doozy.Engine.Utils.DoozyPath.get_BasePath () [0x0003b] in C:\Users\csviv\Desktop\unity\test export\Assets\Doozy\Engine\Utils\DoozyPath.cs:158 
+  at Doozy.Engine.Utils.DoozyPath..cctor () [0x00000] in C:\Users\csviv\Desktop\unity\test export\Assets\Doozy\Engine\Utils\DoozyPath.cs:62 
+   --- End of inner exception stack trace ---
+  at Doozy.Editor.Internal.ProcessorsSettings.get_Instance () [0x00018] in C:\Users\csviv\Desktop\unity\test export\Assets\Doozy\Editor\Internal\ProcessorsSettings.cs:23 
+  at Doozy.Editor.Internal.DoozyAssetsProcessor.ExecuteProcessor () [0x0003f] in C:\Users\csviv\Desktop\unity\test export\Assets\Doozy\Editor\Internal\DoozyAssetsProcessor.cs:44 
+  at Doozy.Editor.Internal.DoozyAssetsProcessor..cctor () [0x00001] in C:\Users\csviv\Desktop\unity\test export\Assets\Doozy\Editor\Internal\DoozyAssetsProcessor.cs:25 
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+System.TypeInitializationException: The type initializer for 'Doozy.Engine.Utils.DoozyPath' threw an exception. ---> System.ArgumentException: The specified path is not of a legal form (empty).
+  at System.IO.Path.InsecureGetFullPath (System.String path) [0x00025] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.IO.Path.GetFullPathInternal (System.String path) [0x00000] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.IO.FileInfo.Init (System.String fileName, System.Boolean checkHost) [0x00007] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.IO.FileInfo..ctor (System.String fileName) [0x00014] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.FileInfo..ctor(string)
+  at Doozy.Engine.Utils.DoozyPath.get_BasePath () [0x0003b] in C:\Users\csviv\Desktop\unity\test export\Assets\Doozy\Engine\Utils\DoozyPath.cs:158 
+  at Doozy.Engine.Utils.DoozyPath..cctor () [0x00000] in C:\Users\csviv\Desktop\unity\test export\Assets\Doozy\Engine\Utils\DoozyPath.cs:62 
+   --- End of inner exception stack trace ---
+  at Doozy.Editor.Internal.ProcessorsSettings.get_Instance () [0x00018] in C:\Users\csviv\Desktop\unity\test export\Assets\Doozy\Editor\Internal\ProcessorsSettings.cs:23 
+  at Doozy.Editor.Internal.FoldersProcessor.ExecuteProcessor () [0x0000c] in C:\Users\csviv\Desktop\unity\test export\Assets\Doozy\Editor\Internal\FoldersProcessor.cs:20 
+  at Doozy.Editor.Internal.FoldersProcessor..cctor () [0x00001] in C:\Users\csviv\Desktop\unity\test export\Assets\Doozy\Editor\Internal\FoldersProcessor.cs:15 
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+ArgumentException: The specified path is not of a legal form (empty).
+  at System.IO.Path.InsecureGetFullPath (System.String path) [0x00025] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.IO.Path.GetFullPathInternal (System.String path) [0x00000] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.IO.FileInfo.Init (System.String fileName, System.Boolean checkHost) [0x00007] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.IO.FileInfo..ctor (System.String fileName) [0x00014] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.FileInfo..ctor(string)
+  at Doozy.Engine.Utils.DoozyPath.get_BasePath () [0x0003b] in C:\Users\csviv\Desktop\unity\test export\Assets\Doozy\Engine\Utils\DoozyPath.cs:158 
+  at Doozy.Engine.Utils.DoozyPath..cctor () [0x00000] in C:\Users\csviv\Desktop\unity\test export\Assets\Doozy\Engine\Utils\DoozyPath.cs:62 
+Rethrow as TypeInitializationException: The type initializer for 'Doozy.Engine.Utils.DoozyPath' threw an exception.
+  at Doozy.Editor.Utils.DefineSymbolsUtils+SymbolsCleaner.OnWillDeleteAsset (System.String assetPath, UnityEditor.RemoveAssetOptions options) [0x00001] in C:\Users\csviv\Desktop\unity\test export\Assets\Doozy\Editor\Utils\DefineSymbolsUtils.cs:103 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod.InternalInvoke(System.Reflection.MonoMethod,object,object[],System.Exception&)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00032] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+Rethrow as TargetInvocationException: Exception has been thrown by the target of an invocation.
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00048] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.Reflection.MethodBase.Invoke (System.Object obj, System.Object[] parameters) [0x00000] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at UnityEditor.AssetModificationProcessorInternal.OnWillDeleteAssets (System.String[] assetPaths, UnityEditor.AssetDeleteResult[] outPathDeletionResults, UnityEditor.RemoveAssetOptions options) [0x00098] in <50f55621a2ca4f31a35283e2979a8bf5>:0 
+UnityEditor.AssetDatabase:DeleteAsset(String)
+FMODUnity.Settings:CleanTemporaryFiles() (at Assets\Plugins\FMOD\src\Runtime\Settings.cs:1137)
+
+RefreshInfo: StopAssetImportingV2(NoUpdateAssetOptions) scanfilter: 
+RefreshProfiler: Total: 0.000ms
+Mono: successfully reloaded assembly
+- Completed reload, in  1.853 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.95 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1672 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 131.7 MB.
+System memory in use after: 131.9 MB.
+
+Unloading 167 unused Assets to reduce memory usage. Loaded Objects now: 3505.
+Total: 2.340900 ms (FindLiveObjects: 0.295500 ms CreateObjectMapping: 0.132000 ms MarkObjects: 1.743300 ms  DeleteObjects: 0.168000 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 146.266280 seconds.
+  path: Assets/Resources/monsters/Magic Slime0.prefab
+  artifactKey: Guid(52b8ab8d8bcb7d64ba69b0ec269b3479) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/monsters/Magic Slime0.prefab using Guid(52b8ab8d8bcb7d64ba69b0ec269b3479) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd56e469b06feaa7645243baae7f3d96c') in 0.126144 seconds
+  Import took 0.135235 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000478 seconds.
+  path: Assets/Resources/monsters/Shoggoth2.prefab
+  artifactKey: Guid(e571ad625f7a66c4ba09f2404281190a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/monsters/Shoggoth2.prefab using Guid(e571ad625f7a66c4ba09f2404281190a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5847355cbbdcbd6cc6304536031dbc80') in 0.047788 seconds
+  Import took 0.064378 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000244 seconds.
+  path: Assets/Resources/monsters/Shoggoth1.prefab
+  artifactKey: Guid(81efac0fac6d6f043bd7953cb90c2859) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/monsters/Shoggoth1.prefab using Guid(81efac0fac6d6f043bd7953cb90c2859) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ccdf6d725b0317e86c0a048c175950d1') in 0.043444 seconds
+  Import took 0.051950 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.873700 seconds.
+  path: Assets/Resources/monsters/Magic Slime1.prefab
+  artifactKey: Guid(81efac0fac6d6f043bd7953cb90c2859) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/monsters/Magic Slime1.prefab using Guid(81efac0fac6d6f043bd7953cb90c2859) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ef26524b555175fd6f55ab83d589d0fc') in 0.039165 seconds
+  Import took 0.048974 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.060645 seconds.
+  path: Assets/Resources/monsters/Magic Slime2.prefab
+  artifactKey: Guid(e571ad625f7a66c4ba09f2404281190a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/monsters/Magic Slime2.prefab using Guid(e571ad625f7a66c4ba09f2404281190a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '338131f7f463892f38ec2cd6ac1187f6') in 0.042636 seconds
+  Import took 0.050520 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 23.528800 seconds.
+  path: Assets/Resources/monsters/Bat0.prefab
+  artifactKey: Guid(db0b0ffb515e67b4fa8dde4f799c6d34) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/monsters/Bat0.prefab using Guid(db0b0ffb515e67b4fa8dde4f799c6d34) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '294181cef2a2580518db7aa021afa303') in 0.042929 seconds
+  Import took 0.052255 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 17.423805 seconds.
+  path: Assets/Resources/monsters/Bat0.prefab
+  artifactKey: Guid(db0b0ffb515e67b4fa8dde4f799c6d34) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/monsters/Bat0.prefab using Guid(db0b0ffb515e67b4fa8dde4f799c6d34) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '59c90da5aa091ddfcb10894a32dd6f1e') in 0.047646 seconds
+  Import took 0.057205 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000525 seconds.
+  path: Assets/Resources/monsters/Bat1.prefab
+  artifactKey: Guid(e8603f88925412e419c3f09bd31d5d36) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/monsters/Bat1.prefab using Guid(e8603f88925412e419c3f09bd31d5d36) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7046162cb911ab9a3f4578aafa5cc029') in 0.048854 seconds
+  Import took 0.056886 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000439 seconds.
+  path: Assets/Resources/monsters/Bat2.prefab
+  artifactKey: Guid(a7363ed4c5aad254d8d358a9d8847a23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/monsters/Bat2.prefab using Guid(a7363ed4c5aad254d8d358a9d8847a23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '90db8964e71181024f98d5f01b8a7dbc') in 0.037061 seconds
+  Import took 0.045698 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006172 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.63 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+System.TypeInitializationException: The type initializer for 'Doozy.Engine.Utils.DoozyPath' threw an exception. ---> System.ArgumentException: The specified path is not of a legal form (empty).
+  at System.IO.Path.InsecureGetFullPath (System.String path) [0x00025] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.IO.Path.GetFullPathInternal (System.String path) [0x00000] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.IO.FileInfo.Init (System.String fileName, System.Boolean checkHost) [0x00007] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.IO.FileInfo..ctor (System.String fileName) [0x00014] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.FileInfo..ctor(string)
+  at Doozy.Engine.Utils.DoozyPath.get_BasePath () [0x0003b] in C:\Users\csviv\Desktop\unity\test export\Assets\Doozy\Engine\Utils\DoozyPath.cs:158 
+  at Doozy.Engine.Utils.DoozyPath..cctor () [0x00000] in C:\Users\csviv\Desktop\unity\test export\Assets\Doozy\Engine\Utils\DoozyPath.cs:62 
+   --- End of inner exception stack trace ---
+  at Doozy.Editor.Internal.ProcessorsSettings.get_Instance () [0x00018] in C:\Users\csviv\Desktop\unity\test export\Assets\Doozy\Editor\Internal\ProcessorsSettings.cs:23 
+  at Doozy.Editor.Internal.DoozyAssetsProcessor.ExecuteProcessor () [0x0003f] in C:\Users\csviv\Desktop\unity\test export\Assets\Doozy\Editor\Internal\DoozyAssetsProcessor.cs:44 
+  at Doozy.Editor.Internal.DoozyAssetsProcessor..cctor () [0x00001] in C:\Users\csviv\Desktop\unity\test export\Assets\Doozy\Editor\Internal\DoozyAssetsProcessor.cs:25 
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+System.TypeInitializationException: The type initializer for 'Doozy.Engine.Utils.DoozyPath' threw an exception. ---> System.ArgumentException: The specified path is not of a legal form (empty).
+  at System.IO.Path.InsecureGetFullPath (System.String path) [0x00025] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.IO.Path.GetFullPathInternal (System.String path) [0x00000] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.IO.FileInfo.Init (System.String fileName, System.Boolean checkHost) [0x00007] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.IO.FileInfo..ctor (System.String fileName) [0x00014] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.FileInfo..ctor(string)
+  at Doozy.Engine.Utils.DoozyPath.get_BasePath () [0x0003b] in C:\Users\csviv\Desktop\unity\test export\Assets\Doozy\Engine\Utils\DoozyPath.cs:158 
+  at Doozy.Engine.Utils.DoozyPath..cctor () [0x00000] in C:\Users\csviv\Desktop\unity\test export\Assets\Doozy\Engine\Utils\DoozyPath.cs:62 
+   --- End of inner exception stack trace ---
+  at Doozy.Editor.Internal.ProcessorsSettings.get_Instance () [0x00018] in C:\Users\csviv\Desktop\unity\test export\Assets\Doozy\Editor\Internal\ProcessorsSettings.cs:23 
+  at Doozy.Editor.Internal.FoldersProcessor.ExecuteProcessor () [0x0000c] in C:\Users\csviv\Desktop\unity\test export\Assets\Doozy\Editor\Internal\FoldersProcessor.cs:20 
+  at Doozy.Editor.Internal.FoldersProcessor..cctor () [0x00001] in C:\Users\csviv\Desktop\unity\test export\Assets\Doozy\Editor\Internal\FoldersProcessor.cs:15 
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+ArgumentException: The specified path is not of a legal form (empty).
+  at System.IO.Path.InsecureGetFullPath (System.String path) [0x00025] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.IO.Path.GetFullPathInternal (System.String path) [0x00000] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.IO.FileInfo.Init (System.String fileName, System.Boolean checkHost) [0x00007] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.IO.FileInfo..ctor (System.String fileName) [0x00014] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.FileInfo..ctor(string)
+  at Doozy.Engine.Utils.DoozyPath.get_BasePath () [0x0003b] in C:\Users\csviv\Desktop\unity\test export\Assets\Doozy\Engine\Utils\DoozyPath.cs:158 
+  at Doozy.Engine.Utils.DoozyPath..cctor () [0x00000] in C:\Users\csviv\Desktop\unity\test export\Assets\Doozy\Engine\Utils\DoozyPath.cs:62 
+Rethrow as TypeInitializationException: The type initializer for 'Doozy.Engine.Utils.DoozyPath' threw an exception.
+  at Doozy.Editor.Utils.DefineSymbolsUtils+SymbolsCleaner.OnWillDeleteAsset (System.String assetPath, UnityEditor.RemoveAssetOptions options) [0x00001] in C:\Users\csviv\Desktop\unity\test export\Assets\Doozy\Editor\Utils\DefineSymbolsUtils.cs:103 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod.InternalInvoke(System.Reflection.MonoMethod,object,object[],System.Exception&)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00032] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+Rethrow as TargetInvocationException: Exception has been thrown by the target of an invocation.
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00048] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.Reflection.MethodBase.Invoke (System.Object obj, System.Object[] parameters) [0x00000] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at UnityEditor.AssetModificationProcessorInternal.OnWillDeleteAssets (System.String[] assetPaths, UnityEditor.AssetDeleteResult[] outPathDeletionResults, UnityEditor.RemoveAssetOptions options) [0x00098] in <50f55621a2ca4f31a35283e2979a8bf5>:0 
+UnityEditor.AssetDatabase:DeleteAsset(String)
+FMODUnity.Settings:CleanTemporaryFiles() (at Assets\Plugins\FMOD\src\Runtime\Settings.cs:1137)
+
+RefreshInfo: StopAssetImportingV2(NoUpdateAssetOptions) scanfilter: 
+RefreshProfiler: Total: 0.000ms
+Mono: successfully reloaded assembly
+- Completed reload, in  1.016 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.82 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1672 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 131.8 MB.
+System memory in use after: 132.0 MB.
+
+Unloading 166 unused Assets to reduce memory usage. Loaded Objects now: 3509.
+Total: 4.209600 ms (FindLiveObjects: 0.451500 ms CreateObjectMapping: 0.210900 ms MarkObjects: 3.247900 ms  DeleteObjects: 0.296900 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 33.671240 seconds.
+  path: Assets/Monsters/Shoggoth.fbx
+  artifactKey: Guid(e242b089d5558bc4eb97f1ba1d3cb38e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Monsters/Shoggoth.fbx using Guid(e242b089d5558bc4eb97f1ba1d3cb38e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b19d0fa2ecc01529cb902d0b99e45f8a') in 0.137620 seconds
+  Import took 0.147531 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005404 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.19 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+System.TypeInitializationException: The type initializer for 'Doozy.Engine.Utils.DoozyPath' threw an exception. ---> System.ArgumentException: The specified path is not of a legal form (empty).
+  at System.IO.Path.InsecureGetFullPath (System.String path) [0x00025] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.IO.Path.GetFullPathInternal (System.String path) [0x00000] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.IO.FileInfo.Init (System.String fileName, System.Boolean checkHost) [0x00007] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.IO.FileInfo..ctor (System.String fileName) [0x00014] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.FileInfo..ctor(string)
+  at Doozy.Engine.Utils.DoozyPath.get_BasePath () [0x0003b] in C:\Users\csviv\Desktop\unity\test export\Assets\Doozy\Engine\Utils\DoozyPath.cs:158 
+  at Doozy.Engine.Utils.DoozyPath..cctor () [0x00000] in C:\Users\csviv\Desktop\unity\test export\Assets\Doozy\Engine\Utils\DoozyPath.cs:62 
+   --- End of inner exception stack trace ---
+  at Doozy.Editor.Internal.ProcessorsSettings.get_Instance () [0x00018] in C:\Users\csviv\Desktop\unity\test export\Assets\Doozy\Editor\Internal\ProcessorsSettings.cs:23 
+  at Doozy.Editor.Internal.DoozyAssetsProcessor.ExecuteProcessor () [0x0003f] in C:\Users\csviv\Desktop\unity\test export\Assets\Doozy\Editor\Internal\DoozyAssetsProcessor.cs:44 
+  at Doozy.Editor.Internal.DoozyAssetsProcessor..cctor () [0x00001] in C:\Users\csviv\Desktop\unity\test export\Assets\Doozy\Editor\Internal\DoozyAssetsProcessor.cs:25 
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+System.TypeInitializationException: The type initializer for 'Doozy.Engine.Utils.DoozyPath' threw an exception. ---> System.ArgumentException: The specified path is not of a legal form (empty).
+  at System.IO.Path.InsecureGetFullPath (System.String path) [0x00025] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.IO.Path.GetFullPathInternal (System.String path) [0x00000] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.IO.FileInfo.Init (System.String fileName, System.Boolean checkHost) [0x00007] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.IO.FileInfo..ctor (System.String fileName) [0x00014] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.FileInfo..ctor(string)
+  at Doozy.Engine.Utils.DoozyPath.get_BasePath () [0x0003b] in C:\Users\csviv\Desktop\unity\test export\Assets\Doozy\Engine\Utils\DoozyPath.cs:158 
+  at Doozy.Engine.Utils.DoozyPath..cctor () [0x00000] in C:\Users\csviv\Desktop\unity\test export\Assets\Doozy\Engine\Utils\DoozyPath.cs:62 
+   --- End of inner exception stack trace ---
+  at Doozy.Editor.Internal.ProcessorsSettings.get_Instance () [0x00018] in C:\Users\csviv\Desktop\unity\test export\Assets\Doozy\Editor\Internal\ProcessorsSettings.cs:23 
+  at Doozy.Editor.Internal.FoldersProcessor.ExecuteProcessor () [0x0000c] in C:\Users\csviv\Desktop\unity\test export\Assets\Doozy\Editor\Internal\FoldersProcessor.cs:20 
+  at Doozy.Editor.Internal.FoldersProcessor..cctor () [0x00001] in C:\Users\csviv\Desktop\unity\test export\Assets\Doozy\Editor\Internal\FoldersProcessor.cs:15 
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+ArgumentException: The specified path is not of a legal form (empty).
+  at System.IO.Path.InsecureGetFullPath (System.String path) [0x00025] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.IO.Path.GetFullPathInternal (System.String path) [0x00000] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.IO.FileInfo.Init (System.String fileName, System.Boolean checkHost) [0x00007] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.IO.FileInfo..ctor (System.String fileName) [0x00014] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.FileInfo..ctor(string)
+  at Doozy.Engine.Utils.DoozyPath.get_BasePath () [0x0003b] in C:\Users\csviv\Desktop\unity\test export\Assets\Doozy\Engine\Utils\DoozyPath.cs:158 
+  at Doozy.Engine.Utils.DoozyPath..cctor () [0x00000] in C:\Users\csviv\Desktop\unity\test export\Assets\Doozy\Engine\Utils\DoozyPath.cs:62 
+Rethrow as TypeInitializationException: The type initializer for 'Doozy.Engine.Utils.DoozyPath' threw an exception.
+  at Doozy.Editor.Utils.DefineSymbolsUtils+SymbolsCleaner.OnWillDeleteAsset (System.String assetPath, UnityEditor.RemoveAssetOptions options) [0x00001] in C:\Users\csviv\Desktop\unity\test export\Assets\Doozy\Editor\Utils\DefineSymbolsUtils.cs:103 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod.InternalInvoke(System.Reflection.MonoMethod,object,object[],System.Exception&)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00032] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+Rethrow as TargetInvocationException: Exception has been thrown by the target of an invocation.
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00048] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.Reflection.MethodBase.Invoke (System.Object obj, System.Object[] parameters) [0x00000] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at UnityEditor.AssetModificationProcessorInternal.OnWillDeleteAssets (System.String[] assetPaths, UnityEditor.AssetDeleteResult[] outPathDeletionResults, UnityEditor.RemoveAssetOptions options) [0x00098] in <50f55621a2ca4f31a35283e2979a8bf5>:0 
+UnityEditor.AssetDatabase:DeleteAsset(String)
+FMODUnity.Settings:CleanTemporaryFiles() (at Assets\Plugins\FMOD\src\Runtime\Settings.cs:1137)
+
+RefreshInfo: StopAssetImportingV2(NoUpdateAssetOptions) scanfilter: 
+RefreshProfiler: Total: 0.000ms
+Mono: successfully reloaded assembly
+- Completed reload, in  1.055 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 2.09 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1672 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 131.8 MB.
+System memory in use after: 132.0 MB.
+
+Unloading 166 unused Assets to reduce memory usage. Loaded Objects now: 3513.
+Total: 3.365600 ms (FindLiveObjects: 0.660700 ms CreateObjectMapping: 0.222500 ms MarkObjects: 2.277300 ms  DeleteObjects: 0.203700 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.008048 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.14 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+System.TypeInitializationException: The type initializer for 'Doozy.Engine.Utils.DoozyPath' threw an exception. ---> System.ArgumentException: The specified path is not of a legal form (empty).
+  at System.IO.Path.InsecureGetFullPath (System.String path) [0x00025] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.IO.Path.GetFullPathInternal (System.String path) [0x00000] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.IO.FileInfo.Init (System.String fileName, System.Boolean checkHost) [0x00007] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.IO.FileInfo..ctor (System.String fileName) [0x00014] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.FileInfo..ctor(string)
+  at Doozy.Engine.Utils.DoozyPath.get_BasePath () [0x0003b] in C:\Users\csviv\Desktop\unity\test export\Assets\Doozy\Engine\Utils\DoozyPath.cs:158 
+  at Doozy.Engine.Utils.DoozyPath..cctor () [0x00000] in C:\Users\csviv\Desktop\unity\test export\Assets\Doozy\Engine\Utils\DoozyPath.cs:62 
+   --- End of inner exception stack trace ---
+  at Doozy.Editor.Internal.ProcessorsSettings.get_Instance () [0x00018] in C:\Users\csviv\Desktop\unity\test export\Assets\Doozy\Editor\Internal\ProcessorsSettings.cs:23 
+  at Doozy.Editor.Internal.DoozyAssetsProcessor.ExecuteProcessor () [0x0003f] in C:\Users\csviv\Desktop\unity\test export\Assets\Doozy\Editor\Internal\DoozyAssetsProcessor.cs:44 
+  at Doozy.Editor.Internal.DoozyAssetsProcessor..cctor () [0x00001] in C:\Users\csviv\Desktop\unity\test export\Assets\Doozy\Editor\Internal\DoozyAssetsProcessor.cs:25 
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+System.TypeInitializationException: The type initializer for 'Doozy.Engine.Utils.DoozyPath' threw an exception. ---> System.ArgumentException: The specified path is not of a legal form (empty).
+  at System.IO.Path.InsecureGetFullPath (System.String path) [0x00025] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.IO.Path.GetFullPathInternal (System.String path) [0x00000] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.IO.FileInfo.Init (System.String fileName, System.Boolean checkHost) [0x00007] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.IO.FileInfo..ctor (System.String fileName) [0x00014] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.FileInfo..ctor(string)
+  at Doozy.Engine.Utils.DoozyPath.get_BasePath () [0x0003b] in C:\Users\csviv\Desktop\unity\test export\Assets\Doozy\Engine\Utils\DoozyPath.cs:158 
+  at Doozy.Engine.Utils.DoozyPath..cctor () [0x00000] in C:\Users\csviv\Desktop\unity\test export\Assets\Doozy\Engine\Utils\DoozyPath.cs:62 
+   --- End of inner exception stack trace ---
+  at Doozy.Editor.Internal.ProcessorsSettings.get_Instance () [0x00018] in C:\Users\csviv\Desktop\unity\test export\Assets\Doozy\Editor\Internal\ProcessorsSettings.cs:23 
+  at Doozy.Editor.Internal.FoldersProcessor.ExecuteProcessor () [0x0000c] in C:\Users\csviv\Desktop\unity\test export\Assets\Doozy\Editor\Internal\FoldersProcessor.cs:20 
+  at Doozy.Editor.Internal.FoldersProcessor..cctor () [0x00001] in C:\Users\csviv\Desktop\unity\test export\Assets\Doozy\Editor\Internal\FoldersProcessor.cs:15 
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+ArgumentException: The specified path is not of a legal form (empty).
+  at System.IO.Path.InsecureGetFullPath (System.String path) [0x00025] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.IO.Path.GetFullPathInternal (System.String path) [0x00000] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.IO.FileInfo.Init (System.String fileName, System.Boolean checkHost) [0x00007] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.IO.FileInfo..ctor (System.String fileName) [0x00014] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.FileInfo..ctor(string)
+  at Doozy.Engine.Utils.DoozyPath.get_BasePath () [0x0003b] in C:\Users\csviv\Desktop\unity\test export\Assets\Doozy\Engine\Utils\DoozyPath.cs:158 
+  at Doozy.Engine.Utils.DoozyPath..cctor () [0x00000] in C:\Users\csviv\Desktop\unity\test export\Assets\Doozy\Engine\Utils\DoozyPath.cs:62 
+Rethrow as TypeInitializationException: The type initializer for 'Doozy.Engine.Utils.DoozyPath' threw an exception.
+  at Doozy.Editor.Utils.DefineSymbolsUtils+SymbolsCleaner.OnWillDeleteAsset (System.String assetPath, UnityEditor.RemoveAssetOptions options) [0x00001] in C:\Users\csviv\Desktop\unity\test export\Assets\Doozy\Editor\Utils\DefineSymbolsUtils.cs:103 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod.InternalInvoke(System.Reflection.MonoMethod,object,object[],System.Exception&)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00032] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+Rethrow as TargetInvocationException: Exception has been thrown by the target of an invocation.
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00048] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.Reflection.MethodBase.Invoke (System.Object obj, System.Object[] parameters) [0x00000] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at UnityEditor.AssetModificationProcessorInternal.OnWillDeleteAssets (System.String[] assetPaths, UnityEditor.AssetDeleteResult[] outPathDeletionResults, UnityEditor.RemoveAssetOptions options) [0x00098] in <50f55621a2ca4f31a35283e2979a8bf5>:0 
+UnityEditor.AssetDatabase:DeleteAsset(String)
+FMODUnity.Settings:CleanTemporaryFiles() (at Assets\Plugins\FMOD\src\Runtime\Settings.cs:1137)
+
+RefreshInfo: StopAssetImportingV2(NoUpdateAssetOptions) scanfilter: 
+RefreshProfiler: Total: 0.000ms
+Mono: successfully reloaded assembly
+- Completed reload, in  1.110 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 2.29 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1672 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 131.8 MB.
+System memory in use after: 132.0 MB.
+
+Unloading 166 unused Assets to reduce memory usage. Loaded Objects now: 3516.
+Total: 3.186400 ms (FindLiveObjects: 0.398900 ms CreateObjectMapping: 0.231900 ms MarkObjects: 2.365700 ms  DeleteObjects: 0.188400 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 131.306870 seconds.
+  path: Assets/Resources/monsters/Bat0.prefab
+  artifactKey: Guid(db0b0ffb515e67b4fa8dde4f799c6d34) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/monsters/Bat0.prefab using Guid(db0b0ffb515e67b4fa8dde4f799c6d34) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5af72af72e8e6d376a9cfe8b591851f9') in 0.117438 seconds
+  Import took 0.127939 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000344 seconds.
+  path: Assets/Resources/monsters/Bat1.prefab
+  artifactKey: Guid(e8603f88925412e419c3f09bd31d5d36) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/monsters/Bat1.prefab using Guid(e8603f88925412e419c3f09bd31d5d36) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '55fca44f0785ccf40f84c884f65e88fc') in 0.035318 seconds
+  Import took 0.042421 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000363 seconds.
+  path: Assets/Resources/monsters/Bat2.prefab
+  artifactKey: Guid(a7363ed4c5aad254d8d358a9d8847a23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/monsters/Bat2.prefab using Guid(a7363ed4c5aad254d8d358a9d8847a23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '23e1f60569aa8bca29a0d6faca44faa0') in 0.037231 seconds
+  Import took 0.045037 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004920 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.99 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+System.TypeInitializationException: The type initializer for 'Doozy.Engine.Utils.DoozyPath' threw an exception. ---> System.ArgumentException: The specified path is not of a legal form (empty).
+  at System.IO.Path.InsecureGetFullPath (System.String path) [0x00025] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.IO.Path.GetFullPathInternal (System.String path) [0x00000] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.IO.FileInfo.Init (System.String fileName, System.Boolean checkHost) [0x00007] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.IO.FileInfo..ctor (System.String fileName) [0x00014] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.FileInfo..ctor(string)
+  at Doozy.Engine.Utils.DoozyPath.get_BasePath () [0x0003b] in C:\Users\csviv\Desktop\unity\test export\Assets\Doozy\Engine\Utils\DoozyPath.cs:158 
+  at Doozy.Engine.Utils.DoozyPath..cctor () [0x00000] in C:\Users\csviv\Desktop\unity\test export\Assets\Doozy\Engine\Utils\DoozyPath.cs:62 
+   --- End of inner exception stack trace ---
+  at Doozy.Editor.Internal.ProcessorsSettings.get_Instance () [0x00018] in C:\Users\csviv\Desktop\unity\test export\Assets\Doozy\Editor\Internal\ProcessorsSettings.cs:23 
+  at Doozy.Editor.Internal.DoozyAssetsProcessor.ExecuteProcessor () [0x0003f] in C:\Users\csviv\Desktop\unity\test export\Assets\Doozy\Editor\Internal\DoozyAssetsProcessor.cs:44 
+  at Doozy.Editor.Internal.DoozyAssetsProcessor..cctor () [0x00001] in C:\Users\csviv\Desktop\unity\test export\Assets\Doozy\Editor\Internal\DoozyAssetsProcessor.cs:25 
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+System.TypeInitializationException: The type initializer for 'Doozy.Engine.Utils.DoozyPath' threw an exception. ---> System.ArgumentException: The specified path is not of a legal form (empty).
+  at System.IO.Path.InsecureGetFullPath (System.String path) [0x00025] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.IO.Path.GetFullPathInternal (System.String path) [0x00000] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.IO.FileInfo.Init (System.String fileName, System.Boolean checkHost) [0x00007] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.IO.FileInfo..ctor (System.String fileName) [0x00014] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.FileInfo..ctor(string)
+  at Doozy.Engine.Utils.DoozyPath.get_BasePath () [0x0003b] in C:\Users\csviv\Desktop\unity\test export\Assets\Doozy\Engine\Utils\DoozyPath.cs:158 
+  at Doozy.Engine.Utils.DoozyPath..cctor () [0x00000] in C:\Users\csviv\Desktop\unity\test export\Assets\Doozy\Engine\Utils\DoozyPath.cs:62 
+   --- End of inner exception stack trace ---
+  at Doozy.Editor.Internal.ProcessorsSettings.get_Instance () [0x00018] in C:\Users\csviv\Desktop\unity\test export\Assets\Doozy\Editor\Internal\ProcessorsSettings.cs:23 
+  at Doozy.Editor.Internal.FoldersProcessor.ExecuteProcessor () [0x0000c] in C:\Users\csviv\Desktop\unity\test export\Assets\Doozy\Editor\Internal\FoldersProcessor.cs:20 
+  at Doozy.Editor.Internal.FoldersProcessor..cctor () [0x00001] in C:\Users\csviv\Desktop\unity\test export\Assets\Doozy\Editor\Internal\FoldersProcessor.cs:15 
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+ArgumentException: The specified path is not of a legal form (empty).
+  at System.IO.Path.InsecureGetFullPath (System.String path) [0x00025] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.IO.Path.GetFullPathInternal (System.String path) [0x00000] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.IO.FileInfo.Init (System.String fileName, System.Boolean checkHost) [0x00007] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.IO.FileInfo..ctor (System.String fileName) [0x00014] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.FileInfo..ctor(string)
+  at Doozy.Engine.Utils.DoozyPath.get_BasePath () [0x0003b] in C:\Users\csviv\Desktop\unity\test export\Assets\Doozy\Engine\Utils\DoozyPath.cs:158 
+  at Doozy.Engine.Utils.DoozyPath..cctor () [0x00000] in C:\Users\csviv\Desktop\unity\test export\Assets\Doozy\Engine\Utils\DoozyPath.cs:62 
+Rethrow as TypeInitializationException: The type initializer for 'Doozy.Engine.Utils.DoozyPath' threw an exception.
+  at Doozy.Editor.Utils.DefineSymbolsUtils+SymbolsCleaner.OnWillDeleteAsset (System.String assetPath, UnityEditor.RemoveAssetOptions options) [0x00001] in C:\Users\csviv\Desktop\unity\test export\Assets\Doozy\Editor\Utils\DefineSymbolsUtils.cs:103 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod.InternalInvoke(System.Reflection.MonoMethod,object,object[],System.Exception&)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00032] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+Rethrow as TargetInvocationException: Exception has been thrown by the target of an invocation.
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00048] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.Reflection.MethodBase.Invoke (System.Object obj, System.Object[] parameters) [0x00000] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at UnityEditor.AssetModificationProcessorInternal.OnWillDeleteAssets (System.String[] assetPaths, UnityEditor.AssetDeleteResult[] outPathDeletionResults, UnityEditor.RemoveAssetOptions options) [0x00098] in <50f55621a2ca4f31a35283e2979a8bf5>:0 
+UnityEditor.AssetDatabase:DeleteAsset(String)
+FMODUnity.Settings:CleanTemporaryFiles() (at Assets\Plugins\FMOD\src\Runtime\Settings.cs:1137)
+
+RefreshInfo: StopAssetImportingV2(NoUpdateAssetOptions) scanfilter: 
+RefreshProfiler: Total: 0.000ms
+Mono: successfully reloaded assembly
+- Completed reload, in  0.995 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.39 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1672 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 131.8 MB.
+System memory in use after: 132.0 MB.
+
+Unloading 166 unused Assets to reduce memory usage. Loaded Objects now: 3520.
+Total: 3.953500 ms (FindLiveObjects: 0.352000 ms CreateObjectMapping: 0.160100 ms MarkObjects: 3.144300 ms  DeleteObjects: 0.295500 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 90.146251 seconds.
+  path: Assets/Resources/monsters/Bat0.prefab
+  artifactKey: Guid(db0b0ffb515e67b4fa8dde4f799c6d34) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/monsters/Bat0.prefab using Guid(db0b0ffb515e67b4fa8dde4f799c6d34) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c8d1305c3a1b10fa88ebf4b71bb38313') in 0.135918 seconds
+  Import took 0.146604 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000289 seconds.
+  path: Assets/Resources/monsters/Bat1.prefab
+  artifactKey: Guid(e8603f88925412e419c3f09bd31d5d36) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/monsters/Bat1.prefab using Guid(e8603f88925412e419c3f09bd31d5d36) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '14ff015e337a58c0bcb40e1447be1734') in 0.032548 seconds
+  Import took 0.040170 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000515 seconds.
+  path: Assets/Resources/monsters/Bat2.prefab
+  artifactKey: Guid(a7363ed4c5aad254d8d358a9d8847a23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/monsters/Bat2.prefab using Guid(a7363ed4c5aad254d8d358a9d8847a23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '10044a015b0f3c77678d2de6ed811292') in 0.034875 seconds
+  Import took 0.047715 seconds .
+

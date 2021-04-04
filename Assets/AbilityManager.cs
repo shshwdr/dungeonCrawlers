@@ -129,7 +129,7 @@ public class AbilityManager : Singleton<AbilityManager>
         var info = abilityDict[abilityId];
         if (!isAbilityUnlocked(abilityId))
         {
-            abilityLevel[abilityId] = 1;
+            abilityLevel[abilityId] = 0;
             abilityButtons[abilityId].gameObject.SetActive(true);
             return string.Format(Dialogs.unlockAbility, info.actionName);
         }

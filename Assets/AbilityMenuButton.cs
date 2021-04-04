@@ -24,7 +24,7 @@ public class AbilityMenuButton : MonoBehaviour
     void updateUI()
     {
             nameLabel.text = item.actionName;
-            levelLabel.text = "LVL "+AbilityManager.Instance.abilityLevel[item.actionId].ToString();
+            levelLabel.text = "LVL "+(AbilityManager.Instance.abilityLevel[item.actionId]+1);
         
     }
     public void Init(AbilityInfo it)

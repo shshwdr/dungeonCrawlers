@@ -206,6 +206,22 @@
       },
       
       {
+        "playerName": "Guardian",
+        "level":1,
+        "hp":75,
+        "atk":20,
+        "def":50,
+        "mag":40,
+        "magdef":25,
+        "absorbCost":9,
+        "absorbRate":0.45,
+        "absorbExp":35,
+        "runRate":0.0,
+        "ability":[{"abilityName":"Slurp","freq":70},{"abilityName":"Slime Surface","freq":20},{"abilityName":"Last Recover","freq":10}],
+        "reward":{"itemName":"spPotion2","itemRate":0.2,"currencyMin":6,"currencyMax":9}
+      },
+      
+      {
         "playerName": "Magic Lizard",
         "level":1,
         "hp":75,
@@ -281,6 +297,11 @@
         "playerName": "Magic Slime",
         "color":2,
         "absorbAbility":"Slippery Shield"
+      },
+      {
+        "playerName": "Guardian",
+        "color":0,
+        "absorbAbility":""
       }
 
     ]

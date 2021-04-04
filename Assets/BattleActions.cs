@@ -37,7 +37,7 @@ public class AllActionInfo
     public List<ActionInfo> topBattleInfos;
     public List<AbilityInfo> abilityInfos;
 }
-public class BattleActions : MonoBehaviour
+public class BattleActions : Singleton<BattleActions>
 {
     [SerializeField]
     TextAsset jsonFile;
@@ -46,6 +46,7 @@ public class BattleActions : MonoBehaviour
     [SerializeField]
     Transform buttonsParent;
     Dictionary<string, ActionInfo> actionDictionary = new Dictionary<string, ActionInfo>();
+    public Dictionary<string, ActionButton> actionButtonDictionary = new Dictionary<string, ActionButton>();
     // Start is called before the first frame update
     void Start()
     {
@@ -67,6 +68,7 @@ public class BattleActions : MonoBehaviour
             GameObject button = Instantiate(buttonPrefab, buttonsParent);
             ActionButton actionButton = button.GetComponent<ActionButton>();
             actionButton.Init(actionInfo);
+            actionButtonDictionary[actionInfo.actionId] = actionButton;
         }
     }
 
