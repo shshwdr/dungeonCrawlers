@@ -47,7 +47,7 @@
     [
       {
         "actionId": "hpPotion",
-        "actionName": "HP Potion",
+        "actionName": "Raspberry",
         "description":"Heal {0} HP",
         "doActionDesc":"You drank the healing potion.",
         "descriptionType":"item",
@@ -55,7 +55,7 @@
         "cost":[3]
       },{
         "actionId": "hpPotion1",
-        "actionName": "HP Potion",
+        "actionName": "Currant",
         "description":"Heal {0} HP",
         "doActionDesc":"You drank the healing potion.",
         "descriptionType":"item",
@@ -64,7 +64,7 @@
       },
       {
         "actionId": "spPotion",
-        "actionName": "SP Potion",
+        "actionName": "BlueBerry",
         "description":"Restore {0} Mana",
         "doActionDesc":"You drank the mana potion.",
         "descriptionType":"item",
@@ -73,7 +73,7 @@
       },
       {
         "actionId": "spPotion1",
-        "actionName": "SP Potion",
+        "actionName": "Blackberry",
         "description":"Restore {0} Mana",
         "doActionDesc":"You drank the mana potion.",
         "descriptionType":"item",

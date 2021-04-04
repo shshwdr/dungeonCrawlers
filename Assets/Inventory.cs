@@ -18,7 +18,7 @@ public class Inventory : Singleton<Inventory>
 {
     Dictionary<string, int> currentItemDict = new Dictionary<string, int>();
     Dictionary<string, ActionButton> itemButtonDict = new Dictionary<string, ActionButton>();
-    Dictionary<string, ItemInfo> itemInfoDict;
+    public Dictionary<string, ItemInfo> itemInfoDict;
     public Dictionary<string, int> statusLevel = new Dictionary<string, int>();
     public Dictionary<string, PlayerPurchaseStatus> playerStatus = new Dictionary<string, PlayerPurchaseStatus>();
 

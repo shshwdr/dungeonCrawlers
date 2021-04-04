@@ -73,6 +73,7 @@ public class GridMovement : MonoBehaviour
             }
             return;
         }
+
         if (Input.GetKey(KeyCode.W))
         {
             if (GetIntoBattle(transform.forward * moveStep))
