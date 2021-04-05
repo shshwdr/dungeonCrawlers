@@ -88,13 +88,13 @@ public class Inventory : Singleton<Inventory>
     public void addCurrency(int value)
     {
         currentCurrency += value;
-        ShopMenu.Instance. updateCoin();
+        //ShopMenu.Instance. updateCoin();
     }
 
     public void lossCurrency(float value)
     {
         currentCurrency =( int)(currentCurrency*(1-value));
-        ShopMenu.Instance.updateCoin();
+        //ShopMenu.Instance.updateCoin();
     }
     public bool canPurchase(PurchaseItem item)
     {
@@ -124,7 +124,7 @@ public class Inventory : Singleton<Inventory>
                 BattleSystem.Instance.player.restoreMana(5);
             }
         }
-        ShopMenu.Instance.updateCoin();
+        //ShopMenu.Instance.updateCoin();
     }
     public bool isStatusAtMaxLevel(PlayerPurchaseStatus status)
     {

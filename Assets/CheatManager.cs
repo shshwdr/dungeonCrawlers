@@ -31,7 +31,11 @@ public class CheatManager : Singleton<CheatManager>
     public void addMoney()
     {
         Inventory.Instance.addCurrency(10000);
-        ShopMenu.Instance.updateCoin();
+        if (ShopManager.Instance.isInShop)
+        {
+
+            ShopMenu.Instance.updateCoin();
+        }
 
     }
 
