@@ -37,7 +37,7 @@ public class GridMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (BattleSystem.Instance.isInBattle || ShopManager.Instance.isInShop || player.isDead)
+        if (BattleSystem.Instance.isInBattle || ShopManager.Instance.isInShop || player.isDead || CSDialogueManager.Instance.isInDialogue)
         {
             return;
         }

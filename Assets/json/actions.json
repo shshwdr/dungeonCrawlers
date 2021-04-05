@@ -4,8 +4,8 @@
       {
         "actionId": "spell",
         "actionName": "Spell",
-        "description":"Select a spell to cast",
-        "doActionDesc":"You rush to the enemy and attack",
+        "description":"Select a ability to use",
+        "doActionDesc":"You are picking the abilities...",
         "descriptionType":"normal",
         "cost":[0]
       },
@@ -13,7 +13,7 @@
         "actionId": "item",
         "actionName": "Item",
         "description":"Select an item to use",
-        "doActionDesc":"You rush to the enemy and attack",
+        "doActionDesc":"You are picking item to use...",
         "descriptionType":"normal",
         "cost":[0]
       },
@@ -29,7 +29,7 @@
         "actionId": "run",
         "actionName": "Run",
         "description":"Run away from battle",
-        "doActionDesc":"You try to move away",
+        "doActionDesc":"You try to run away...",
         "descriptionType":"run",
         "cost":[0]
       },
@@ -37,7 +37,7 @@
       {
         "actionId": "continue",
         "actionName": "End Turn",
-        "description":"Finish your turn",
+        "description":"End your turn. Action point less than 5 would be saved for next turn.",
         "doActionDesc":"You decided to move on.",
         "descriptionType":"normal",
         "cost":[0]

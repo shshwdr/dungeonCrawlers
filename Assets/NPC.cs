@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class NPC : Interactable
 {
+    public string dialog_title;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +25,7 @@ public class NPC : Interactable
             return;
         }
         isInteracting = true;
-        DialogueManager.ShowAlert("This is a frog", showTime);
+        DialogueManager.StartConversation(dialog_title);
+        //DialogueManager.ShowAlert("This is a frog", showTime);
     }
 }

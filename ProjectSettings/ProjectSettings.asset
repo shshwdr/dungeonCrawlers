@@ -145,7 +145,8 @@ PlayerSettings:
   resolutionScalingMode: 0
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
-  applicationIdentifier: {}
+  applicationIdentifier:
+    Standalone: com.Flavedo.dungeon
   buildNumber:
     Standalone: 0
     iPhone: 0
@@ -584,21 +585,21 @@ PlayerSettings:
   webGLThreadsSupport: 0
   webGLDecompressionFallback: 0
   scriptingDefineSymbols:
-    1: dUI_MANAGER;dUI_TextMeshPro;TMP_PRESENT
-    4: dUI_MANAGER;dUI_TextMeshPro
-    7: dUI_MANAGER;dUI_TextMeshPro
-    13: dUI_MANAGER;dUI_TextMeshPro
-    14: dUI_MANAGER;dUI_TextMeshPro
-    19: dUI_MANAGER;dUI_TextMeshPro
-    21: dUI_MANAGER;dUI_TextMeshPro
-    25: dUI_MANAGER;dUI_TextMeshPro
-    27: dUI_MANAGER;dUI_TextMeshPro
-    28: dUI_MANAGER;dUI_TextMeshPro
-    29: dUI_MANAGER;dUI_TextMeshPro
-    30: dUI_MANAGER;dUI_TextMeshPro
-    31: dUI_MANAGER;dUI_TextMeshPro
-    32: dUI_MANAGER;dUI_TextMeshPro
-    33: dUI_MANAGER;dUI_TextMeshPro
+    1: dUI_MANAGER;TMP_PRESENT
+    4: dUI_MANAGER
+    7: dUI_MANAGER
+    13: dUI_MANAGER
+    14: dUI_MANAGER
+    19: dUI_MANAGER
+    21: dUI_MANAGER
+    25: dUI_MANAGER
+    27: dUI_MANAGER
+    28: dUI_MANAGER
+    29: dUI_MANAGER
+    30: dUI_MANAGER
+    31: dUI_MANAGER
+    32: dUI_MANAGER
+    33: dUI_MANAGER
   additionalCompilerArguments: {}
   platformArchitecture: {}
   scriptingBackend: {}

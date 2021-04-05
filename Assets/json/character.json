@@ -15,14 +15,14 @@
     {
       "playerName": "Bat",
       "level": 1,
-      "hp": 15,
+      "hp": 9,
       "atk": 0,
       "def": 0,
       "mag": 0,
       "magdef": 0,
       "absorbCost": 6,
       "absorbRate": 0.7,
-      "absorbExp": 15,
+      "absorbExp": 10,
       "runRate": 0.85,
       "ability": [
         {
@@ -36,9 +36,9 @@
       ],
       "reward": {
         "itemName": "hpPotion",
-        "itemRate": 0.3,
-        "currencyMin": 2,
-        "currencyMax": 5
+        "itemRate": 0.2,
+        "currencyMin": 1,
+        "currencyMax": 3
       }
     },
 
@@ -46,7 +46,7 @@
     {
       "playerName": "Bat",
       "level": 2,
-      "hp": 25,
+      "hp": 20,
       "atk": 40,
       "def": 15,
       "mag": 30,
@@ -113,14 +113,14 @@
     {
       "playerName": "Bee",
       "level": 1,
-      "hp": 15,
-      "atk": 15,
+      "hp": 12,
+      "atk": 10,
       "def": 10,
       "mag": 0,
       "magdef": 5,
       "absorbCost": 6,
       "absorbRate": 0.70,
-      "absorbExp": 20,
+      "absorbExp": 15,
       "runRate": 0.8,
       "ability": [
         {

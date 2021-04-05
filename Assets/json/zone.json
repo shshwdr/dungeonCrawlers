@@ -1,8 +1,20 @@
 {
     "zoneInfos":
-    [
+    [{
+      "zoneId": "simple",
+      "zoneName": "grassland",
+      "zoneMonsters":[
+        {"monsterId":"Bat", "level":1,"color":0,"rate":40},
+        {"monsterId":"Bat", "level":1,"color":1,"rate":40},
+        {"monsterId":"Bat", "level":1,"color":2,"rate":40},
+
+        {"monsterId":"Bee", "level":1,"color":0,"rate":20},
+        {"monsterId":"Bee", "level":1,"color":1,"rate":20},
+        {"monsterId":"Bee", "level":1,"color":2,"rate":20}
+      ]
+    },
       {
-        "zoneId": "tutorial",
+        "zoneId": "level1",
         "zoneName": "grassland",
         "zoneMonsters":[
           {"monsterId":"Bat", "level":1,"color":0,"rate":45},
