@@ -584,7 +584,7 @@ PlayerSettings:
   webGLThreadsSupport: 0
   webGLDecompressionFallback: 0
   scriptingDefineSymbols:
-    1: dUI_MANAGER;dUI_TextMeshPro
+    1: dUI_MANAGER;dUI_TextMeshPro;TMP_PRESENT
     4: dUI_MANAGER;dUI_TextMeshPro
     7: dUI_MANAGER;dUI_TextMeshPro
     13: dUI_MANAGER;dUI_TextMeshPro

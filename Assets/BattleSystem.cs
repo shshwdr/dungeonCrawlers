@@ -460,7 +460,7 @@ public class BattleSystem : Singleton<BattleSystem>
         //show particle effect
         //check possibility
         var value = Random.value;
-        showParticleEffect("Absorb");
+        showParticleEffect("w");
         if (value < monster.monsterStatus.absorbRate || CheatManager.Instance.defeiniteAbsorb)
         {
 
