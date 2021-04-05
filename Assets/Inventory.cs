@@ -141,6 +141,7 @@ public class Inventory : Singleton<Inventory>
 
     public void updateStatusLevel(PlayerPurchaseStatus status)
     {
+        statusLevel[status.itemId]++;
         if (BattleSystem.Instance.player)
         {
             if (status.itemId == "hp")
@@ -153,7 +154,6 @@ public class Inventory : Singleton<Inventory>
                 BattleSystem.Instance.player.restoreMana(5);
             }
         }
-        statusLevel[status.itemId]++;
     }
 
     

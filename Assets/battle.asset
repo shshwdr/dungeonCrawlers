@@ -87,7 +87,7 @@ MonoBehaviour:
   m_Name: UINode
   m_EditorClassIdentifier: 
   ErrorNodeNameIsEmpty: 0
-  ErrorDuplicateNameFoundInGraph: 1
+  ErrorDuplicateNameFoundInGraph: 0
   m_inputSockets:
   - m_connectionMode: 1
     m_connections:
@@ -1208,7 +1208,7 @@ MonoBehaviour:
   m_Name: UINode
   m_EditorClassIdentifier: 
   ErrorNodeNameIsEmpty: 0
-  ErrorDuplicateNameFoundInGraph: 1
+  ErrorDuplicateNameFoundInGraph: 0
   m_inputSockets:
   - m_connectionMode: 1
     m_connections:
@@ -1300,12 +1300,18 @@ MonoBehaviour:
   m_minimumOutputSocketsCount: 1
   m_graphId: 215106a5-2532-4d6f-8131-8724e49513e4
   m_id: 4f01632d-308f-4a07-bf45-31c28329cddb
-  m_name: UI Node
+  m_name: Hud
   m_notes: 
-  m_onEnterShowViews: []
+  m_onEnterShowViews:
+  - Category: Normal
+    InstantAction: 0
+    Name: HUD
   m_onEnterHideViews: []
   m_onExitShowViews: []
-  m_onExitHideViews: []
+  m_onExitHideViews:
+  - Category: Normal
+    InstantAction: 0
+    Name: HUD
 --- !u!114 &5724856045826410376
 MonoBehaviour:
   m_ObjectHideFlags: 1

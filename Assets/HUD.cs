@@ -10,6 +10,7 @@ public class HUD : Singleton<HUD>
     public TMP_Text skillPointUI;
     public BattleStateUI enemyUI;
     public BattleStateUI playerUI;
+    public BattleStateUI playerUI2;
     // Start is called before the first frame update
     void Start()
     {

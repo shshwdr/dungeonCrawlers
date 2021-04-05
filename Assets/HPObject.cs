@@ -10,6 +10,7 @@ public class HPObject : MonoBehaviour
 
     protected int currentHP;
     protected BattleStateUI stateUI;
+    protected BattleStateUI stateUI2;
 
     public bool isDead;
     // Start is called before the first frame update
@@ -21,7 +22,7 @@ public class HPObject : MonoBehaviour
     protected virtual void Init(BattleCharacterStatus s)
     {
         status = s;
-        currentHP = status.hp;
+        currentHP = getMaxHp();
     }
 
     public void UpdateStatus()
@@ -32,7 +33,10 @@ public class HPObject : MonoBehaviour
     protected virtual void initStatusUI()
     {
         stateUI.updateHPObject(this);
+        if (stateUI2) { stateUI2.updateHPObject(this); }
         stateUI.updateName(status.playerName).updateMaxHP(getMaxHp());
+        if (stateUI2)
+            stateUI2.updateName(status.playerName).updateMaxHP(getMaxHp());
         updateStatusUI();
     }
 
@@ -44,6 +48,8 @@ public class HPObject : MonoBehaviour
     public virtual void updateStatusUI()
     {
         stateUI.updateHP(currentHP);
+        if (stateUI2)
+            stateUI2.updateHP(currentHP);
     }
 
     public virtual void heal(int value)

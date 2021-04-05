@@ -16,10 +16,12 @@ public class BattlePlayer : HPObject
 
         originPosition = transform.position;
         stateUI = HUD.Instance.playerUI;
+        stateUI2 = HUD.Instance.playerUI2;
         base.Start();
         Init(BattleCharacters.Instance.playerStatus);
         currentSP = playerStatus.mana;
         BattleSystem.Instance.player = this;
+        initStatusUI();
 
     }
     protected override void Init(BattleCharacterStatus s)
@@ -76,6 +78,11 @@ public class BattlePlayer : HPObject
     {
         base.updateStatusUI();
         stateUI.updateSP(currentSP);
+        if (stateUI2)
+        {
+
+            stateUI2.updateSP(currentSP);
+        }
     }
 
     public void updateBuffUI()
@@ -108,9 +115,17 @@ public class BattlePlayer : HPObject
         return Inventory.Instance.playerStatus["mana"].getLevelValue;
     }
 
+    public void initStatusUIPublic()
+    {
+        initStatusUI();
+    }
     protected override void initStatusUI()
     {
-        stateUI.updateMaxSP(getMana());
+        stateUI.updateMaxSP(getMana()); 
+        if (stateUI2)
+        {
+            stateUI2.updateMaxSP(getMana());
+        }
         updateBuffUI();
         base.initStatusUI();
     }
