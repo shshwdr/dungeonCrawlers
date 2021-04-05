@@ -339,6 +339,8 @@ public class BattleSystem : Singleton<BattleSystem>
         var selectedAbility = abilities[randomId];
         var selectedAbilityInfo = MonsterAbilityManager.Instance.abilityDictionary[selectedAbility.abilityName];
 
+        //show particle effect
+        showParticleEffect(selectedAbilityInfo.actionId);
         if (selectedAbilityInfo.descriptionType == "attack")
         {
             bool attackSucceed = true;
