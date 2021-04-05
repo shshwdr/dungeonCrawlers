@@ -30,7 +30,10 @@ public class AllZoneInfo
 public class ZoneManager : Singleton<ZoneManager>
 {
     [SerializeField]
-    int meetMonterCounter = 5;
+    int meetMonterCounterMin = 5;
+    [SerializeField]
+    int meetMonterCounterMax = 5;
+    int meetMonterCounter = 0;
     int currentStepCounter = 0;
     Dictionary<string, ZoneInfo> zoneDict = new Dictionary<string, ZoneInfo>();
     [SerializeField]
@@ -44,7 +47,7 @@ public class ZoneManager : Singleton<ZoneManager>
         // Start is called before the first frame update
         void Start()
     {
-        
+        meetMonterCounter = UnityEngine.Random.Range(meetMonterCounterMin, meetMonterCounterMax);
     }
 
     public bool moveInDangerZone(bool canTriggerBattle)
@@ -57,6 +60,8 @@ public class ZoneManager : Singleton<ZoneManager>
 
                 //start popup battle
                 currentStepCounter = 0;
+
+                meetMonterCounter = UnityEngine.Random.Range(meetMonterCounterMin, meetMonterCounterMax);
                 return true;
             }
             else

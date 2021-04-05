@@ -382,7 +382,7 @@ public class BattleSystem : Singleton<BattleSystem>
                 //        player.restoreMana(info.getEffectValue);
                 //        break;
                 //}
-                yield return StartCoroutine(yieldAndShowText(string.Format(selectedAbilityInfo.description, monster.getName(), selectedAbilityInfo.getDamage)));
+                yield return StartCoroutine(yieldAndShowText(string.Format(selectedAbilityInfo.description, monster.getName(), damageValue)));
             }
             else
             {
@@ -556,7 +556,8 @@ public class BattleSystem : Singleton<BattleSystem>
 
     IEnumerator cleanBattle()
     {
-        monster.clearCamera();
+        if(monster)
+            monster.clearCamera();
         //yield return new WaitForSeconds(1f);
         GameEventMessage.SendEvent("StopBattle");
 

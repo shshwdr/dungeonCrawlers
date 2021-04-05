@@ -23,12 +23,9 @@ public class ShopItem : MonoBehaviour
 
     void updateUI()
     {
-        if (item is PlayerPurchaseStatus)
-        {
-            var playerStatus = (PlayerPurchaseStatus)item;
-            nameLabel.text = item.itemName;
-            costLabel.text = playerStatus.getCost.ToString();
-        }
+
+        nameLabel.text = item.getItemName;
+        costLabel.text = item.getCost.ToString();
     }
     public void Init(PurchaseItem it)
     {
@@ -47,6 +44,15 @@ public class ShopItem : MonoBehaviour
             var level = Inventory.Instance.statusLevel[pitem.itemId];
             ShopMenu.Instance.detailLabel.text = string.Format("{0} from level {1} to level{2}, increase the value from {3} to {4}.",
                 pitem.itemName, level, level+1,pitem.getLevelValue,pitem.getNextLevelValue );
+        }else if (item is PurchaseInventory)
+        {
+            var itemAction = Inventory.Instance.itemInfoDict[item.itemId];
+            ShopMenu.Instance.detailLabel.text = "Purchase " + itemAction.actionName+"\n";
+            ShopMenu.Instance.detailLabel.text += string.Format(itemAction.description,itemAction.param);
+        }
+        else if(item is PurchaseHeal)
+        {
+            ShopMenu.Instance.detailLabel.text = item.getItemName;
         }
     }
     public void OnExit()

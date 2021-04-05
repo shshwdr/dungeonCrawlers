@@ -34,10 +34,9 @@ public class Dialogs : MonoBehaviour
     public static string playerBasicAttack = "You attack!";
     public static string spellButton = "Select a spell to use";
     public static string itemButton = "Select an item to use";
-    public static string absorbButton = "Absorb enemy Ability, cost {0} skill point";
     public static string runButton = "Run from the battle";
 
-    public static string actionCost = "\tcost {0} skill point";
+    public static string actionCost = "\tcost {0} action point";
     public static string manaCost = "\tcost {0} mana point";
     public static string actionCostNotEnough = "You don't have enough cost to {0}";
     public static string manaCostNotEnough = "You don't have enough mana to {0}";

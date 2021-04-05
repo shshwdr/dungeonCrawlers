@@ -19,11 +19,39 @@ public class PlayerPurchaseStatus : PurchaseItem
     public int getLevelValue { get { return levelValue[Inventory.Instance.statusLevel[itemId]]; } }
     public int getNextLevelValue { get { return levelValue[Inventory.Instance.statusLevel[itemId] + 1]; } }
 }
+
+[Serializable]
+public class PurchaseInventory : PurchaseItem
+{
+    public int cost;
+    public override int getCost
+    {
+        get { return cost * Utils.currencyScale; }
+    }
+
+    public override string getItemName
+    {
+        get { return Inventory.Instance.itemInfoDict[itemId].actionName; }
+    }
+}
+[Serializable]
+public class PurchaseHeal : PurchaseItem
+{
+    public float cost;
+    public override int getCost
+    {
+        get { return (int)(cost * Utils.currencyScale); }
+    }
+}
 [Serializable]
 public class PurchaseItem
 {
     public string itemId;
     public string itemName;
+    public virtual string getItemName
+    {
+        get { return itemName; }
+    }
     public virtual int getCost
     {
         get { return 0; }
@@ -35,8 +63,10 @@ public class PurchaseItem
     public class AllShopItems
     {
 
-        public PlayerPurchaseStatus[] PlayerStatus;
-    }
+    public PlayerPurchaseStatus[] PlayerStatus;
+    public PurchaseInventory[] Items;
+    public PurchaseHeal[] ImmediateEffect;
+}
 public class ShopManager : Singleton<ShopManager>
 {
     [SerializeField]
@@ -77,6 +107,18 @@ public class ShopManager : Singleton<ShopManager>
                 itemButtons[i].Init(actionInfo);
                 i++;
             }
+        }
+        foreach (var actionInfo in allitems.Items)
+        {
+            itemButtons[i].gameObject.SetActive(true);
+            itemButtons[i].Init(actionInfo);
+            i++;
+        }
+        foreach (var actionInfo in allitems.ImmediateEffect)
+        {
+            itemButtons[i].gameObject.SetActive(true);
+            itemButtons[i].Init(actionInfo);
+            i++;
         }
         for (; i < itemButtons.Count; i++)
         {

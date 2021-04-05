@@ -72,7 +72,7 @@ public class Inventory : Singleton<Inventory>
         updateItemButton(item);
     }
 
-    public void addItem(string item, int value)
+    public void addItem(string item, int value = 1)
     {
         if (currentItemDict.ContainsKey(item))
         {
@@ -110,6 +110,19 @@ public class Inventory : Singleton<Inventory>
         if(item is PlayerPurchaseStatus)
         {
             updateStatusLevel((PlayerPurchaseStatus)item);
+        }else if(item is PurchaseInventory)
+        {
+            addItem(item.itemId);
+        }else if(item is PurchaseHeal)
+        {
+            if (item.itemId == "hp")
+            {
+                BattleSystem.Instance.player.heal(5);
+            }
+            else
+            {
+                BattleSystem.Instance.player.restoreMana(5);
+            }
         }
         ShopMenu.Instance.updateCoin();
     }
