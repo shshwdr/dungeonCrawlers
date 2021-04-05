@@ -15,6 +15,7 @@ public class Inventory : Singleton<Inventory>
 {
     Dictionary<string, int> currentItemDict = new Dictionary<string, int>();
     Dictionary<string, ActionButton> itemButtonDict = new Dictionary<string, ActionButton>();
+    Dictionary<string, ActionButton> itemButtonDict2 = new Dictionary<string, ActionButton>();
     public Dictionary<string, ItemInfo> itemInfoDict;
     public Dictionary<string, int> statusLevel = new Dictionary<string, int>();
     public Dictionary<string, PlayerPurchaseStatus> playerStatus = new Dictionary<string, PlayerPurchaseStatus>();
@@ -28,13 +29,16 @@ public class Inventory : Singleton<Inventory>
     [SerializeField]
     Transform buttonsParent;
 
+    [SerializeField]
+    Transform buttonsParent2;
+
     public int currentCurrency = 0;
     // Start is called before the first frame update
     void Awake()
     {
         AllActionInfo allItemInfo = JsonUtility.FromJson<AllActionInfo>(jsonFile.text);
         itemInfoDict = allItemInfo.itemInfos.ToDictionary(x => x.actionId, x => x);
-
+        int i = 0;
         foreach (var itemInfo in allItemInfo.itemInfos)
         {
             //don't show currency in action
@@ -48,8 +52,11 @@ public class Inventory : Singleton<Inventory>
             ActionButton actionButton = button.GetComponent<ActionButton>();
             actionButton.Init(itemInfo);
             itemButtonDict[itemInfo.actionId] = actionButton;
-            updateItemButton(itemInfo.actionId);
 
+            itemButtonDict2[itemInfo.actionId] = buttonsParent2.GetChild(i).GetComponent<ActionButton>();
+            itemButtonDict2[itemInfo.actionId].Init(itemInfo);
+            updateItemButton(itemInfo.actionId);
+            i++;
         }
         foreach (var actionInfo in allItemInfo.topBattleInfos)
         {
@@ -68,9 +75,12 @@ public class Inventory : Singleton<Inventory>
         if (currentItemDict[itemInfo] > 0)
         {
             itemButtonDict[itemInfo].gameObject.SetActive(true);
+
+            itemButtonDict2[itemInfo].gameObject.SetActive(true);
         }
         else
         {
+            itemButtonDict2[itemInfo].gameObject.SetActive(false);
             itemButtonDict[itemInfo].gameObject.SetActive(false);
         }
     }
@@ -132,7 +142,7 @@ public class Inventory : Singleton<Inventory>
                 BattleSystem.Instance.player.restoreMana(5);
             }
         }
-        //ShopMenu.Instance.updateCoin();
+        ShopMenu.Instance.updateCoin();
     }
     public bool isStatusAtMaxLevel(PlayerPurchaseStatus status)
     {

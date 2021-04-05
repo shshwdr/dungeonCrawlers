@@ -29,6 +29,8 @@ public class BattleSystem : Singleton<BattleSystem>
     float startBattleTime = 1f;
     [SerializeField]
     float attackTime = 1f;
+    [SerializeField]
+    GameObject diceImage;
 
     public Monster monster;
     public BattlePlayer player;
@@ -82,7 +84,7 @@ public class BattleSystem : Singleton<BattleSystem>
         monster.getIntoBattle();
         player.getIntoBattle();
         GameEventMessage.SendEvent("Battle");
-
+        diceImage.SetActive(true);
         monster.updateStatusUI();
         player.updateStatusUI();
 
@@ -556,7 +558,8 @@ public class BattleSystem : Singleton<BattleSystem>
 
     IEnumerator cleanBattle()
     {
-        if(monster)
+        diceImage.SetActive(false);
+        if (monster)
             monster.clearCamera();
         //yield return new WaitForSeconds(1f);
         GameEventMessage.SendEvent("StopBattle");

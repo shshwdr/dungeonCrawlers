@@ -8,6 +8,7 @@ public class ActionButton : MonoBehaviour
     ActionInfo info;
 
     public TMP_Text battleDialogUI;
+    public GameObject dialogUIObj;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,25 +25,52 @@ public class ActionButton : MonoBehaviour
 
     public void OnClick()
     {
+        if (!BattleSystem.Instance.isInBattle)
+        {
+            if (dialogUIObj)
+            {
+                dialogUIObj.SetActive(false);
+            }
+            if (info is ItemInfo)
+            {
+                var itemInfo = (ItemInfo)info;
+                if (itemInfo != null)
+                {
+                    switch (itemInfo.actionId)
+                    {
+                        case "hpPotion":
+                        case "hpPotion1":
+                            BattleSystem.Instance.OnHeal(itemInfo.param);
+                            break;
+                        case "spPotion":
+                        case "spPotion1":
+                            BattleSystem.Instance.OnHeal(itemInfo.param);
+                            break;
+                    }
+                    Inventory.Instance.useItem(itemInfo.actionId);
+                }
+            }
+            return;
+        }
         //check if enough cost
-        if (info.getCost > BattleSystem.Instance.skillPoint && !GameManager.Instance.noActionCost)
+        if (BattleSystem.Instance.isInBattle && info.getCost > BattleSystem.Instance.skillPoint && !GameManager.Instance.noActionCost )
         {
 
             HUD.Instance.battleDialogUI.text = string.Format(Dialogs.actionCostNotEnough, info.actionName);
         }
-        else if ((info is AbilityInfo) &&  !BattleSystem.Instance.player.canUseMana(((AbilityInfo)info).getMana) && !GameManager.Instance.noManaCost)
+        else if (BattleSystem.Instance.isInBattle && (info is AbilityInfo) &&  !BattleSystem.Instance.player.canUseMana(((AbilityInfo)info).getMana) && !GameManager.Instance.noManaCost)
         {
 
             HUD.Instance.battleDialogUI.text = string.Format(Dialogs.actionCostNotEnough, info.actionName);
         }
         else
         {
-            if (!GameManager.Instance.noActionCost)
+            if (BattleSystem.Instance.isInBattle && !GameManager.Instance.noActionCost)
             {
 
                 BattleSystem.Instance.updateSkillPoint(info.getCost);
             }
-            if (!GameManager.Instance.noManaCost)
+            if (BattleSystem.Instance.isInBattle && !GameManager.Instance.noManaCost)
             {
                 int manaCost = 0;
                 if ((info is AbilityInfo))
@@ -114,6 +142,10 @@ public class ActionButton : MonoBehaviour
 
     public void OnPointEnter()
     {
+        if (dialogUIObj)
+        {
+            dialogUIObj.SetActive(true);
+        }
         string text = "";
         if (info is AbilityInfo)
         {
@@ -151,7 +183,7 @@ public class ActionButton : MonoBehaviour
             text = info.description;
 
         }
-        if (info.getCost > 0)
+        if (BattleSystem.Instance.isInBattle && info.getCost > 0)
         {
             var cost = info.getCost;
             if(info.descriptionType == "absorb")
@@ -160,17 +192,28 @@ public class ActionButton : MonoBehaviour
             }
             text += string.Format(Dialogs.actionCost, cost);
         }
-        if((info is AbilityInfo) && ((AbilityInfo)info).getMana > 0)
+        if(BattleSystem.Instance.isInBattle && (info is AbilityInfo) && ((AbilityInfo)info).getMana > 0)
         {
 
             text += string.Format(Dialogs.manaCost, ((AbilityInfo)info).getMana);
         }
-        HUD.Instance.battleDialogUI.text = text;
+        if (dialogUIObj)
+        {
+            dialogUIObj.GetComponentInChildren<TMP_Text>().text = text;
+        }
+        else
+        {
+
+            HUD.Instance.battleDialogUI.text = text;
+        }
     }
 
     public void OnPointExit()
     {
-
+        if (dialogUIObj)
+        {
+            dialogUIObj.SetActive(false);
+        }
         HUD.Instance.battleDialogUI.text = string.Format(Dialogs.chooseAction, BattleSystem.Instance.skillPoint);
     }
 
