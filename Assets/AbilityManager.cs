@@ -84,7 +84,7 @@ public class AbilityManager : Singleton<AbilityManager>
 
     public Dictionary<string, int> abilityLevel = new Dictionary<string, int>();
     public Dictionary<string, int> abilityExp = new Dictionary<string, int>();
-    Dictionary<string, ActionButton> abilityButtons = new Dictionary<string, ActionButton>();
+    public Dictionary<string, ActionButton> abilityButtons = new Dictionary<string, ActionButton>();
 
     // Start is called before the first frame update
     void Start()

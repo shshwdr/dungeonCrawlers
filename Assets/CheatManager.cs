@@ -39,6 +39,20 @@ public class CheatManager : Singleton<CheatManager>
 
     }
 
+    public void unlockAllAbility()
+    {
+        foreach(var ability in AbilityManager.Instance.abilityDict)
+        {
+            if(AbilityManager.Instance.abilityLevel.ContainsKey(ability.Key))
+            {
+
+                AbilityManager.Instance.abilityButtons[ability.Key].gameObject.SetActive(true);
+                AbilityManager.Instance.abilityLevel[ability.Key] = Mathf.Max(0, AbilityManager.Instance.abilityLevel[ability.Key]);
+            }
+
+        }
+    }
+
     public void heal()
     {
         if (BattleSystem.Instance.player)

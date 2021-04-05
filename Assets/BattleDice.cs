@@ -30,10 +30,10 @@ public class BattleDice : Singleton<BattleDice>
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            rollDices();
-        }
+        //if (Input.GetKeyDown(KeyCode.Space))
+        //{
+        //    rollDices();
+        //}
         if (thrown)
         {
             if (finished)
