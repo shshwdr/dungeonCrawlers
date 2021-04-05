@@ -57,7 +57,7 @@
       {
         "actionId": "hpPotion",
         "actionName": "Raspberry",
-        "description":"Heal {0} HP",
+        "description":"Heal <color=red>{0}</color> HP",
         "doActionDesc":"You drank the healing potion.",
         "descriptionType":"item",
         "param":10,
@@ -65,7 +65,7 @@
       },{
         "actionId": "hpPotion1",
         "actionName": "Currant",
-        "description":"Heal {0} HP",
+        "description":"Heal <color=red>{0}</color> HP",
         "doActionDesc":"You drank the healing potion.",
         "descriptionType":"item",
         "param":25,
@@ -74,7 +74,7 @@
       {
         "actionId": "spPotion",
         "actionName": "BlueBerry",
-        "description":"Restore {0} Mana",
+        "description":"Restore <color=red>{0}</color> Mana",
         "doActionDesc":"You drank the mana potion.",
         "descriptionType":"item",
         "param":8,
@@ -83,7 +83,7 @@
       {
         "actionId": "spPotion1",
         "actionName": "Blackberry",
-        "description":"Restore {0} Mana",
+        "description":"Restore <color=red>{0}</color> Mana",
         "doActionDesc":"You drank the mana potion.",
         "descriptionType":"item",
         "param":15,
@@ -104,7 +104,7 @@
       {
         "actionId": "Attack",
         "actionName": "Attack",
-        "description":"Do {0} physical damage to enemy",
+        "description":"Do <color=red>{0}</color> physical damage to enemy",
         "doActionDesc":"You rush to the enemy and attack",
         "descriptionType":"attack",
         "abilityType":"physical",
@@ -120,7 +120,7 @@
       {
         "actionId": "Focus",
         "actionName": "Focus",
-        "description":"Restore {0} mana",
+        "description":"Restore <color=red>{0}</color> mana",
         "doActionDesc":"You used focus.",
         "descriptionType":"effect",
         "abilityType":"physical",
@@ -135,7 +135,7 @@
       },{
         "actionId": "Tiny Tornado",
         "actionName": "Tiny Tornado",
-        "description":"Deal {0} Physical Damage",
+        "description":"Deal <color=red>{0}</color> Physical Damage",
         "doActionDesc":"You used Tiny Tornado.",
         "descriptionType":"attack",
         "abilityType":"physical",
@@ -150,7 +150,7 @@
       },{
         "actionId": "Heat Breath",
         "actionName": "Heat Breath",
-        "description":"Deal {0} Physical Damage",
+        "description":"Deal <color=red>{0}</color> Physical Damage",
         "doActionDesc":"You used Heat Breath.",
         "descriptionType":"attack",
         "abilityType":"magical",
@@ -166,7 +166,7 @@
       {
         "actionId": "Confusing Strike",
         "actionName": "Confusing Strike",
-        "description":"Deal {0} Physycal damage - the next move of the enemy has {1}% chance to fail.",
+        "description":"Deal <color=red>{0}</color> Physycal damage - the next move of the enemy has <color=red>{1}</color>% chance to fail.",
         "doActionDesc":"You use Confusing Strike",
         "descriptionType":"attackEffect",
         "abilityType":"physical",
@@ -182,7 +182,7 @@
       {
         "actionId": "Driller",
         "actionName": "Driller",
-        "description":"Deal {0} Physical damage - it ignored {1}% of enemy's DEF.",
+        "description":"Deal <color=red>{0}</color> Physical damage - it ignored <color=red>{1}</color>% of enemy's DEF.",
         "doActionDesc":"You use driller",
         "descriptionType":"attackEffect",
         "abilityType":"physical",
@@ -198,7 +198,7 @@
       {
         "actionId": "Eye Contact",
         "actionName": "Eye Contact",
-        "description":"Remove {0}% of enemy's MagicDEF for this turn.",
+        "description":"Remove <color=red>{0}</color>% of enemy's MagicDEF for this turn.",
         "doActionDesc":"You use Eye Contact",
         "descriptionType":"effect",
         "abilityType":"physical",
@@ -214,7 +214,7 @@
       {
         "actionId": "Spells Drain",
         "actionName": "Spells Drain",
-        "description":"Deal {0} Physical damage - restore mana for the {1}% of the damage done.",
+        "description":"Deal <color=red>{0}</color> Physical damage - restore mana for the <color=red>{1}</color>% of the damage done.",
         "doActionDesc":"You use Spells Drain",
         "descriptionType":"attackEffect",
         "abilityType":"physical",
@@ -229,7 +229,7 @@
       },{
         "actionId": "Lava Rock",
         "actionName": "Lava Rock",
-        "description":"Deal {0} Physical Damage",
+        "description":"Deal <color=red>{0}</color> Physical Damage",
         "doActionDesc":"You used Lava Rock.",
         "descriptionType":"attack",
         "abilityType":"magical",
@@ -245,7 +245,7 @@
       {
         "actionId": "Static Soul",
         "actionName": "Static Soul",
-        "description":"Increase MagicDEF and DEF by {0} until next turn",
+        "description":"Increase MagicDEF and DEF by <color=red>{0}</color> until next turn",
         "doActionDesc":"You rush to the enemy and attack",
         "descriptionType":"effect",
         "abilityType":"effect",
@@ -261,7 +261,7 @@
       {
         "actionId": "Fertilizer",
         "actionName": "Fertilizer",
-        "description":"Restore {0} HP every turn for the next 2 turns.",
+        "description":"Restore <color=red>{0}</color> HP every turn for the next 2 turns.",
         "doActionDesc":"You used fertilizer",
         "descriptionType":"effect",
         "abilityType":"physical",
@@ -277,7 +277,7 @@
       {
         "actionId": "Sticky Jelly",
         "actionName": "Sticky Jelly",
-        "description":"Deal {0} Magical Damage - the next move of the enemy has a {1}% chance to fail.",
+        "description":"Deal <color=red>{0}</color> Magical Damage - the next move of the enemy has a <color=red>{1}</color>% chance to fail.",
         "doActionDesc":"You use Sticky Jelly",
         "descriptionType":"attackEffect",
         "abilityType":"magical",
@@ -293,7 +293,7 @@
       {
         "actionId": "Slippery Shield",
         "actionName": "Slippery Shield",
-        "description":"The next enemy's move has {0}% Chance to fail, if it does: deal the enemy half damage of the move.",
+        "description":"The next enemy's move has <color=red>{0}</color>% Chance to fail, if it does: deal the enemy half damage of the move.",
         "doActionDesc":"You use Slippery Shield",
         "descriptionType":"effect",
         "abilityType":"physical",

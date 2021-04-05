@@ -36,8 +36,8 @@ public class Dialogs : MonoBehaviour
     public static string itemButton = "Select an item to use";
     public static string runButton = "Run from the battle";
 
-    public static string actionCost = "\tcost {0} action point";
-    public static string manaCost = "\tcost {0} mana point";
+    public static string actionCost = "\ncost <color=red>{0}</color> action point";
+    public static string manaCost = "\ncost <color=blue>{0}</color> mana point";
     public static string actionCostNotEnough = "You don't have enough cost to {0}";
     public static string manaCostNotEnough = "You don't have enough mana to {0}";
 }

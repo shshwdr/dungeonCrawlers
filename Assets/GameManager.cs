@@ -10,6 +10,8 @@ public class GameManager : Singleton<GameManager>
     public bool noActionCost;
     public bool noManaCost;
 
+    public GameObject cheat;
+
     public void killMonster() { }
 
     public void toggleEnemyImmortal(bool value)
@@ -38,6 +40,8 @@ public class GameManager : Singleton<GameManager>
     // Update is called once per frame
     void Update()
     {
-        
+        if(Input.GetKeyDown(KeyCode.T)){
+            cheat.SetActive(!cheat.active);
+        }
     }
 }
