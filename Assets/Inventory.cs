@@ -10,10 +10,7 @@ public class ItemInfo:ActionInfo
     public int param;
 }
 [Serializable]
-public class AllItemInfo
-{
-    public List<ItemInfo> itemInfos;
-}
+
 public class Inventory : Singleton<Inventory>
 {
     Dictionary<string, int> currentItemDict = new Dictionary<string, int>();
@@ -35,7 +32,7 @@ public class Inventory : Singleton<Inventory>
     // Start is called before the first frame update
     void Awake()
     {
-        AllItemInfo allItemInfo = JsonUtility.FromJson<AllItemInfo>(jsonFile.text);
+        AllActionInfo allItemInfo = JsonUtility.FromJson<AllActionInfo>(jsonFile.text);
         itemInfoDict = allItemInfo.itemInfos.ToDictionary(x => x.actionId, x => x);
 
         foreach (var itemInfo in allItemInfo.itemInfos)
@@ -54,6 +51,17 @@ public class Inventory : Singleton<Inventory>
             updateItemButton(itemInfo.actionId);
 
         }
+        foreach (var actionInfo in allItemInfo.topBattleInfos)
+        {
+            if (actionInfo.actionId == "back")
+            {
+                GameObject button = Instantiate(itemButtonPrefab, buttonsParent);
+                ActionButton actionButton = button.GetComponent<ActionButton>();
+                actionButton.Init(actionInfo);
+                itemButtonDict[actionInfo.actionId] = actionButton;
+            }
+        }
+
     }
     void updateItemButton(string itemInfo)
     {

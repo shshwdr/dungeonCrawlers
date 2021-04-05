@@ -93,6 +93,15 @@ public class ActionButton : MonoBehaviour
                     case "continue":
                         BattleSystem.Instance.OnContinue();
                         break;
+                    case "item":
+                        HUD.Instance.showItemActions();
+                        break;
+                    case "spell":
+                        HUD.Instance.showSkillActions();
+                        break;
+                    case "back":
+                        HUD.Instance.showGeneraActions();
+                        break;
                     default:
                         Debug.LogError("no action support");
                         break;

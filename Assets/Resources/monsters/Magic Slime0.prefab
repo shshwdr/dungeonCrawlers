@@ -1196,7 +1196,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 995486114731825321, guid: e325bbb2dcb898342976c0f3e5d56970, type: 3}
       propertyPath: m_Name
-      value: Shoggoth0
+      value: Magic Slime0
       objectReference: {fileID: 0}
     - target: {fileID: 995486114731825333, guid: e325bbb2dcb898342976c0f3e5d56970, type: 3}
       propertyPath: m_RootOrder
@@ -1254,6 +1254,10 @@ PrefabInstance:
       propertyPath: displayName
       value: Magic Slime
       objectReference: {fileID: 0}
+    - target: {fileID: 995486114989844328, guid: e325bbb2dcb898342976c0f3e5d56970, type: 3}
+      propertyPath: m_Lens.FieldOfView
+      value: 45
+      objectReference: {fileID: 0}
     - target: {fileID: 995486114989844329, guid: e325bbb2dcb898342976c0f3e5d56970, type: 3}
       propertyPath: m_LocalRotation.w
       value: -0.11363632
@@ -1273,6 +1277,18 @@ PrefabInstance:
     - target: {fileID: 995486114989844330, guid: e325bbb2dcb898342976c0f3e5d56970, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 995486115315717649, guid: e325bbb2dcb898342976c0f3e5d56970, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 995486115315717649, guid: e325bbb2dcb898342976c0f3e5d56970, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.69
+      objectReference: {fileID: 0}
+    - target: {fileID: 995486115315717649, guid: e325bbb2dcb898342976c0f3e5d56970, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.56
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 995486114731825332, guid: e325bbb2dcb898342976c0f3e5d56970, type: 3}

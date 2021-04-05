@@ -114,6 +114,16 @@ public class AbilityManager : Singleton<AbilityManager>
 
             abilityExp[actionInfo.actionId] = 0;
         }
+        foreach (var actionInfo in allActionInfoList.topBattleInfos)
+        {
+            if (actionInfo.actionId == "back")
+            {
+                GameObject button = Instantiate(buttonPrefab, buttonsParent);
+                ActionButton actionButton = button.GetComponent<ActionButton>();
+                actionButton.Init(actionInfo);
+                abilityButtons[actionInfo.actionId] = actionButton;
+            }
+        }
     }
 
     public bool isAbilityUnlocked(string abilityId)

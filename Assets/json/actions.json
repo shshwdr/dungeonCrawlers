@@ -36,9 +36,18 @@
       
       {
         "actionId": "continue",
-        "actionName": "Continue",
+        "actionName": "End Turn",
         "description":"Finish your turn",
         "doActionDesc":"You decided to move on.",
+        "descriptionType":"normal",
+        "cost":[0]
+      },
+      
+      {
+        "actionId": "back",
+        "actionName": "Back",
+        "description":"Back to main actions",
+        "doActionDesc":"",
         "descriptionType":"normal",
         "cost":[0]
       }

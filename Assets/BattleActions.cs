@@ -36,6 +36,7 @@ public class AllActionInfo
 {
     public List<ActionInfo> topBattleInfos;
     public List<AbilityInfo> abilityInfos;
+    public List<ItemInfo> itemInfos;
 }
 public class BattleActions : Singleton<BattleActions>
 {
@@ -65,10 +66,15 @@ public class BattleActions : Singleton<BattleActions>
 
         foreach (var actionInfo in allActionInfoList.topBattleInfos)
         {
+            if (actionInfo.actionId == "back")
+            {
+                continue;
+            }
             GameObject button = Instantiate(buttonPrefab, buttonsParent);
             ActionButton actionButton = button.GetComponent<ActionButton>();
             actionButton.Init(actionInfo);
             actionButtonDictionary[actionInfo.actionId] = actionButton;
+            
         }
     }
 
