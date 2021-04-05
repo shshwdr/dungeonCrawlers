@@ -416,7 +416,7 @@
     {
       "playerName": "Guardian",
       "level": 1,
-      "hp": 50,
+      "hp": 40,
       "atk": 0,
       "def": 10,
       "mag": 0,
