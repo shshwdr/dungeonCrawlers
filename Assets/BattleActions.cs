@@ -28,7 +28,14 @@ public class ActionInfo
             return lev;
         }
     }
-    public int getCost { get {return cost[level]; } }
+    public int getCost { get {
+
+            if (descriptionType == "absorb")
+            {
+                return BattleSystem.Instance.monster.monsterStatus.absorbCost;
+            }
+            return cost[level]; } 
+    }
 }
 
 [Serializable]

@@ -5,13 +5,21 @@
         "zoneId": "tutorial",
         "zoneName": "grassland",
         "zoneMonsters":[
-          {"monsterId":"Bat", "level":1,"color":0,"rate":1},
-          {"monsterId":"Bat", "level":1,"color":1,"rate":1},
-          {"monsterId":"Bat", "level":1,"color":2,"rate":1},
+          {"monsterId":"Bat", "level":1,"color":0,"rate":45},
+          {"monsterId":"Bat", "level":1,"color":1,"rate":45},
+          {"monsterId":"Bat", "level":1,"color":2,"rate":45},
 
-          {"monsterId":"Magic Slime", "level":1,"color":0,"rate":1},
-          {"monsterId":"Magic Slime", "level":1,"color":1,"rate":1},
-          {"monsterId":"Magic Slime", "level":1,"color":2,"rate":1}
+          {"monsterId":"Bee", "level":1,"color":0,"rate":30},
+          {"monsterId":"Bee", "level":1,"color":1,"rate":30},
+          {"monsterId":"Bee", "level":1,"color":2,"rate":30},
+
+          {"monsterId":"Golem", "level":1,"color":0,"rate":10},
+          {"monsterId":"Golem", "level":1,"color":1,"rate":10},
+          {"monsterId":"Golem", "level":1,"color":2,"rate":10},
+
+          {"monsterId":"Magic Slime", "level":1,"color":0,"rate":15},
+          {"monsterId":"Magic Slime", "level":1,"color":1,"rate":15},
+          {"monsterId":"Magic Slime", "level":1,"color":2,"rate":15}
         ]
       },
       {

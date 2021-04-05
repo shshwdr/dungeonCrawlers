@@ -218,6 +218,7 @@ public class BattleSystem : Singleton<BattleSystem>
             int failedChance = getBuffValue(player, "increaseChanceToFail");
             if (failedChance>0)
             {
+                removeBuff(player, "increaseChanceToFail");
                 var rand = Random.Range(0, 100);
                 if (rand < failedChance)
                 {
@@ -282,7 +283,7 @@ public class BattleSystem : Singleton<BattleSystem>
         {
             if (playerBuffDict.ContainsKey(buffId))
             {
-                playerBuffDict.ContainsKey(buffId);
+                playerBuffDict.Remove(buffId);
             }
             else
             {
@@ -293,7 +294,7 @@ public class BattleSystem : Singleton<BattleSystem>
         {
             if (monsterBuffDict.ContainsKey(buffId))
             {
-                monsterBuffDict.ContainsKey(buffId);
+                monsterBuffDict.Remove(buffId);
             }
             else
             {
@@ -359,6 +360,7 @@ public class BattleSystem : Singleton<BattleSystem>
                     attackSucceed = false;
                     missReflect = true;
                 }
+
             }
             //check if increaseChanceToFail valid
             int failedChance = getBuffValue(monster, "increaseChanceToFail");
@@ -558,6 +560,7 @@ public class BattleSystem : Singleton<BattleSystem>
 
     IEnumerator cleanBattle()
     {
+        skillPoint = 0;
         diceImage.SetActive(false);
         if (monster)
             monster.clearCamera();

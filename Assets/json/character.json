@@ -23,7 +23,7 @@
       "absorbCost": 6,
       "absorbRate": 0.7,
       "absorbExp": 15,
-      "runRate": 0.8,
+      "runRate": 0.85,
       "ability": [
         {
           "abilityName": "Bite",
@@ -36,7 +36,7 @@
       ],
       "reward": {
         "itemName": "hpPotion",
-        "itemRate": 0.1,
+        "itemRate": 0.3,
         "currencyMin": 2,
         "currencyMax": 5
       }
@@ -54,7 +54,7 @@
       "absorbCost": 7,
       "absorbRate": 0.65,
       "absorbExp": 25,
-      "runRate": 0.75,
+      "runRate": 0.8,
       "ability": [
         {
           "abilityName": "Bite",
@@ -71,7 +71,7 @@
       ],
       "reward": {
         "itemName": "hpPotion",
-        "itemRate": 0.15,
+        "itemRate": 0.3,
         "currencyMin": 4,
         "currencyMax": 8
       }
@@ -87,7 +87,7 @@
       "absorbCost": 8,
       "absorbRate": 0.6,
       "absorbExp": 40,
-      "runRate": 0.7,
+      "runRate": 0.77,
       "ability": [
         {
           "abilityName": "Bite",
@@ -104,7 +104,7 @@
       ],
       "reward": {
         "itemName": "hpPotion",
-        "itemRate": 0.2,
+        "itemRate": 0.3,
         "currencyMin": 6,
         "currencyMax": 10
       }
@@ -121,7 +121,7 @@
       "absorbCost": 6,
       "absorbRate": 0.70,
       "absorbExp": 20,
-      "runRate": 0.65,
+      "runRate": 0.8,
       "ability": [
         {
           "abilityName": "Sting",
@@ -134,7 +134,7 @@
       ],
       "reward": {
         "itemName": "spPotion",
-        "itemRate": 0.1,
+        "itemRate": 0.2,
         "currencyMin": 4,
         "currencyMax": 6
       }
@@ -151,7 +151,7 @@
       "absorbCost": 7,
       "absorbRate": 0.6,
       "absorbExp": 30,
-      "runRate": 0.6,
+      "runRate": 0.75,
       "ability": [
         {
           "abilityName": "Sting",
@@ -168,7 +168,7 @@
       ],
       "reward": {
         "itemName": "spPotion",
-        "itemRate": 0.15,
+        "itemRate": 0.25,
         "currencyMin": 6,
         "currencyMax": 9
       }
@@ -184,7 +184,7 @@
       "absorbCost": 8,
       "absorbRate": 0.55,
       "absorbExp": 35,
-      "runRate": 0.55,
+      "runRate": 0.7,
       "ability": [
         {
           "abilityName": "Sting",
@@ -201,7 +201,7 @@
       ],
       "reward": {
         "itemName": "spPotion",
-        "itemRate": 0.2,
+        "itemRate": 0.3,
         "currencyMin": 8,
         "currencyMax": 12
       }
@@ -220,7 +220,7 @@
       "absorbCost": 7,
       "absorbRate": 0.6,
       "absorbExp": 20,
-      "runRate": 0.6,
+      "runRate": 0.8,
       "ability": [
         {
           "abilityName": "Smash Attack",
@@ -253,7 +253,7 @@
       "absorbCost": 8,
       "absorbRate": 0.55,
       "absorbExp": 25,
-      "runRate": 0.55,
+      "runRate": 0.7,
       "ability": [
         {
           "abilityName": "Smash Attack",
@@ -286,7 +286,7 @@
       "absorbCost": 9,
       "absorbRate": 0.5,
       "absorbExp": 30,
-      "runRate": 0.5,
+      "runRate": 0.6,
       "ability": [
         {
           "abilityName": "Smash Attack",
@@ -322,7 +322,7 @@
       "absorbCost": 8,
       "absorbRate": 0.55,
       "absorbExp": 20,
-      "runRate": 0.65,
+      "runRate": 0.8,
       "ability": [
         {
           "abilityName": "Slurp",
@@ -356,7 +356,7 @@
       "absorbCost": 9,
       "absorbRate": 0.5,
       "absorbExp": 30,
-      "runRate": 0.6,
+      "runRate": 0.65,
       "ability": [
         {
           "abilityName": "Slurp",
@@ -416,7 +416,7 @@
     {
       "playerName": "Guardian",
       "level": 1,
-      "hp": 35,
+      "hp": 50,
       "atk": 0,
       "def": 10,
       "mag": 0,
@@ -445,69 +445,11 @@
     {
       "playerName": "Guardian",
       "level": 2,
-      "hp": 50,
-      "atk": 0,
+      "hp": 60,
+      "atk": 20,
       "def": 10,
-      "mag": 0,
+      "mag": 10,
       "magdef": 10,
-      "absorbCost": 9,
-      "absorbRate": 0.45,
-      "absorbExp": 35,
-      "runRate": 0.0,
-      "ability": [
-        {
-          "abilityName": "Slurp",
-          "freq": 50
-        },
-        {
-          "abilityName": "Slime Surface",
-          "freq": 50
-        }
-      ],
-      "reward": {
-        "itemName": "spPotion2",
-        "itemRate": 0,
-        "currencyMin": 40,
-        "currencyMax": 50
-      }
-    },
-    {
-      "playerName": "Guardian",
-      "level": 3,
-      "hp": 75,
-      "atk": 20,
-      "def": 50,
-      "mag": 40,
-      "magdef": 25,
-      "absorbCost": 9,
-      "absorbRate": 0.45,
-      "absorbExp": 35,
-      "runRate": 0.0,
-      "ability": [
-        {
-          "abilityName": "Slurp",
-          "freq": 70
-        },
-        {
-          "abilityName": "Slime Surface",
-          "freq": 20
-        }
-      ],
-      "reward": {
-        "itemName": "spPotion2",
-        "itemRate": 0,
-        "currencyMin": 70,
-        "currencyMax": 80
-      }
-    },
-    {
-      "playerName": "Magic Lizard",
-      "level": 1,
-      "hp": 75,
-      "atk": 20,
-      "def": 50,
-      "mag": 40,
-      "magdef": 25,
       "absorbCost": 9,
       "absorbRate": 0.45,
       "absorbExp": 35,
@@ -524,6 +466,80 @@
         {
           "abilityName": "Last Recover",
           "freq": 10
+        }
+      ],
+      "reward": {
+        "itemName": "spPotion2",
+        "itemRate": 0,
+        "currencyMin": 40,
+        "currencyMax": 50
+      }
+    },
+    {
+      "playerName": "Guardian",
+      "level": 3,
+      "hp": 80,
+      "atk": 50,
+      "def": 50,
+      "mag": 40,
+      "magdef": 25,
+      "absorbCost": 9,
+      "absorbRate": 0.45,
+      "absorbExp": 35,
+      "runRate": 0.0,
+      "ability": [
+        {
+          "abilityName": "Slurp",
+          "freq": 70
+        },
+        {
+          "abilityName": "Smash Attack",
+          "freq": 70
+        },
+        {
+          "abilityName": "Slime Surface",
+          "freq": 20
+        },
+        {
+          "abilityName": "Last Recover",
+          "freq": 20
+        }
+      ],
+      "reward": {
+        "itemName": "spPotion2",
+        "itemRate": 0,
+        "currencyMin": 70,
+        "currencyMax": 80
+      }
+    },
+    {
+      "playerName": "Magic Lizard",
+      "level": 1,
+      "hp": 100,
+      "atk": 70,
+      "def": 50,
+      "mag": 70,
+      "magdef": 25,
+      "absorbCost": 9,
+      "absorbRate": 0.45,
+      "absorbExp": 35,
+      "runRate": 0.0,
+      "ability": [
+        {
+          "abilityName": "Slurp",
+          "freq": 70
+        },
+        {
+          "abilityName": "Smash Attack",
+          "freq": 70
+        },
+        {
+          "abilityName": "Slime Surface",
+          "freq": 20
+        },
+        {
+          "abilityName": "Last Recover",
+          "freq": 20
         }
       ],
       "reward": {
