@@ -51,5 +51,7 @@ public class GameOver : MonoBehaviour
         BattleSystem.Instance.player.Reset();
         DialogueManager.ShowAlert("You get healed.");
         GameEventMessage.SendEvent("ExitGameOver");
+
+        DialogueManager.StartConversation("frogHeal");
     }
 }

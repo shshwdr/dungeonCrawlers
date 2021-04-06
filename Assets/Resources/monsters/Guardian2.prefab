@@ -63,5 +63,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: Guardian2
       objectReference: {fileID: 0}
+    - target: {fileID: 3875387873238238963, guid: ee70ca62c421af0498c046e0bccd1685, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c3a798f0b0a7aa843b4d3a7cdf8da039, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ee70ca62c421af0498c046e0bccd1685, type: 3}
