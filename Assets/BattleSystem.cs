@@ -45,7 +45,7 @@ public class BattleSystem : Singleton<BattleSystem>
 
     public Dictionary<string, BuffInfo> playerBuffDict = new Dictionary<string, BuffInfo>() ;
     public Dictionary<string, BuffInfo> monsterBuffDict = new Dictionary<string, BuffInfo>() ;
-
+    bool isFirst = true;
     // Start is called before the first frame update
     void Start()
     {
@@ -664,6 +664,18 @@ public class BattleSystem : Singleton<BattleSystem>
 
         updateSkillPoint(-value);
         HUD.Instance.battleDialogUI.text = string.Format(Dialogs.afterThrowDice, value);
+        if (isFirst)
+        {
+            isFirst = false;
+            StartCoroutine(showHint());
+        }
+    }
+
+    IEnumerator showHint()
+    {
+        yield return new WaitForSeconds(1);
+
+        DialogueManager.StartConversation("attack");
     }
     public void OnHeal(int value)
     {
