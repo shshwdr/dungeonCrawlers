@@ -1642,6 +1642,7 @@ MonoBehaviour:
       m_Calls: []
   TargetLabel: 2
   TextLabel: {fileID: 0}
+  TextMeshProLabel: {fileID: 0}
   ToggleProgressor: {fileID: 0}
 --- !u!114 &36642104
 MonoBehaviour:
@@ -4654,6 +4655,7 @@ MonoBehaviour:
       m_Calls: []
   TargetLabel: 2
   TextLabel: {fileID: 0}
+  TextMeshProLabel: {fileID: 0}
   ToggleProgressor: {fileID: 0}
 --- !u!114 &185815741
 MonoBehaviour:
@@ -8331,7 +8333,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 351528522}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.81, z: 0}
+  m_LocalPosition: {x: 0, y: 0.37, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1732002531}
@@ -14491,8 +14493,8 @@ RectTransform:
   m_Father: {fileID: 1519880198}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 1028, y: 0}
   m_SizeDelta: {x: 1784, y: 0}
   m_Pivot: {x: 0.5, y: 1}
@@ -19629,6 +19631,7 @@ MonoBehaviour:
     PresetName: 
   TargetLabel: 2
   TextLabel: {fileID: 0}
+  TextMeshProLabel: {fileID: 0}
 --- !u!114 &954532442
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19891,7 +19894,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.4, y: 1.127, z: -29.7}
+  m_LocalPosition: {x: 5.4, y: 1.127, z: -31.94}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -29032,6 +29035,7 @@ MonoBehaviour:
       m_Calls: []
   TargetLabel: 2
   TextLabel: {fileID: 0}
+  TextMeshProLabel: {fileID: 0}
   ToggleProgressor: {fileID: 0}
 --- !u!114 &1414150425
 MonoBehaviour:
@@ -31425,6 +31429,7 @@ MonoBehaviour:
     PresetName: 
   TargetLabel: 2
   TextLabel: {fileID: 0}
+  TextMeshProLabel: {fileID: 0}
 --- !u!114 &1437068616
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33867,6 +33872,7 @@ MonoBehaviour:
     PresetName: 
   TargetLabel: 2
   TextLabel: {fileID: 0}
+  TextMeshProLabel: {fileID: 0}
 --- !u!114 &1477306155
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34196,6 +34202,18 @@ PrefabInstance:
     - target: {fileID: 6964350046267830663, guid: ff0398e1dd36ada40957d27903c47369, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6964925173071645270, guid: ff0398e1dd36ada40957d27903c47369, type: 3}
+      propertyPath: coinMax
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6964925173071645270, guid: ff0398e1dd36ada40957d27903c47369, type: 3}
+      propertyPath: coinMin
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6964925173071645270, guid: ff0398e1dd36ada40957d27903c47369, type: 3}
+      propertyPath: itemCount
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6965924076278055975, guid: ff0398e1dd36ada40957d27903c47369, type: 3}
       propertyPath: m_Name
@@ -34541,7 +34559,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1520658384}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.4, y: 1.127, z: -29.7}
+  m_LocalPosition: {x: 5.4, y: 1.127, z: -31.94}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1957434576}
@@ -34768,7 +34786,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1543889745}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.053, z: 0}
+  m_LocalPosition: {x: 0, y: 1.127, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1732002531}
@@ -38952,6 +38970,7 @@ MonoBehaviour:
       m_Calls: []
   TargetLabel: 2
   TextLabel: {fileID: 0}
+  TextMeshProLabel: {fileID: 0}
   ToggleProgressor: {fileID: 0}
 --- !u!114 &1653763767
 MonoBehaviour:
@@ -40231,6 +40250,7 @@ MonoBehaviour:
       m_Calls: []
   TargetLabel: 2
   TextLabel: {fileID: 0}
+  TextMeshProLabel: {fileID: 0}
   ToggleProgressor: {fileID: 0}
 --- !u!114 &1654165783
 MonoBehaviour:
@@ -40794,7 +40814,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1732002530}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.4, y: 1.18, z: -29.7}
+  m_LocalPosition: {x: 5.4, y: 0, z: -31.94}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1543889746}
@@ -43100,6 +43120,7 @@ MonoBehaviour:
       m_Calls: []
   TargetLabel: 2
   TextLabel: {fileID: 0}
+  TextMeshProLabel: {fileID: 0}
   ToggleProgressor: {fileID: 0}
 --- !u!114 &1797424280
 MonoBehaviour:
@@ -46992,6 +47013,7 @@ MonoBehaviour:
     PresetName: 
   TargetLabel: 2
   TextLabel: {fileID: 0}
+  TextMeshProLabel: {fileID: 0}
 --- !u!114 &1923883541
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -52862,6 +52884,7 @@ MonoBehaviour:
     PresetName: 
   TargetLabel: 2
   TextLabel: {fileID: 0}
+  TextMeshProLabel: {fileID: 0}
 --- !u!114 &2125347646
 MonoBehaviour:
   m_ObjectHideFlags: 0

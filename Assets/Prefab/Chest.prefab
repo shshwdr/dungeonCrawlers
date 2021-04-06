@@ -222,7 +222,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10eca121844fac94894cf7aea529372e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinMin: 5
-  coinMax: 10
-  itemCount: 5
+  coinMin: 3
+  coinMax: 6
+  itemCount: 3
   hasCollected: 0
