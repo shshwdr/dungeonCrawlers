@@ -39,7 +39,7 @@ public class BattleSystem : Singleton<BattleSystem>
 
     public int skillPoint;
     public int keepSkillPoint = 5;
-
+    public bool successAbsorb = false;
     public bool isInBattle { get { return state != BattleState.None; } }
 
 
@@ -460,10 +460,10 @@ public class BattleSystem : Singleton<BattleSystem>
         //show particle effect
         //check possibility
         var value = Random.value;
-        showParticleEffect("w");
+        showParticleEffect("Absorb");
         if (value < monster.monsterStatus.absorbRate || CheatManager.Instance.defeiniteAbsorb)
         {
-
+            successAbsorb = true;
             yield return StartCoroutine( yieldAndShowText(string.Format(Dialogs.absorbSuccess, monster.getName())));
            // yield return StartCoroutine(yieldAndShowText(string.Format(selectedAbilityInfo.description, monster.monsterStatus.playerName, selectedAbilityInfo.getDamage)));
 
@@ -585,9 +585,22 @@ public class BattleSystem : Singleton<BattleSystem>
         }
         if (state == BattleState.Won || state == BattleState.Absorb || isPopup)
         {
-            monster.fullyDie();
-            yield return new WaitForSeconds(0.5f);
-            Destroy(monster.gameObject);//better way to die?
+
+            if(monster.displayName == "Magic Lizard")
+            {
+                monster.dieIdle();
+
+                yield return new WaitForSeconds(0.5f);
+                DialogueManager.StartConversation("finish");
+            }
+            else
+            {
+
+                monster.fullyDie();
+                yield return new WaitForSeconds(0.5f);
+                Destroy(monster.gameObject);
+            }
+
         }
         if (state == BattleState.Lost)
         {
@@ -673,7 +686,7 @@ public class BattleSystem : Singleton<BattleSystem>
 
     IEnumerator showHint()
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(0.5f);
 
         DialogueManager.StartConversation("attack");
     }

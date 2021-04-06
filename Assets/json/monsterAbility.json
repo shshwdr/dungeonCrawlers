@@ -36,11 +36,11 @@
       {
         "actionId": "Strong Skin",
         "actionName": "Strong Skin",
-        "description":"{0} use strong skin and Grow DEF and M DEG of 20 for the next turn",
+        "description":"{0} use strong skin and Grow DEF and M DEG of 20 for 2 round",
         "descriptionType":"effect",
         "abilityType":"physical",
         "damage":[0],
-        "effectRound":2,
+        "effectRound":3,
         "effectValue":[20],
         "effectType":"increaseBDef",
         "doActionDesc":"You rush to the enemy and attack",

@@ -19,12 +19,19 @@ public class Monster : HPObject
 
     public Vector3 popupPositionAdjust;
     public Vector3 monsterCenter;
+
+    NPC npc;
     // Start is called before the first frame update
     protected override void Start()
     {
         base.Start();
         Init(BattleCharacters.Instance.monsterStatusDict[getMonsterId()]);
         monsterCenter = transform.Find("monsterCenter").position;
+        npc = GetComponent<NPC>();
+        if (npc)
+        {
+            npc.enabled = false;
+        }
     }
 
     public string getName()
@@ -110,6 +117,16 @@ public class Monster : HPObject
         base.die();
 
         animator.SetTrigger("die");
+    }
+
+    public void dieIdle()
+    {
+        animator.SetTrigger("dieIdle");
+        if (npc)
+        {
+            npc.enabled = true;
+        }
+        Destroy(this);
     }
 
     public void fullyDie()

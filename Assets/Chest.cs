@@ -34,7 +34,7 @@ public class Chest : Interactable
     [SerializeField]
     bool hasCollected = false;
 
-
+    public GameObject indicator;
     string[] itemList = new string[]{
         "hpPotion1","hpPotion","spPotion","spPotion1"
         };
@@ -49,6 +49,8 @@ public class Chest : Interactable
         if (!hasCollected)
         {
             hasCollected = true;
+
+            indicator.SetActive(false);
             //random coin
             var rand = Random.Range(coinMin * Utils.currencyScale, coinMax * Utils.currencyScale);
             Inventory.Instance.addCurrency(rand * Utils.currencyScale);
@@ -81,7 +83,7 @@ public class Chest : Interactable
     // Start is called before the first frame update
     void Start()
     {
-        
+        indicator.SetActive(true);
     }
 
     // Update is called once per frame

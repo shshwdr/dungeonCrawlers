@@ -1180,8 +1180,8 @@ MonoBehaviour:
         SoundName: No Sound
         AudioClip: {fileID: 0}
         OutputAudioMixerGroup: {fileID: 0}
-    PresetCategory: Uncategorized
-    PresetName: Default
+    PresetCategory: Organic
+    PresetName: BlowDown
     PunchAnimation:
       AnimationType: 4
       Move:
@@ -2487,8 +2487,8 @@ MonoBehaviour:
     IsPlaying: 0
     LoopAnimationType: 0
     LoadSelectedPresetAtRuntime: 0
-    PresetCategory: 
-    PresetName: 
+    PresetCategory: Uncategorized
+    PresetName: Default
   SelectedLoopAnimation:
     Animation:
       AnimationType: 3
@@ -2581,8 +2581,8 @@ MonoBehaviour:
     IsPlaying: 0
     LoopAnimationType: 1
     LoadSelectedPresetAtRuntime: 0
-    PresetCategory: 
-    PresetName: 
+    PresetCategory: Uncategorized
+    PresetName: Default
   TargetLabel: 2
   TextLabel: {fileID: 0}
   TextMeshProLabel: {fileID: 6307316474698570152}
@@ -2599,3 +2599,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   battleDialogUI: {fileID: 6307316474698570152}
+  dialogUIObj: {fileID: 0}

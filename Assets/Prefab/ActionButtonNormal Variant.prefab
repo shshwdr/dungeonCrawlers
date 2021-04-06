@@ -1,5 +1,17 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!225 &8808598380734534779
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8083472212524039232}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1001 &2857065351382316896
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13,7 +25,87 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6307316474726075168, guid: 40247330819f9944c8b579a746e16a82, type: 3}
       propertyPath: m_Name
-      value: ActionButtonNormal
+      value: ActionButtonNormal Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 6307316474726075174, guid: 40247330819f9944c8b579a746e16a82, type: 3}
+      propertyPath: OnClick.PresetName
+      value: BlowDown
+      objectReference: {fileID: 0}
+    - target: {fileID: 6307316474726075174, guid: 40247330819f9944c8b579a746e16a82, type: 3}
+      propertyPath: OnClick.PresetCategory
+      value: Organic
+      objectReference: {fileID: 0}
+    - target: {fileID: 6307316474726075174, guid: 40247330819f9944c8b579a746e16a82, type: 3}
+      propertyPath: OnClick.PunchAnimation.Fade.To
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6307316474726075174, guid: 40247330819f9944c8b579a746e16a82, type: 3}
+      propertyPath: OnClick.PunchAnimation.Move.By.y
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6307316474726075174, guid: 40247330819f9944c8b579a746e16a82, type: 3}
+      propertyPath: OnClick.PunchAnimation.Scale.By.x
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6307316474726075174, guid: 40247330819f9944c8b579a746e16a82, type: 3}
+      propertyPath: OnClick.PunchAnimation.Scale.By.y
+      value: -0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6307316474726075174, guid: 40247330819f9944c8b579a746e16a82, type: 3}
+      propertyPath: OnClick.PunchAnimation.Rotate.By.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6307316474726075174, guid: 40247330819f9944c8b579a746e16a82, type: 3}
+      propertyPath: OnClick.PunchAnimation.Rotate.By.z
+      value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6307316474726075174, guid: 40247330819f9944c8b579a746e16a82, type: 3}
+      propertyPath: OnClick.PunchAnimation.Move.Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6307316474726075174, guid: 40247330819f9944c8b579a746e16a82, type: 3}
+      propertyPath: OnClick.PunchAnimation.Move.Vibrato
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 6307316474726075174, guid: 40247330819f9944c8b579a746e16a82, type: 3}
+      propertyPath: OnClick.PunchAnimation.Move.Duration
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6307316474726075174, guid: 40247330819f9944c8b579a746e16a82, type: 3}
+      propertyPath: OnClick.PunchAnimation.Scale.Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6307316474726075174, guid: 40247330819f9944c8b579a746e16a82, type: 3}
+      propertyPath: OnClick.PunchAnimation.Scale.Vibrato
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6307316474726075174, guid: 40247330819f9944c8b579a746e16a82, type: 3}
+      propertyPath: OnClick.PunchAnimation.Rotate.Vibrato
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6307316474726075174, guid: 40247330819f9944c8b579a746e16a82, type: 3}
+      propertyPath: OnClick.PunchAnimation.Scale.Duration
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6307316474726075174, guid: 40247330819f9944c8b579a746e16a82, type: 3}
+      propertyPath: OnClick.PunchAnimation.Move.Elasticity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6307316474726075174, guid: 40247330819f9944c8b579a746e16a82, type: 3}
+      propertyPath: OnClick.PunchAnimation.Rotate.Duration
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6307316474726075174, guid: 40247330819f9944c8b579a746e16a82, type: 3}
+      propertyPath: OnClick.PunchAnimation.Scale.Elasticity
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6307316474726075174, guid: 40247330819f9944c8b579a746e16a82, type: 3}
+      propertyPath: OnClick.PunchAnimation.Scale.StartDelay
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6307316474726075174, guid: 40247330819f9944c8b579a746e16a82, type: 3}
+      propertyPath: OnClick.PunchAnimation.Rotate.Elasticity
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6307316474726075175, guid: 40247330819f9944c8b579a746e16a82, type: 3}
       propertyPath: m_Pivot.x
@@ -101,3 +193,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 40247330819f9944c8b579a746e16a82, type: 3}
+--- !u!1 &8083472212524039232 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6307316474726075168, guid: 40247330819f9944c8b579a746e16a82, type: 3}
+  m_PrefabInstance: {fileID: 2857065351382316896}
+  m_PrefabAsset: {fileID: 0}

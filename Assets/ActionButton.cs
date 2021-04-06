@@ -25,6 +25,10 @@ public class ActionButton : MonoBehaviour
 
     public void OnClick()
     {
+        if (CSDialogueManager.Instance.isInDialogue)
+        {
+            return;
+        }
         if (!BattleSystem.Instance.isInBattle)
         {
             if (dialogUIObj)

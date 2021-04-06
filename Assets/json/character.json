@@ -15,7 +15,7 @@
     {
       "playerName": "Bat",
       "level": 1,
-      "hp": 9,
+      "hp": 12,
       "atk": 0,
       "def": 0,
       "mag": 0,
@@ -36,7 +36,7 @@
       ],
       "reward": {
         "itemName": "hpPotion",
-        "itemRate": 0.2,
+        "itemRate": 0.3,
         "currencyMin": 1,
         "currencyMax": 3
       }
@@ -104,7 +104,7 @@
       ],
       "reward": {
         "itemName": "hpPotion",
-        "itemRate": 0.3,
+        "itemRate": 0.35,
         "currencyMin": 6,
         "currencyMax": 10
       }
@@ -113,7 +113,7 @@
     {
       "playerName": "Bee",
       "level": 1,
-      "hp": 12,
+      "hp": 15,
       "atk": 10,
       "def": 10,
       "mag": 0,
@@ -134,7 +134,7 @@
       ],
       "reward": {
         "itemName": "spPotion",
-        "itemRate": 0.2,
+        "itemRate": 0.3,
         "currencyMin": 4,
         "currencyMax": 6
       }
@@ -168,7 +168,7 @@
       ],
       "reward": {
         "itemName": "spPotion",
-        "itemRate": 0.25,
+        "itemRate": 0.3,
         "currencyMin": 6,
         "currencyMax": 9
       }
@@ -201,7 +201,7 @@
       ],
       "reward": {
         "itemName": "spPotion",
-        "itemRate": 0.3,
+        "itemRate": 0.35,
         "currencyMin": 8,
         "currencyMax": 12
       }
@@ -237,7 +237,7 @@
       ],
       "reward": {
         "itemName": "hpPotion2",
-        "itemRate": 0.1,
+        "itemRate": 0.2,
         "currencyMin": 5,
         "currencyMax": 10
       }
@@ -270,7 +270,7 @@
       ],
       "reward": {
         "itemName": "hpPotion2",
-        "itemRate": 0.15,
+        "itemRate": 0.2,
         "currencyMin": 8,
         "currencyMax": 15
       }
@@ -303,7 +303,7 @@
       ],
       "reward": {
         "itemName": "hpPotion2",
-        "itemRate": 0.2,
+        "itemRate": 0.25,
         "currencyMin": 15,
         "currencyMax": 20
       }
@@ -339,7 +339,7 @@
       ],
       "reward": {
         "itemName": "spPotion2",
-        "itemRate": 0.1,
+        "itemRate": 0.15,
         "currencyMin": 5,
         "currencyMax": 8
       }
@@ -427,7 +427,7 @@
       "runRate": 0.0,
       "ability": [
         {
-          "abilityName": "Bite",
+          "abilityName": "Wing Attack",
           "freq": 50
         },
         {
@@ -460,7 +460,7 @@
           "freq": 70
         },
         {
-          "abilityName": "Slime Surface",
+          "abilityName": "Strong Skin",
           "freq": 20
         },
         {
@@ -497,7 +497,7 @@
           "freq": 70
         },
         {
-          "abilityName": "Slime Surface",
+          "abilityName": "Strong Skin",
           "freq": 20
         },
         {
@@ -516,10 +516,10 @@
       "playerName": "Magic Lizard",
       "level": 1,
       "hp": 100,
-      "atk": 70,
+      "atk": 80,
       "def": 50,
-      "mag": 70,
-      "magdef": 25,
+      "mag": 80,
+      "magdef": 50,
       "absorbCost": 9,
       "absorbRate": 0.45,
       "absorbExp": 35,
@@ -534,7 +534,7 @@
           "freq": 70
         },
         {
-          "abilityName": "Slime Surface",
+          "abilityName": "Strong Skin",
           "freq": 20
         },
         {
@@ -613,6 +613,21 @@
       },
       {
         "playerName": "Guardian",
+        "color":0,
+        "absorbAbility":""
+      },
+      {
+        "playerName": "Guardian",
+        "color":1,
+        "absorbAbility":""
+      },
+      {
+        "playerName": "Guardian",
+        "color":2,
+        "absorbAbility":""
+      },
+      {
+        "playerName": "Magic Lizard",
         "color":0,
         "absorbAbility":""
       }

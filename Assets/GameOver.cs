@@ -54,4 +54,10 @@ public class GameOver : MonoBehaviour
 
         DialogueManager.StartConversation("frogHeal");
     }
+
+    //public void getBackToOrigin()
+    //{
+
+    //    BattleSystem.Instance.player.Reset();
+    //}
 }

@@ -17,7 +17,6 @@ public class ShopMenu : Singleton<ShopMenu>
     {
         if (coinLabel)
         {
-
             coinLabel.text = "Coin: " + Inventory.Instance.currentCurrency;
         }
     }

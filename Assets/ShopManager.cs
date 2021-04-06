@@ -74,7 +74,7 @@ public class ShopManager : Singleton<ShopManager>
     [SerializeField]
     Transform buttonsParent;
 
-
+    public bool firstOpen = true;
     public bool isInShop;
     AllShopItems allitems;
     List<ShopItem> itemButtons = new List<ShopItem>();
@@ -128,8 +128,17 @@ public class ShopManager : Singleton<ShopManager>
 
     public void showShopMenu()
     {
+        if (firstOpen)
+        {
+            firstOpen = false;
+        }
+        else
+        {
+            ShopMenu.Instance.updateCoin();
+        }
         isInShop = true;
         GameEventMessage.SendEvent("Shop");
+
     }
 
     public void hideShopMenu()

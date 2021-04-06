@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 5285936806666698418}
   - component: {fileID: 5285936806666698429}
   - component: {fileID: 5285936806666698417}
+  - component: {fileID: 3265147230365151575}
   m_Layer: 0
   m_Name: shopItem 1
   m_TagString: Untagged
@@ -1047,8 +1048,8 @@ MonoBehaviour:
         SoundName: No Sound
         AudioClip: {fileID: 0}
         OutputAudioMixerGroup: {fileID: 0}
-    PresetCategory: Uncategorized
-    PresetName: Default
+    PresetCategory: Organic
+    PresetName: BlowDown
     PunchAnimation:
       AnimationType: 4
       Move:
@@ -2467,6 +2468,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameLabel: {fileID: 5285936807847810864}
   costLabel: {fileID: 5285936807603270397}
+--- !u!225 &3265147230365151575
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5285936806666698431}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &5285936807603270399
 GameObject:
   m_ObjectHideFlags: 0

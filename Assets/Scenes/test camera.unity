@@ -180,6 +180,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: db0b0ffb515e67b4fa8dde4f799c6d34, type: 3}
+--- !u!4 &428857427 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5877645785978165131, guid: 5e584d6a9f3cef84aacf2576a2314cba, type: 3}
+  m_PrefabInstance: {fileID: 2009784847}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &993396225
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -464,8 +469,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1802619648}
-  m_LocalRotation: {x: -0.002306072, y: 0.9946943, z: -0.10027318, w: -0.022875873}
-  m_LocalPosition: {x: 7.2971787, y: 8.608251, z: -29.330614}
+  m_LocalRotation: {x: 0.0111192055, y: 0.9811606, z: -0.18347982, w: 0.059460085}
+  m_LocalPosition: {x: 35.0419, y: 15.017422, z: 1.9599409}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -617,6 +622,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lizard
       objectReference: {fileID: 0}
+    - target: {fileID: 818294311446576639, guid: 5e584d6a9f3cef84aacf2576a2314cba, type: 3}
+      propertyPath: m_LookAt
+      value: 
+      objectReference: {fileID: 428857427}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5e584d6a9f3cef84aacf2576a2314cba, type: 3}
 --- !u!1001 &2028299693

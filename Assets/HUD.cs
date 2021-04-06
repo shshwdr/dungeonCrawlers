@@ -24,12 +24,19 @@ public class HUD : Singleton<HUD>
 
     }
     public GameObject skillActions;
+    public GameObject skillHint;
     public GameObject itemActions;
     public GameObject generalActions;
 
     public void showSkillActions()
     {
         skillActions.SetActive(true);
+
+        if (BattleSystem.Instance.successAbsorb)
+        {
+            skillHint.SetActive(true);
+        }
+
         itemActions.SetActive(false);
         generalActions.SetActive(false);
     }
@@ -37,6 +44,7 @@ public class HUD : Singleton<HUD>
     public void showItemActions()
     {
 
+        skillHint.SetActive(false);
         skillActions.SetActive(false);
         itemActions.SetActive(true);
         generalActions.SetActive(false);
@@ -45,6 +53,7 @@ public class HUD : Singleton<HUD>
     public void showGeneraActions()
     {
 
+        skillHint.SetActive(false);
         skillActions.SetActive(false);
         itemActions.SetActive(false);
         generalActions.SetActive(true);

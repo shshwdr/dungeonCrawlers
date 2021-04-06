@@ -1194,6 +1194,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 995486114519374703, guid: e325bbb2dcb898342976c0f3e5d56970, type: 3}
+      propertyPath: m_LookAt
+      value: 
+      objectReference: {fileID: 6032835670240141785}
     - target: {fileID: 995486114731825321, guid: e325bbb2dcb898342976c0f3e5d56970, type: 3}
       propertyPath: m_Name
       value: Magic Slime0
@@ -1204,15 +1208,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 995486114731825333, guid: e325bbb2dcb898342976c0f3e5d56970, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 9.12
       objectReference: {fileID: 0}
     - target: {fileID: 995486114731825333, guid: e325bbb2dcb898342976c0f3e5d56970, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 6.9559827
       objectReference: {fileID: 0}
     - target: {fileID: 995486114731825333, guid: e325bbb2dcb898342976c0f3e5d56970, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -26.49336
       objectReference: {fileID: 0}
     - target: {fileID: 995486114731825333, guid: e325bbb2dcb898342976c0f3e5d56970, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1296,5 +1300,10 @@ PrefabInstance:
 --- !u!4 &6032835669648125821 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 995486114731825333, guid: e325bbb2dcb898342976c0f3e5d56970, type: 3}
+  m_PrefabInstance: {fileID: 6802789821677975496}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &6032835670240141785 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 995486115315717649, guid: e325bbb2dcb898342976c0f3e5d56970, type: 3}
   m_PrefabInstance: {fileID: 6802789821677975496}
   m_PrefabAsset: {fileID: 0}

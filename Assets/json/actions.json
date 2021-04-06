@@ -2,6 +2,14 @@
     "topBattleInfos":
     [
       {
+        "actionId": "absorb",
+        "actionName": "Absorb",
+        "description":"Absorb the enemy",
+        "doActionDesc":"You tried to absorb the enemy",
+        "descriptionType":"absorb",
+        "cost":[8]
+      },
+      {
         "actionId": "spell",
         "actionName": "Spell",
         "description":"Select a ability to use",
@@ -16,14 +24,6 @@
         "doActionDesc":"You are picking item to use...",
         "descriptionType":"normal",
         "cost":[0]
-      },
-      {
-        "actionId": "absorb",
-        "actionName": "Absorb",
-        "description":"Absorb the enemy",
-        "doActionDesc":"You tried to absorb the enemy",
-        "descriptionType":"absorb",
-        "cost":[8]
       },
       {
         "actionId": "run",

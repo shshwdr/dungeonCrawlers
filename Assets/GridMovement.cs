@@ -80,7 +80,7 @@ public class GridMovement : MonoBehaviour
             return;
         }
 
-        if (Input.GetKey(KeyCode.W))
+        if (Input.GetKey(KeyCode.W)||Input.GetKey(KeyCode.UpArrow))
         {
             if (GetIntoBattle(transform.forward * moveStep))
             {
@@ -103,7 +103,7 @@ public class GridMovement : MonoBehaviour
             }
 
         }
-        else if (Input.GetKeyDown(KeyCode.S))
+        else if (Input.GetKeyDown(KeyCode.S)|| Input.GetKeyDown(KeyCode.DownArrow))
         {
             //if(GetIntoBattle(-transform.forward * moveStep))
             //{
@@ -119,11 +119,11 @@ public class GridMovement : MonoBehaviour
             currentDirection += left*2;
 
         }
-        else if (Input.GetKeyDown(KeyCode.A))
+        else if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow))
         {
             currentDirection += left;
         }
-        else if (Input.GetKeyDown(KeyCode.D))
+        else if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow))
         {
             currentDirection += right; 
            
@@ -181,8 +181,11 @@ public class GridMovement : MonoBehaviour
         if (Physics.Raycast(myRay, out hit, moveStep, layerMask))
         {
             var monster = hit.collider.GetComponent<Monster>();
-            BattleSystem.Instance.StartBattle(monster, player);
-            return true;
+            if (monster)
+            {
+                BattleSystem.Instance.StartBattle(monster, player);
+                return true;
+            }
         }
         return false;
     }
