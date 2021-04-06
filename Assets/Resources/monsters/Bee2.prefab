@@ -61,7 +61,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2186320428904699034, guid: b94c21d99b60bad47b4aafd0eccd76f5, type: 3}
       propertyPath: displayName
-      value: Bee 2
+      value: Grass Rikayon
       objectReference: {fileID: 0}
+    - target: {fileID: 4277472738075207673, guid: b94c21d99b60bad47b4aafd0eccd76f5, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 681afb501b7b9c74f988a3d44e29b343, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b94c21d99b60bad47b4aafd0eccd76f5, type: 3}

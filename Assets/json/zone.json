@@ -8,9 +8,9 @@
         {"monsterId":"Bat", "level":1,"color":1,"rate":40},
         {"monsterId":"Bat", "level":1,"color":2,"rate":40},
 
-        {"monsterId":"Bee", "level":1,"color":0,"rate":20},
-        {"monsterId":"Bee", "level":1,"color":1,"rate":20},
-        {"monsterId":"Bee", "level":1,"color":2,"rate":20}
+        {"monsterId":"Bee", "level":1,"color":0,"rate":30},
+        {"monsterId":"Bee", "level":1,"color":1,"rate":30},
+        {"monsterId":"Bee", "level":1,"color":2,"rate":30}
       ]
     },
       {
@@ -38,18 +38,42 @@
         "zoneId": "tutorial2",
         "zoneName": "grassland",
         "zoneMonsters":[
-          {"monsterId":"Bat", "level":2,"color":0,"rate":1},
-          {"monsterId":"Bat", "level":2,"color":1,"rate":1},
-          {"monsterId":"Bat", "level":2,"color":2,"rate":1}
+          {"monsterId":"Bat", "level":2,"color":0,"rate":45},
+          {"monsterId":"Bat", "level":2,"color":1,"rate":45},
+          {"monsterId":"Bat", "level":2,"color":2,"rate":45},
+
+          {"monsterId":"Bee", "level":2,"color":0,"rate":40},
+          {"monsterId":"Bee", "level":2,"color":1,"rate":40},
+          {"monsterId":"Bee", "level":2,"color":2,"rate":40},
+
+          {"monsterId":"Golem", "level":2,"color":0,"rate":30},
+          {"monsterId":"Golem", "level":2,"color":1,"rate":30},
+          {"monsterId":"Golem", "level":2,"color":2,"rate":30},
+
+          {"monsterId":"Magic Slime", "level":2,"color":0,"rate":35},
+          {"monsterId":"Magic Slime", "level":2,"color":1,"rate":35},
+          {"monsterId":"Magic Slime", "level":1,"color":2,"rate":35}
         ]
       },
       {
         "zoneId": "tutorial3",
         "zoneName": "grassland",
         "zoneMonsters":[
-          {"monsterId":"Bat", "level":3,"color":0,"rate":1},
-          {"monsterId":"Bat", "level":3,"color":1,"rate":1},
-          {"monsterId":"Bat", "level":3,"color":2,"rate":1}
+          {"monsterId":"Bat", "level":3,"color":0,"rate":35},
+          {"monsterId":"Bat", "level":3,"color":1,"rate":35},
+          {"monsterId":"Bat", "level":3,"color":2,"rate":35},
+
+          {"monsterId":"Bee", "level":3,"color":0,"rate":40},
+          {"monsterId":"Bee", "level":3,"color":1,"rate":40},
+          {"monsterId":"Bee", "level":3,"color":2,"rate":40},
+
+          {"monsterId":"Golem", "level":3,"color":0,"rate":40},
+          {"monsterId":"Golem", "level":3,"color":1,"rate":40},
+          {"monsterId":"Golem", "level":3,"color":2,"rate":40},
+
+          {"monsterId":"Magic Slime", "level":3,"color":0,"rate":35},
+          {"monsterId":"Magic Slime", "level":3,"color":1,"rate":35},
+          {"monsterId":"Magic Slime", "level":3,"color":2,"rate":35}
         ]
       }
     ]

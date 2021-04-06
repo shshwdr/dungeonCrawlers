@@ -61,7 +61,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2186320428904699034, guid: b94c21d99b60bad47b4aafd0eccd76f5, type: 3}
       propertyPath: displayName
-      value: Bee 1
+      value: Poison Rikayon
       objectReference: {fileID: 0}
+    - target: {fileID: 4277472738075207673, guid: b94c21d99b60bad47b4aafd0eccd76f5, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c7137e946a2bf77498b55b878fb70ca9, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b94c21d99b60bad47b4aafd0eccd76f5, type: 3}
