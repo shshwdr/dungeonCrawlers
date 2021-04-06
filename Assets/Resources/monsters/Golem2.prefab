@@ -65,7 +65,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2186320428904699034, guid: 48f2c9880fe02ba4bbe3e8da5c6234e0, type: 3}
       propertyPath: displayName
-      value: Golem 2
+      value: Forest Wendigo
       objectReference: {fileID: 0}
+    - target: {fileID: 6021366278160181855, guid: 48f2c9880fe02ba4bbe3e8da5c6234e0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a50fd17019f62ac44b045221e36226b9, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 48f2c9880fe02ba4bbe3e8da5c6234e0, type: 3}
