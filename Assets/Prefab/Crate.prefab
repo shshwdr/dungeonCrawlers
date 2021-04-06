@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8053118189574179190}
   - component: {fileID: 8053118189574179189}
   m_Layer: 12
-  m_Name: WoodCrate
+  m_Name: Crate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28,7 +28,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2081649586425892962}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -3.4138749, y: 0.07498217, z: -61.718678}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
@@ -226,7 +226,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6799077288153519816
 Transform:
   m_ObjectHideFlags: 0
