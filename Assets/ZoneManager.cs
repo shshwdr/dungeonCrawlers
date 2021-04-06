@@ -62,6 +62,7 @@ public class ZoneManager : Singleton<ZoneManager>
                 currentStepCounter = 0;
 
                 meetMonterCounter = UnityEngine.Random.Range(meetMonterCounterMin, meetMonterCounterMax);
+                Debug.Log("meet monster counter " + meetMonterCounter+ " "+ meetMonterCounterMin);
                 return true;
             }
             else

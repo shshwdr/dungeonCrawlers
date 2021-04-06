@@ -13,7 +13,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: Flavedo
-  productName: dungeon
+  productName: The Reign of the Lizard Wizard
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -261,7 +261,7 @@ PlayerSettings:
   - m_BuildTarget: 
     m_Icons:
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: 84ed71163b2404a95a30b46895c53398, type: 3}
+      m_Icon: {fileID: 2800000, guid: 241e3f1a1b078e84787a73b0a35ff4db, type: 3}
       m_Width: 128
       m_Height: 128
       m_Kind: 0

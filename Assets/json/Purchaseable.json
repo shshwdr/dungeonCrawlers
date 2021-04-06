@@ -43,12 +43,12 @@
       {
         "itemId": "hp",
         "itemName":"Heal 5 hp",
-        "cost": 1
+        "cost": 2
       },
       {
         "itemId": "sp",
         "itemName":"Restore 5 mana",
-        "cost": 1.5
+        "cost": 3
       }
     ],
     "Items":
@@ -56,22 +56,22 @@
       {
         "itemId": "hpPotion",
         "itemName":"Heal 5 hp",
-        "cost": 4
+        "cost": 6
       },
       {
         "itemId": "spPotion",
         "itemName":"Heal 5 hp",
-        "cost": 5
+        "cost": 8
       },
       {
         "itemId": "hpPotion1",
         "itemName":"Heal 5 hp",
-        "cost": 12
+        "cost": 16
       },
       {
         "itemId": "spPotion1",
         "itemName":"Heal 5 hp",
-        "cost": 12
+        "cost": 16
       }
     ]
   }

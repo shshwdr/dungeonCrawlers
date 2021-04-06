@@ -46,7 +46,7 @@
     {
       "playerName": "Bat",
       "level": 2,
-      "hp": 20,
+      "hp": 25,
       "atk": 40,
       "def": 15,
       "mag": 30,
@@ -143,7 +143,7 @@
     {
       "playerName": "Bee",
       "level": 2,
-      "hp": 25,
+      "hp": 28,
       "atk": 60,
       "def": 25,
       "mag": 0,
@@ -176,7 +176,7 @@
     {
       "playerName": "Bee",
       "level": 3,
-      "hp": 35,
+      "hp": 40,
       "atk": 70,
       "def": 30,
       "mag": 0,
@@ -278,7 +278,7 @@
     {
       "playerName": "Golem",
       "level": 3,
-      "hp": 45,
+      "hp": 50,
       "atk": 60,
       "def": 35,
       "mag": 0,
@@ -348,7 +348,7 @@
     {
       "playerName": "Magic Slime",
       "level": 2,
-      "hp": 25,
+      "hp": 30,
       "atk": 0,
       "def": 15,
       "mag": 50,
@@ -382,7 +382,7 @@
     {
       "playerName": "Magic Slime",
       "level": 3,
-      "hp": 35,
+      "hp": 40,
       "atk": 0,
       "def": 10,
       "mag": 70,
@@ -416,12 +416,12 @@
     {
       "playerName": "Guardian",
       "level": 1,
-      "hp": 40,
+      "hp": 45,
       "atk": 0,
       "def": 10,
       "mag": 0,
       "magdef": 10,
-      "absorbCost": 9,
+      "absorbCost": 0,
       "absorbRate": 0.45,
       "absorbExp": 35,
       "runRate": 0.0,
@@ -445,12 +445,12 @@
     {
       "playerName": "Guardian",
       "level": 2,
-      "hp": 60,
+      "hp": 70,
       "atk": 20,
       "def": 10,
       "mag": 10,
       "magdef": 10,
-      "absorbCost": 9,
+      "absorbCost": 0,
       "absorbRate": 0.45,
       "absorbExp": 35,
       "runRate": 0.0,
@@ -478,12 +478,12 @@
     {
       "playerName": "Guardian",
       "level": 3,
-      "hp": 80,
+      "hp": 90,
       "atk": 50,
       "def": 50,
       "mag": 40,
       "magdef": 25,
-      "absorbCost": 9,
+      "absorbCost": 0,
       "absorbRate": 0.45,
       "absorbExp": 35,
       "runRate": 0.0,
@@ -520,7 +520,7 @@
       "def": 50,
       "mag": 80,
       "magdef": 50,
-      "absorbCost": 9,
+      "absorbCost": 0,
       "absorbRate": 0.45,
       "absorbExp": 35,
       "runRate": 0.0,
@@ -589,7 +589,7 @@
       {
         "playerName": "Golem",
         "color":1,
-        "absorbAbility":"Lava Rock "
+        "absorbAbility":"Lava Rock"
       },
       {
         "playerName": "Golem",

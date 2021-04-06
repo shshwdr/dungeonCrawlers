@@ -136,10 +136,12 @@ public class Monster : HPObject
 
     public void startAttackCamera()
     {
-        attackCamera.gameObject.SetActive(true);
+        if (attackCamera)
+            attackCamera.gameObject.SetActive(true);
     }
     public void finishAttackCamera()
     {
+        if(attackCamera)
         attackCamera.gameObject.SetActive(false);
     }
 

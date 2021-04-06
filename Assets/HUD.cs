@@ -32,7 +32,7 @@ public class HUD : Singleton<HUD>
     {
         skillActions.SetActive(true);
 
-        if (BattleSystem.Instance.successAbsorb)
+        if (!BattleSystem.Instance.successAbsorb)
         {
             skillHint.SetActive(true);
         }

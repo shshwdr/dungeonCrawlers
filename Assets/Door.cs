@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Door : Interactable
 {
-
+    public string words;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,7 +24,7 @@ public class Door : Interactable
             return;
         }
         isInteracting = true;
-        DialogueManager.ShowAlert("Kill Guardian to pass", showTime);
+        DialogueManager.ShowAlert(words, showTime);
     }
 
     public void OpenDoor()

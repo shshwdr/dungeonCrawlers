@@ -48,7 +48,7 @@ public class ActionButton : MonoBehaviour
                             break;
                         case "spPotion":
                         case "spPotion1":
-                            BattleSystem.Instance.OnHeal(itemInfo.param);
+                            BattleSystem.Instance.OnRestoreSP(itemInfo.param);
                             break;
                     }
                     Inventory.Instance.useItem(itemInfo.actionId);

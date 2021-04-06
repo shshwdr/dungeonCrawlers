@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="ParameterPreset" id="{1a027a9f-2fae-454a-b91b-a2434a1b690f}">
+		<property name="name">
+			<value>To Boss Battle</value>
+		</property>
+		<relationship name="folder">
+			<destination>{e91d3e79-8fee-468c-942e-75e16a254157}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{aa764acc-9dc9-4d37-951b-85e1560f252f}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{aa764acc-9dc9-4d37-951b-85e1560f252f}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

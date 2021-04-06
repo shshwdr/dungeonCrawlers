@@ -69,7 +69,7 @@ public class Chest : Interactable
             foreach(var item in collectItem){
 
                 Inventory.Instance.addItem(item.Key, item.Value);
-                res += string.Format(" {0} {1}", item.Value, Inventory.Instance. itemInfoDict[item.Key].actionName);
+                res += string.Format(", {0} {1} ", item.Value, Inventory.Instance. itemInfoDict[item.Key].actionName);
             }
 
             DialogueManager.ShowAlert(res, showTime);

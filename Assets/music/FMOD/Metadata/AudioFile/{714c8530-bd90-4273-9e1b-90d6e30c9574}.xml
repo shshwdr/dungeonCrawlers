@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="AudioFile" id="{714c8530-bd90-4273-9e1b-90d6e30c9574}">
+		<property name="assetPath">
+			<value>Battle Intro 2.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>4.0909070294784584</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{b227804b-e996-4e51-84b8-eca950151dce}</destination>
+		</relationship>
+	</object>
+</objects>

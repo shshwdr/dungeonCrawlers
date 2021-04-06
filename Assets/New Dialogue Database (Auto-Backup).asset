@@ -1664,7 +1664,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: When you defeat monsters they will drop <color=red>Gold</color>, which
+        value: When you defeat monsters they will drop <color=red>Coin</color>, which
           you can spend using these stones.
         type: 0
         typeString: 

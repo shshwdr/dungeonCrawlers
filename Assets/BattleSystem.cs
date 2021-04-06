@@ -68,7 +68,7 @@ public class BattleSystem : Singleton<BattleSystem>
     {
         if(state == BattleState.None)
         {
-            FModSoundManager.Instance.GetIntoBattle();
+
 
             monster = m;
             state = BattleState.Start;
@@ -88,8 +88,18 @@ public class BattleSystem : Singleton<BattleSystem>
         monster.updateStatusUI();
         player.updateStatusUI();
 
+        if (monster.monsterStatus.absorbCost == 0)
+        {
+
+            FModSoundManager.Instance.GetIntoBossBattle();
+        }
+        else
+        {
+
+            FModSoundManager.Instance.GetIntoBattle();
+        }
         //set up action buttons
-        if(monster.getAbsorbId() == "")
+        if (monster.getAbsorbId() == "")
         {
             BattleActions.Instance.actionButtonDictionary["absorb"].gameObject.SetActive(false);
         }

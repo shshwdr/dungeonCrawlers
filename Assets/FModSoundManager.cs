@@ -20,7 +20,7 @@ public class FModSoundManager : Singleton<FModSoundManager>
     // Start is called before the first frame update
 
     string[] paramNames = new string[]{
-        "To Exploration","To Danger Zone","To Battle"
+        "To Exploration","To Danger Zone","To Battle","To Boss Battle"
         };
 
     void Start()
@@ -28,7 +28,7 @@ public class FModSoundManager : Singleton<FModSoundManager>
         //ambience = FMODUnity.RuntimeManager.CreateInstance(eventName);
         //ambience.start();
         // Invoke("delayTest", 0.1f);
-        startEvent("event:/HRS 2 Test");
+        startEvent("event:/Dungeon Crawler Music");
         GetIntoSafeZone();
         DontDestroyOnLoad(gameObject);
     }
@@ -86,6 +86,11 @@ public class FModSoundManager : Singleton<FModSoundManager>
     public void GetIntoBattle()
     {
         setToZeroExpect(2);
+    }
+
+    public void GetIntoBossBattle()
+    {
+        setToZeroExpect(3);
     }
 
     public void GetIntoSafeZone()

@@ -1,5 +1,25 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-9153637805904376342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Dungeon Crawler Music/To Exploration
+  m_EditorClassIdentifier: 
+  Name: To Exploration
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &-8306848362199906916
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40,6 +60,33 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
+--- !u!114 &-7594136079805044472
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dungeon Crawler Music
+  m_EditorClassIdentifier: 
+  Path: event:/Dungeon Crawler Music
+  guid: af67b99bf7a90d4080bce451bb4a289e
+  Banks:
+  - {fileID: 3419072151234876074}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -1035788305114291881}
+  - {fileID: -2137695760305617356}
+  - {fileID: -9153637805904376342}
+  - {fileID: -3878587533880371730}
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 342857
 --- !u!114 &-6714527516141534797
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -55,11 +102,11 @@ MonoBehaviour:
   Path: Assets/music/FMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637526128480000000
+  lastModified: 637533053039066066
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 894
+    Value: 958
   Exists: 1
 --- !u!114 &-4462530535642820545
 MonoBehaviour:
@@ -72,6 +119,66 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
   m_Name: parameter:/HRS 2 Test/To Danger Zone
+  m_EditorClassIdentifier: 
+  Name: To Danger Zone
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
+--- !u!114 &-3878587533880371730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Dungeon Crawler Music/To Battle
+  m_EditorClassIdentifier: 
+  Name: To Battle
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
+--- !u!114 &-2137695760305617356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Dungeon Crawler Music/To Boss Battle
+  m_EditorClassIdentifier: 
+  Name: To Boss Battle
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
+--- !u!114 &-1035788305114291881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Dungeon Crawler Music/To Danger Zone
   m_EditorClassIdentifier: 
   Name: To Danger Zone
   Min: 0
@@ -97,13 +204,13 @@ MonoBehaviour:
   - {fileID: -6714527516141534797}
   - {fileID: 3419072151234876074}
   EditorEvents:
-  - {fileID: 5005484798744981543}
+  - {fileID: -7594136079805044472}
   EditorParameters: []
   MasterBanks:
   - {fileID: 3419072151234876074}
   StringsBanks:
   - {fileID: -6714527516141534797}
-  stringsBankWriteTime: 637526128480000000
+  stringsBankWriteTime: 637533053039066066
   cacheVersion: 6
 --- !u!114 &1053669007438579022
 MonoBehaviour:
@@ -140,7 +247,7 @@ MonoBehaviour:
   Path: Assets/music/FMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637526128480000000
+  lastModified: 637533053039066066
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -158,8 +265,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/HRS 2 Test
   guid: 4d2a58dc1f9dfd458419da9f1d73155c
-  Banks:
-  - {fileID: 3419072151234876074}
+  Banks: []
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
