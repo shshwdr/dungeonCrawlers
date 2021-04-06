@@ -26,6 +26,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 995486113393203756, guid: e325bbb2dcb898342976c0f3e5d56970, type: 3}
+      propertyPath: m_Waypoints.Array.data[0].position.x
+      value: -0.23
+      objectReference: {fileID: 0}
+    - target: {fileID: 995486113393203756, guid: e325bbb2dcb898342976c0f3e5d56970, type: 3}
+      propertyPath: m_Waypoints.Array.data[0].position.y
+      value: 6.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 995486113393203756, guid: e325bbb2dcb898342976c0f3e5d56970, type: 3}
+      propertyPath: m_Waypoints.Array.data[0].position.z
+      value: 5.98
+      objectReference: {fileID: 0}
+    - target: {fileID: 995486113393203756, guid: e325bbb2dcb898342976c0f3e5d56970, type: 3}
+      propertyPath: m_Waypoints.Array.data[1].position.x
+      value: 1.78
+      objectReference: {fileID: 0}
+    - target: {fileID: 995486113393203756, guid: e325bbb2dcb898342976c0f3e5d56970, type: 3}
+      propertyPath: m_Waypoints.Array.data[1].position.y
+      value: 6.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 995486113393203756, guid: e325bbb2dcb898342976c0f3e5d56970, type: 3}
+      propertyPath: m_Waypoints.Array.data[1].position.z
+      value: 4.66
+      objectReference: {fileID: 0}
     - target: {fileID: 995486114731825321, guid: e325bbb2dcb898342976c0f3e5d56970, type: 3}
       propertyPath: m_Name
       value: Lizard
