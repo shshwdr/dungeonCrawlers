@@ -1043,10 +1043,10 @@ MonoBehaviour:
             m_CallState: 2
       GameEvents: []
       SoundData:
-        SoundSource: 0
+        SoundSource: 1
         DatabaseName: General
-        SoundName: No Sound
-        AudioClip: {fileID: 0}
+        SoundName: 
+        AudioClip: {fileID: 8300000, guid: 255cb07c53ab1c04dbd4aec49f61744f, type: 3}
         OutputAudioMixerGroup: {fileID: 0}
     PresetCategory: Organic
     PresetName: BlowDown

@@ -1251,6 +1251,18 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 995486114731825334, guid: e325bbb2dcb898342976c0f3e5d56970, type: 3}
+      propertyPath: dieClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 8f9210ffdaa550c4689504da64ff7b06, type: 3}
+    - target: {fileID: 995486114731825334, guid: e325bbb2dcb898342976c0f3e5d56970, type: 3}
+      propertyPath: appearClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 1415365a45db840488cdf471702737ce, type: 3}
+    - target: {fileID: 995486114731825334, guid: e325bbb2dcb898342976c0f3e5d56970, type: 3}
+      propertyPath: attackClip
+      value: 
+      objectReference: {fileID: 8300000, guid: c59a790bf6929334289e8285b9e43ea9, type: 3}
+    - target: {fileID: 995486114731825334, guid: e325bbb2dcb898342976c0f3e5d56970, type: 3}
       propertyPath: playerName
       value: Magic Slime
       objectReference: {fileID: 0}
@@ -1258,6 +1270,10 @@ PrefabInstance:
       propertyPath: displayName
       value: Magic Slime
       objectReference: {fileID: 0}
+    - target: {fileID: 995486114731825334, guid: e325bbb2dcb898342976c0f3e5d56970, type: 3}
+      propertyPath: getDamageClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 4a47935bff89a5a4c8c1220277452521, type: 3}
     - target: {fileID: 995486114989844328, guid: e325bbb2dcb898342976c0f3e5d56970, type: 3}
       propertyPath: m_Lens.FieldOfView
       value: 45

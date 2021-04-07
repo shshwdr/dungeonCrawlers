@@ -1,3 +1,4 @@
+using PixelCrushers.DialogueSystem;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -41,7 +42,19 @@ public class GameManager : Singleton<GameManager>
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.T)){
-            cheat.SetActive(!cheat.active);
+           // cheat.SetActive(!cheat.active);
+        }
+
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            //cheat.SetActive(!cheat.active);
+            //if (BattleSystem.Instance.monster)
+            //{
+            //    BattleSystem.Instance.monster.takeDamage(1000);
+            //    BattleSystem.Instance.checkDeath();
+            //}
+            BattleSystem.Instance.EndBattle();
+            GameOver.Instance.reviveOrigin();
         }
     }
 }

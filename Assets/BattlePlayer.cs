@@ -7,7 +7,7 @@ public class BattlePlayer : HPObject
 {
     public Vector3 originPosition;
     public BattlePlayerStatus playerStatus;
-
+    public AudioSource audioSource;
 
     protected int currentSP;
     // Start is called before the first frame update

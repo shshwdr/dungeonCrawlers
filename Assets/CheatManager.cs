@@ -34,7 +34,7 @@ public class CheatManager : Singleton<CheatManager>
         if (ShopManager.Instance.isInShop)
         {
 
-            ShopMenu.Instance.updateCoin();
+            ShopManager.Instance.updateCoin();
         }
 
     }

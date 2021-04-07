@@ -20,6 +20,14 @@ public class Monster : HPObject
     public Vector3 popupPositionAdjust;
     public Vector3 monsterCenter;
 
+    AudioSource audioSource;
+
+    public AudioClip appearClip;
+    public AudioClip attackClip;
+    public AudioClip dieClip;
+    public AudioClip getDamageClip;
+
+
     NPC npc;
     // Start is called before the first frame update
     protected override void Start()
@@ -32,6 +40,7 @@ public class Monster : HPObject
         {
             npc.enabled = false;
         }
+        audioSource = GetComponent<AudioSource>();
     }
 
     public string getName()
@@ -53,7 +62,6 @@ public class Monster : HPObject
         stateUI = HUD.Instance.enemyUI;
         monsterStatus = (MonsterStatus)s;
         base.Init(s);
-
     }
 
 
@@ -94,6 +102,13 @@ public class Monster : HPObject
         animator.SetTrigger("battle");
         battleCamera.SetActive(true);
         initStatusUI();
+        StartCoroutine(playAppear());
+    }
+
+    IEnumerator playAppear()
+    {
+        yield return new WaitForSeconds(0.5f);
+        audioSource.PlayOneShot(appearClip);
     }
 
     public  override void takeDamage(int damage)
@@ -104,6 +119,7 @@ public class Monster : HPObject
             base.takeDamage(damage);
         }
         animator.SetTrigger("takeDamage");
+        audioSource.PlayOneShot(getDamageClip);
     }
 
     public void finishDamage()
@@ -117,6 +133,7 @@ public class Monster : HPObject
         base.die();
 
         animator.SetTrigger("die");
+        audioSource.PlayOneShot(dieClip);
     }
 
     public void dieIdle()
@@ -150,6 +167,7 @@ public class Monster : HPObject
         //base.attack(attakee);
         //random choose attack
 
+        audioSource.PlayOneShot(attackClip);
 
         attakee.takeDamage(damage);
         //battleCamera.SetActive(true);

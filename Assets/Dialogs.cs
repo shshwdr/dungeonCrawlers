@@ -11,16 +11,16 @@ public class Dialogs : MonoBehaviour
     public static string lossBattle = "You lost!";
     public static string runFailedBattle = "You failed to run away!";
     public static string runSucceedBattle = "You run away from the monster!";
-    public static string throwDice = "Your are throwing dice...";
+    public static string throwDice = "You throw your dice...";
     public static string afterThrowDice = "you thrown {0} points, choose your actions";
-    public static string chooseAction = "you have {0} points, choose your actions";
+    public static string chooseAction = "You have {0} action points. Choose your actions.";
 
     public static string attackFailed = "{0} attacked but failed";
     public static string attackFailedAndReflect = "{0} attacked but failed, and get damage from himself.";
     public static string graduallyHeal = "{0} restored {1} hp";
 
     //ability
-    public static string unlockAbility = "You unlocked ability 	<color=red>{0}</color>.";
+    public static string unlockAbility = "You unlocked the ability <color=red>{0}</color>.";
     public static string abilityMax = "Your ability <color=red>{0}</color> is at max level.";
     public static string abilityExpAdd = "You earned <color=red>{0}</color> EXP for ability <color=red>{1}</color>.";
     public static string abilityLevelUp = " Your ability <color=red>{0}</color> level up!";

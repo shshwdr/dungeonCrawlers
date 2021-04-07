@@ -113,8 +113,8 @@ ModelImporter:
       name: Attack2
       takeName: Armature|ArmatureAction
       internalID: 0
-      firstFrame: 150
-      lastFrame: 175
+      firstFrame: 157
+      lastFrame: 180
       wrapMode: 0
       orientationOffsetY: 0
       level: 0

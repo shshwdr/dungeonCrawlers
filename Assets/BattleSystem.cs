@@ -43,12 +43,20 @@ public class BattleSystem : Singleton<BattleSystem>
     public bool isInBattle { get { return state != BattleState.None; } }
 
 
+    public AudioClip absorbClip;
+    public AudioClip runClip;
+    public AudioClip throwDiceClip;
+
+
+    AudioSource audioSource;
+
     public Dictionary<string, BuffInfo> playerBuffDict = new Dictionary<string, BuffInfo>() ;
     public Dictionary<string, BuffInfo> monsterBuffDict = new Dictionary<string, BuffInfo>() ;
     bool isFirst = true;
     // Start is called before the first frame update
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
     }
 
 
@@ -208,7 +216,7 @@ public class BattleSystem : Singleton<BattleSystem>
     IEnumerator PlayerUseAbility(AbilityInfo info)
     {
         //damage
-        HUD.Instance.battleDialogUI.text = Dialogs.playerBasicAttack;
+        HUD.Instance.battleDialogUI.text = info.doActionDesc;
 
         applyEffect(info, player);
 
@@ -404,13 +412,13 @@ public class BattleSystem : Singleton<BattleSystem>
                 {
 
                     //missed and reflect
-                    yield return StartCoroutine(yieldAndShowText(string.Format(Dialogs.attackFailedAndReflect, player.playerStatus.playerName)));
+                    yield return StartCoroutine(yieldAndShowText(string.Format(Dialogs.attackFailedAndReflect, monster.monsterStatus.playerName)));
                 }
                 else
                 {
 
                     //missed
-                    yield return StartCoroutine(yieldAndShowText(string.Format(Dialogs.attackFailed, player.playerStatus.playerName)));
+                    yield return StartCoroutine(yieldAndShowText(string.Format(Dialogs.attackFailed, monster.monsterStatus.playerName)));
                 }
             }
         }
@@ -470,6 +478,7 @@ public class BattleSystem : Singleton<BattleSystem>
         //show particle effect
         //check possibility
         var value = Random.value;
+        audioSource.PlayOneShot(absorbClip);
         showParticleEffect("Absorb");
         if (value < monster.monsterStatus.absorbRate || CheatManager.Instance.defeiniteAbsorb)
         {
@@ -496,7 +505,7 @@ public class BattleSystem : Singleton<BattleSystem>
 
     }
 
-    void EndBattle()
+    public void EndBattle()
     {
         GameEventMessage.SendEvent("StopAction");
         if (state == BattleState.Won)
@@ -516,6 +525,10 @@ public class BattleSystem : Singleton<BattleSystem>
         {
 
             HUD.Instance.battleDialogUI.text = Dialogs.winBattle;
+            StartCoroutine(cleanBattle());
+        }
+        else
+        {
             StartCoroutine(cleanBattle());
         }
 
@@ -545,9 +558,9 @@ public class BattleSystem : Singleton<BattleSystem>
         var reward = monster.monsterStatus.reward;
         if (value <= reward.itemRate)
         {
-            newReward.itemName = reward.itemName;
+            newReward.itemName = Inventory.Instance.itemInfoDict[reward.itemName].actionName ;
             newReward.gotItem = true;
-            Inventory.Instance.addItem(newReward.itemName, 1);
+            Inventory.Instance.addItem(reward.itemName, 1);
         }
         newReward.currency = Random.Range(reward.currencyMin * Utils.currencyScale, reward.currencyMax * Utils.currencyScale);
         Inventory.Instance.addCurrency(newReward.currency);
@@ -596,7 +609,7 @@ public class BattleSystem : Singleton<BattleSystem>
         if (state == BattleState.Won || state == BattleState.Absorb || isPopup)
         {
 
-            if(monster.displayName == "Magic Lizard")
+            if(monster.monsterStatus.playerName == "Magic Lizard")
             {
                 monster.dieIdle();
 
@@ -608,7 +621,11 @@ public class BattleSystem : Singleton<BattleSystem>
 
                 monster.fullyDie();
                 yield return new WaitForSeconds(0.5f);
-                Destroy(monster.gameObject);
+                if (monster)
+                {
+
+                    Destroy(monster.gameObject);
+                }
             }
 
         }
@@ -677,6 +694,9 @@ public class BattleSystem : Singleton<BattleSystem>
         yield return new WaitForSeconds(0.1f);
 
         HUD.Instance.battleDialogUI.text = Dialogs.throwDice;
+
+        yield return new WaitForSeconds(0.5f);
+        audioSource.PlayOneShot(throwDiceClip);
         //HUD.Instance.battleDialogUI.text = "Choose an action:";
     }
 
@@ -686,7 +706,7 @@ public class BattleSystem : Singleton<BattleSystem>
         GameEventMessage.SendEvent("Action");
 
         updateSkillPoint(-value);
-        HUD.Instance.battleDialogUI.text = string.Format(Dialogs.afterThrowDice, value);
+        HUD.Instance.battleDialogUI.text = string.Format(Dialogs.chooseAction, skillPoint);
         if (isFirst)
         {
             isFirst = false;
@@ -724,6 +744,8 @@ public class BattleSystem : Singleton<BattleSystem>
 
     public void OnRun()
     {
+
+        audioSource.PlayOneShot(runClip);
         GameEventMessage.SendEvent("StopAction");
         var runRate = monster.monsterStatus.runRate;
         var randValue = Random.value;

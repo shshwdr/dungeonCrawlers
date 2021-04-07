@@ -32,10 +32,15 @@ public class Inventory : Singleton<Inventory>
     [SerializeField]
     Transform buttonsParent2;
 
+    AudioSource audioSource;
+    public AudioClip coinsClip;
+    public AudioClip itemUseClip;
+
     public int currentCurrency = 0;
     // Start is called before the first frame update
     void Awake()
     {
+        audioSource = GetComponent<AudioSource>();
         AllActionInfo allItemInfo = JsonUtility.FromJson<AllActionInfo>(jsonFile.text);
         itemInfoDict = allItemInfo.itemInfos.ToDictionary(x => x.actionId, x => x);
         int i = 0;
@@ -88,6 +93,7 @@ public class Inventory : Singleton<Inventory>
     {
         currentItemDict[item] -= value;
         updateItemButton(item);
+        audioSource.PlayOneShot(itemUseClip);
     }
 
     public void addItem(string item, int value = 1)
@@ -101,11 +107,14 @@ public class Inventory : Singleton<Inventory>
             currentItemDict[item] = value;
         }
         updateItemButton(item);
+        audioSource.PlayOneShot(itemUseClip);
     }
 
     public void addCurrency(int value)
     {
         currentCurrency += value;
+
+        audioSource.PlayOneShot(coinsClip);
         //ShopMenu.Instance. updateCoin();
     }
 
@@ -142,7 +151,7 @@ public class Inventory : Singleton<Inventory>
                 BattleSystem.Instance.player.restoreMana(5);
             }
         }
-        ShopMenu.Instance.updateCoin();
+        ShopManager.Instance.updateCoin();
     }
     public bool isStatusAtMaxLevel(PlayerPurchaseStatus status)
     {

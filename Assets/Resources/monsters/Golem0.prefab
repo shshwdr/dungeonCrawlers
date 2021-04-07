@@ -151,6 +151,18 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 995486114731825334, guid: e325bbb2dcb898342976c0f3e5d56970, type: 3}
+      propertyPath: dieClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 098b71aaf43cad54c8d48c84b26b9781, type: 3}
+    - target: {fileID: 995486114731825334, guid: e325bbb2dcb898342976c0f3e5d56970, type: 3}
+      propertyPath: appearClip
+      value: 
+      objectReference: {fileID: 8300000, guid: fccf4c08e0c190d48a7eb73636d6da23, type: 3}
+    - target: {fileID: 995486114731825334, guid: e325bbb2dcb898342976c0f3e5d56970, type: 3}
+      propertyPath: attackClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 2d12dd9f80505004aacccbe6c5ba5e4c, type: 3}
+    - target: {fileID: 995486114731825334, guid: e325bbb2dcb898342976c0f3e5d56970, type: 3}
       propertyPath: playerName
       value: Golem
       objectReference: {fileID: 0}
@@ -158,6 +170,10 @@ PrefabInstance:
       propertyPath: displayName
       value: Arcane Wendigo
       objectReference: {fileID: 0}
+    - target: {fileID: 995486114731825334, guid: e325bbb2dcb898342976c0f3e5d56970, type: 3}
+      propertyPath: getDamageClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 80e527d99c8cee14a9a315c0bfdc1610, type: 3}
     - target: {fileID: 995486114731825334, guid: e325bbb2dcb898342976c0f3e5d56970, type: 3}
       propertyPath: popupPositionAdjust.y
       value: -1.1

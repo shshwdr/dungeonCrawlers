@@ -3,6 +3,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using TMPro;
 using UnityEngine;
 [Serializable]
 public class PlayerPurchaseStatus : PurchaseItem
@@ -73,12 +74,23 @@ public class ShopManager : Singleton<ShopManager>
     TextAsset jsonFile;
     [SerializeField]
     Transform buttonsParent;
+    public TMP_Text detailLabel;
+    public TMP_Text coinLabel;
 
     public bool firstOpen = true;
     public bool isInShop;
     AllShopItems allitems;
     List<ShopItem> itemButtons = new List<ShopItem>();
     // Start is called before the first frame update
+
+
+    public void updateCoin()
+    {
+        if (coinLabel)
+        {
+            coinLabel.text = "Coin: " + Inventory.Instance.currentCurrency;
+        }
+    }
     void Start()
     {
         foreach (Transform buffTransform in buttonsParent)
@@ -134,7 +146,7 @@ public class ShopManager : Singleton<ShopManager>
         }
         else
         {
-            ShopMenu.Instance.updateCoin();
+            ShopManager.Instance.updateCoin();
         }
         isInShop = true;
         GameEventMessage.SendEvent("Shop");

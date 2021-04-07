@@ -2,7 +2,7 @@
     "PlayerStatus":
     [
       {
-        "playerName": "Flav",
+        "playerName": "Hero",
         "hp":25,
         "atk":0,
         "def":0,
@@ -36,7 +36,7 @@
       ],
       "reward": {
         "itemName": "hpPotion",
-        "itemRate": 0.3,
+        "itemRate": 1,
         "currencyMin": 1,
         "currencyMax": 3
       }

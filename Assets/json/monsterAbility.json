@@ -67,8 +67,8 @@
       },
       {
         "actionId": "Wing Attack",
-        "actionName": "Wing Attack",
-        "description":"{0} use Wing Attack and deal <color=red> {1} </color><color=blue> Magical </color>damage",
+        "actionName": "Lunge",
+        "description":"{0} use Lunge and deal <color=red> {1} </color><color=blue> Magical </color>damage",
         "descriptionType":"attack",
         "abilityType":"magical",
         "damage":[5],
@@ -132,8 +132,8 @@
       },
       {
         "actionId": "Slurp",
-        "actionName": "Slurp",
-        "description":"{0} use Slurp and deal <color=red> {1} </color><color=blue> Magical </color>damage",
+        "actionName": "Ravage",
+        "description":"{0} use Ravage and deal <color=red> {1} </color><color=blue> Magical </color>damage",
         "descriptionType":"attack",
         "abilityType":"magical",
         "damage":[7],

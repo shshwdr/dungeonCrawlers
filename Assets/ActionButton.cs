@@ -9,9 +9,14 @@ public class ActionButton : MonoBehaviour
 
     public TMP_Text battleDialogUI;
     public GameObject dialogUIObj;
+
+    AudioSource audioSource;
+
+    public AudioClip notEnoughSourceClip;
     // Start is called before the first frame update
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         if (info!=null)
         {
             battleDialogUI.text = info.actionName;
@@ -60,11 +65,13 @@ public class ActionButton : MonoBehaviour
         if (BattleSystem.Instance.isInBattle && info.getCost > BattleSystem.Instance.skillPoint && !GameManager.Instance.noActionCost )
         {
 
+            audioSource.PlayOneShot(notEnoughSourceClip);
             HUD.Instance.battleDialogUI.text = string.Format(Dialogs.actionCostNotEnough, info.actionName);
         }
         else if (BattleSystem.Instance.isInBattle && (info is AbilityInfo) &&  !BattleSystem.Instance.player.canUseMana(((AbilityInfo)info).getMana) && !GameManager.Instance.noManaCost)
         {
 
+            audioSource.PlayOneShot(notEnoughSourceClip);
             HUD.Instance.battleDialogUI.text = string.Format(Dialogs.actionCostNotEnough, info.actionName);
         }
         else
@@ -98,7 +105,7 @@ public class ActionButton : MonoBehaviour
                             break;
                         case "spPotion":
                         case "spPotion1":
-                            BattleSystem.Instance.OnHeal(itemInfo.param);
+                            BattleSystem.Instance.OnRestoreSP(itemInfo.param);
                             break;
                     }
                     Inventory.Instance.useItem(itemInfo.actionId);
@@ -108,6 +115,16 @@ public class ActionButton : MonoBehaviour
             {
                 var abilityInfo = (AbilityInfo)info;
                 BattleSystem.Instance.OnAbilityButton(abilityInfo);
+                var soundstring = "sfx/Spells/" + abilityInfo.actionId;
+                var sound = Resources.Load<AudioClip>(soundstring);
+                if (sound)
+                {
+
+                   BattleSystem.Instance.player.audioSource.PlayOneShot(sound);
+                }
+                else
+                {
+                }
             }
             else
             {

@@ -4641,6 +4641,18 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 995486114731825334, guid: e325bbb2dcb898342976c0f3e5d56970, type: 3}
+      propertyPath: dieClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 92e3356e18f94a64ca39ba968906518c, type: 3}
+    - target: {fileID: 995486114731825334, guid: e325bbb2dcb898342976c0f3e5d56970, type: 3}
+      propertyPath: appearClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 207e9685933e7ac48a26e9e80ab7b4c8, type: 3}
+    - target: {fileID: 995486114731825334, guid: e325bbb2dcb898342976c0f3e5d56970, type: 3}
+      propertyPath: attackClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 8ed67c7e8d7c0c74eb388622b43e9ec8, type: 3}
+    - target: {fileID: 995486114731825334, guid: e325bbb2dcb898342976c0f3e5d56970, type: 3}
       propertyPath: playerName
       value: Bee
       objectReference: {fileID: 0}
@@ -4648,6 +4660,10 @@ PrefabInstance:
       propertyPath: displayName
       value: Fiery Rikayon
       objectReference: {fileID: 0}
+    - target: {fileID: 995486114731825334, guid: e325bbb2dcb898342976c0f3e5d56970, type: 3}
+      propertyPath: getDamageClip
+      value: 
+      objectReference: {fileID: 8300000, guid: aafdab8350815074994fd6097371d8e4, type: 3}
     - target: {fileID: 995486114731825334, guid: e325bbb2dcb898342976c0f3e5d56970, type: 3}
       propertyPath: popupPositionAdjust.y
       value: -1.1

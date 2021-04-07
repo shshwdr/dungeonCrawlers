@@ -160,7 +160,7 @@ MonoBehaviour:
       value: Lizard
       type: 0
       typeString: 
-    portrait: {fileID: 0}
+    portrait: {fileID: 2800000, guid: 8d827fdfb0968c845ba1b441beebaa5a, type: 3}
     spritePortrait: {fileID: 0}
     alternatePortraits: []
     spritePortraits: []
@@ -186,7 +186,7 @@ MonoBehaviour:
       value: Lizard
       type: 0
       typeString: 
-    portrait: {fileID: 0}
+    portrait: {fileID: 2800000, guid: 8d827fdfb0968c845ba1b441beebaa5a, type: 3}
     spritePortrait: {fileID: 0}
     alternatePortraits: []
     spritePortraits: []
@@ -208,7 +208,7 @@ MonoBehaviour:
       value: False
       type: 2
       typeString: CustomFieldType_Boolean
-    portrait: {fileID: 0}
+    portrait: {fileID: 2800000, guid: 89be8148cd2f9de4d84c139e885959c3, type: 3}
     spritePortrait: {fileID: 0}
     alternatePortraits: []
     spritePortraits: []
@@ -997,8 +997,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "<color=red>Find and defeat the three Guardians</color>, and here
-          we go. Simple as that! Now, into the swamp with you, there are no monsters
+        value: "<color=red>Find and defeat the three Guardians</color>, and in we
+          go. Simple as that! Now, into the swamp with you, there are no monsters
           around here. And hey, don\u2019t worry, I\u2019ll help you along the way."
         type: 0
         typeString: 
@@ -1597,7 +1597,7 @@ MonoBehaviour:
         typeString: 
       - title: Dialogue Text
         value: Of course, there is no magic swamp without a <color=red>Magic Stone</color>.
-          You will find these stones here and there. Walk to them and prey for items.
+          You will find these stones here and there. Walk to them and pray for items.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -4535,7 +4535,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: After unlock new abilities you can use them in <color=red>Ability</color>
+        value: To activate an ability you've unlocked in combat, use the action <color=red>Ability</color>.
+          Pretty straight forward, really.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -5012,7 +5013,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Do you want to get back?
+        value: Do you want to teleport back to the starting area?
         type: 0
         typeString: 
       - title: Parenthetical
