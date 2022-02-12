@@ -42,7 +42,7 @@ public class ShopItem : MonoBehaviour
         {
             var pitem = (PlayerPurchaseStatus)item;
             var level = Inventory.Instance.statusLevel[pitem.itemId];
-            ShopManager.Instance.detailLabel.text = string.Format("{0} from level {1} to level{2}, increase the value from {3} to {4}.",
+            ShopManager.Instance.detailLabel.text = string.Format("{0} from level {1} to level {2}\nincrease the value from {3} to {4}.",
                 pitem.itemName, level, level+1,pitem.getLevelValue,pitem.getNextLevelValue );
         }else if (item is PurchaseInventory)
         {
